@@ -695,6 +695,170 @@ html{scroll-padding-top:132px;}
   }
 }
 
+
+
+/* =========================================================
+   MOBILE-FIRST UPGRADE: same website, optimized mobile layout
+   ========================================================= */
+@media (max-width: 900px){
+  body{padding-bottom:74px;}
+  .header{
+    height:72px !important;
+    min-height:72px !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:12px 5% !important;
+    gap:12px !important;
+  }
+  .brand{width:auto !important;}
+  .logo-mark{width:40px;height:40px;}
+  .logo-text{font-size:18px;}
+  .logo-text span{font-size:9px;letter-spacing:2.4px;}
+  .mobile-menu{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    min-width:46px;
+    height:42px;
+    padding:0 12px !important;
+    border-radius:8px;
+    background:rgba(255,255,255,.06);
+  }
+  .nav{
+    display:none !important;
+    position:absolute !important;
+    top:72px !important;
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+    background:rgba(3,16,31,.98) !important;
+    border-top:1px solid rgba(255,255,255,.08) !important;
+    border-bottom:3px solid var(--blue) !important;
+    padding:18px 5% 22px !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+  }
+  .nav.active{display:flex !important;}
+  .nav a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding:15px 2px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:13px !important;
+    white-space:normal !important;
+  }
+  .nav a:after{content:'›';opacity:.45;font-size:18px;}
+  .nav-cta{
+    margin-top:14px;
+    justify-content:center !important;
+    border-bottom:0 !important;
+    border-radius:8px !important;
+    padding:14px 18px !important;
+    background:var(--blue) !important;
+  }
+  .nav-cta:after{display:none;}
+
+  html{scroll-padding-top:92px !important;}
+  #home,#services,#estimating,#takeoffs,#cad,#documents,#coordination,#admin,#scheduling,#support,#why,#industries,#roofing,#civil,#commercial,#residential,#industrial,#renewable,#process,#contact{scroll-margin-top:92px !important;}
+
+  .hero{
+    padding-top:72px !important;
+    padding-bottom:30px !important;
+  }
+  .hero-bg{top:72px !important;opacity:.45 !important;}
+  .hero-bg:before{background:linear-gradient(180deg, rgba(3,16,31,.96) 0%, rgba(3,16,31,.90) 62%, rgba(3,16,31,.74) 100%) !important;}
+  .hero-content{
+    padding:50px 6% 24px !important;
+  }
+  h1{font-size:clamp(34px, 10vw, 48px) !important;line-height:1.06 !important;letter-spacing:-1px !important;}
+  .hero p{font-size:15.5px !important;line-height:1.6 !important;margin-bottom:26px !important;}
+  .hero-bullets{gap:10px !important;margin-bottom:28px !important;}
+  .hero-bullets div{font-size:13.5px !important;align-items:flex-start !important;}
+  .hero-actions{gap:12px !important;}
+  .hero-actions .btn{width:100% !important;max-width:none !important;}
+  .stats-bar{
+    grid-template-columns:1fr !important;
+    margin:0 6% !important;
+    border-radius:12px !important;
+  }
+  .stat{padding:18px !important;}
+  .stat strong{font-size:20px !important;}
+
+  .section{padding:68px 6% !important;}
+  .section-head{margin-bottom:36px !important;}
+  .section h2{font-size:30px !important;}
+  .section-head p{font-size:15.5px !important;}
+  .services-grid,.process-grid{grid-template-columns:1fr !important;gap:16px !important;}
+  .service-card,.step{padding:24px !important;min-height:auto !important;}
+  .split,.contact{grid-template-columns:1fr !important;gap:36px !important;}
+  .image-panel{height:360px !important;}
+  .content-item{padding:18px !important;}
+  .industries{padding:68px 6% !important;}
+  .industry-grid{grid-template-columns:1fr 1fr !important;gap:14px !important;}
+  .industry{padding:22px 12px !important;}
+  .cta{
+    margin:0 6% 54px !important;
+    padding:30px 24px !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    text-align:left !important;
+  }
+  .cta h2{font-size:27px !important;}
+  .cta .btn{width:100% !important;max-width:none !important;}
+  .contact{padding:68px 6% !important;}
+  .contact h2{font-size:34px !important;}
+  .form-card{padding:24px !important;}
+  .form-grid{grid-template-columns:1fr !important;}
+  .footer-main{padding:42px 6% 32px !important;grid-template-columns:1fr !important;}
+  .footer-menu-grid{grid-template-columns:1fr !important;gap:26px !important;}
+  .float{display:none !important;}
+  .mobile-quick-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1001;
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(2,9,18,.96);
+    border-top:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .mobile-quick-actions a{
+    min-height:48px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+  }
+  .mobile-quick-actions .call{background:#fff;color:#071523;}
+  .mobile-quick-actions .quote{background:var(--yellow);color:#071523;}
+}
+
+@media (min-width: 901px){
+  .mobile-quick-actions{display:none !important;}
+}
+
+@media (max-width: 480px){
+  .industry-grid{grid-template-columns:1fr !important;}
+  .panel-card{left:14px !important;right:14px !important;bottom:14px !important;padding:18px !important;}
+  .contact-list div{padding:16px !important;}
+  input,select,textarea{font-size:16px !important;}
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -1086,6 +1250,11 @@ html{scroll-padding-top:132px;}
 </footer>
 
 <a class="float service-link" href="#contact" data-service="Other">Request a Quote &rarr;</a>
+<div class="mobile-quick-actions" aria-label="Mobile quick actions">
+  <a class="call" href="tel:7703558848">Call Now</a>
+  <a class="quote service-link" href="#contact" data-service="Other">Get a Quote</a>
+</div>
+
 
 <script>
 const nav=document.getElementById('nav');
