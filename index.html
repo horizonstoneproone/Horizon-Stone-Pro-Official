@@ -31,7 +31,7 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
   "logo":"https://www.horizonstonepro.com/images/og-image.jpg",
   "description":"Construction estimating, quantity takeoffs, CAD drafting, document control and project coordination services.",
   "email":"sales@horizonstonepro.com",
-  "telephone":"+1-404-397-7699",
+  "telephone":"+1-770-355-8848",
   "sameAs":[
     "https://www.linkedin.com/company/horizon-stone-pro",
     "https://www.facebook.com/horizonstonepro",
@@ -46,7 +46,7 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
   "name":"Horizon Stone Pro LLC",
   "image":"https://www.horizonstonepro.com/images/og-image.jpg",
   "url":"https://www.horizonstonepro.com",
-  "telephone":"+1-404-397-7699",
+  "telephone":"+1-770-355-8848",
   "email":"sales@horizonstonepro.com",
   "address":{
     "@type":"PostalAddress",
@@ -681,8 +681,6 @@ textarea { min-height: 120px; resize: vertical }
   .float{right:14px;bottom:14px;padding:12px 16px;font-size:11px;}
 }
 
-
-
 /* =========================================================
    FINAL HERO/STATS COLLISION FIX
    This moves the USA / 6+ / Fast / Lean feature bar into
@@ -777,8 +775,6 @@ html{scroll-padding-top:132px;}
   }
 }
 
-
-
 /* =========================================================
    MOBILE-FIRST UPGRADE: same website, optimized mobile layout
    ========================================================= */
@@ -807,110 +803,5 @@ html{scroll-padding-top:132px;}
     border-radius:8px;
     background:rgba(255,255,255,.06);
   }
-}
-</style>
-</head>
-<body>
-
-  <!-- SECCIÓN FORMULARIO DE CONTACTO -->
-  <section class="contact" id="contact">
-    <div>
-      <h2>Let's build something <span>together</span></h2>
-      <p>Ready to streamline your preconstruction workflow? Contact us today to discuss your upcoming project requirements.</p>
-      <div class="contact-list">
-        <div>
-          <strong>Email us</strong>
-          <a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a>
-        </div>
-        <div>
-          <strong>Call us</strong>
-          <a href="tel:+14043977699">+1 (404) 397-7699</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="form-card">
-      <h3>Request a Quote</h3>
-      <p>Submit your project details and drawings below.</p>
-      
-      <!-- FORMULARIO CORREGIDO CON ID PARA AJAX -->
-      <form id="contact-form">
-        <div class="form-grid">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" name="first_name" required placeholder="John">
-          </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" name="last_name" required placeholder="Doe">
-          </div>
-          <div class="form-group full">
-            <label>Company Email</label>
-            <input type="email" name="email" required placeholder="john@company.com">
-          </div>
-          <div class="form-group full">
-            <label>Company Name</label>
-            <input type="text" name="company" required placeholder="EPC Engineering LLC">
-          </div>
-          <div class="form-group full">
-            <label>Service Needed</label>
-            <select name="service" required>
-              <option value="" disabled selected>Select a service...</option>
-              <option value="estimating">Construction Estimating</option>
-              <option value="takeoffs">Quantity Takeoffs</option>
-              <option value="cad">CAD Drafting</option>
-              <option value="document_control">Document Control</option>
-            </select>
-          </div>
-          <div class="form-group full">
-            <label>Project Details</label>
-            <textarea name="message" required placeholder="Tell us about your project timeline and required scope..."></textarea>
-          </div>
-        </div>
-        <button type="submit" class="btn submit">Send Message</button>
-      </form>
-
-      <!-- CONTENEDOR OCULTO PARA EL MENSAJE DE ÉXITO -->
-      <div id="form-success" style="display:none; color: var(--blue); font-weight: 700; margin-top: 20px; text-align: center; padding: 15px; border: 2px solid var(--blue); border-radius: 8px; background: var(--soft);">
-         Thank you! Your message has been sent successfully. We'll get back to you shortly.
-      </div>
-    </div>
-  </section>
-
-  <!-- SCRIPT DE ENVÍO SILENCIOSO (AJAX) -->
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Detiene la redirección automática
-
-        const form = this;
-        const formData = new FormData(form);
-        const successMessage = document.getElementById('form-success');
-
-        // ENVÍO DE DATOS EN SEGUNDO PLANO A FORMSUBMIT
-        // Comentario: Asegúrate de que este sea tu correo verificado en la plataforma
-        fetch('https://formsubmit.co/ajax/sales@horizonstonepro.com', { <!-- REEMPLAZAR AQUÍ SI ES NECESARIO -->
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.success === "true" || data.status === "success") {
-                // Esconde el formulario y muestra el texto de éxito limpio
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-            } else {
-                alert('Oops! Something went wrong. Please try again.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred. Please verify your connection and try again.');
-        });
-    });
-  </script>
-
-</body>
-</html>
+  .nav{
+    display 
