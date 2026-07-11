@@ -5,7 +5,8 @@
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"6a5068042f6001001c0e60f7"})},
 document.head.appendChild(o)}initApollo();</script>
- <script>
+ <!-- Meta Pixel Code -->
+<script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -20,7 +21,8 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
 /></noscript>
-<script type="application/ld+json">
+<!-- End Meta Pixel Code -->
+  <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"Organization",
@@ -29,7 +31,7 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
   "logo":"https://www.horizonstonepro.com/images/og-image.jpg",
   "description":"Construction estimating, quantity takeoffs, CAD drafting, document control and project coordination services.",
   "email":"sales@horizonstonepro.com",
-  "telephone":"+1-770-355-8848",
+  "telephone":"+1-404-397-7699",
   "sameAs":[
     "https://www.linkedin.com/company/horizon-stone-pro",
     "https://www.facebook.com/horizonstonepro",
@@ -44,7 +46,7 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
   "name":"Horizon Stone Pro LLC",
   "image":"https://www.horizonstonepro.com/images/og-image.jpg",
   "url":"https://www.horizonstonepro.com",
-  "telephone":"+1-770-355-8848",
+  "telephone":"+1-404-397-7699",
   "email":"sales@horizonstonepro.com",
   "address":{
     "@type":"PostalAddress",
@@ -72,7 +74,8 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
   <meta name="google-site-verification" content="11t34u-fYsiW8Rb8tABD-XB_9DcGZyjkOQjGakvrCC0" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH3NT91CM4"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XH3NT91CM4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -125,6 +128,7 @@ body{font-family:var(--font);background:var(--light);color:var(--ink);overflow-x
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 
+/* HEADER & NAVBAR NAVIGATION */
 .header {
   position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; height: 90px;
   display: flex; align-items: center; justify-content: space-between; padding: 0 6%;
@@ -148,6 +152,7 @@ img{max-width:100%;display:block}
 .nav-cta:hover { background: var(--blue2); transform: translateY(-1px); }
 .mobile-menu { display: none; border: 1px solid rgba(255,255,255,.2); padding: 10px 16px; border-radius: 6px; color: #fff; font-weight: 700; font-size: 13px; cursor: pointer }
 
+/* PREMIUM GLOBAL ACTIONS Button Component */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 6px;
   background: var(--blue); color: #fff; font-size: 14px; font-weight: 700; letter-spacing: .3px; text-transform: uppercase;
@@ -160,6 +165,7 @@ img{max-width:100%;display:block}
 .btn-yellow { background: var(--yellow); color: #071523; box-shadow: 0 12px 30px rgba(255,179,0,.2) }
 .btn-yellow:hover { background: var(--yellow2); box-shadow: 0 18px 40px rgba(255,179,0,0.3); }
 
+/* HERO ARCHITECTURE PANEL */
 .hero { position: relative; min-height: 820px; padding-top: 90px; background: var(--navy); color: #fff; overflow: hidden; display: flex; align-items: center; }
 .hero-bg { position: absolute; inset: 0; top: 90px; display: grid; grid-template-columns: 1.1fr .9fr }
 .hero-bg:before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(3,16,31,0.98) 0%, rgba(3,16,31,0.92) 45%, rgba(3,16,31,0.5) 75%, rgba(3,16,31,0.1) 100%); z-index: 2 }
@@ -179,6 +185,7 @@ h1 span { color: var(--yellow) }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap }
 
+/* METRICS INTEGRATED BAR FRAME */
 .stats-bar {
   position: absolute; bottom: 0; left: 6%; right: 6%; z-index: 10; transform: translateY(50%);
   display: grid; grid-template-columns: repeat(4, 1fr); background: rgba(6, 27, 53, 0.95);
@@ -195,6 +202,7 @@ h1 span { color: var(--yellow) }
 .stat strong { display: block; color: #fff; font-size: 24px; font-weight: 700; line-height: 1.1 }
 .stat span { display: block; color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px }
 
+/* STRUCTURAL LAYOUT SECTIONS */
 .section { padding: 140px 6% 100px; background: var(--white); text-align: center }
 .section.alt { background: var(--light) }
 .section-head { max-width: 800px; margin: 0 auto 64px }
@@ -203,6 +211,7 @@ h1 span { color: var(--yellow) }
 .section h2 span { color: var(--blue) }
 .section-head p { color: var(--muted); font-size: 17px; line-height: 1.65; max-width: 700px; margin: 0 auto }
 
+/* CORE 6+ SERVICES BLOCK SYSTEM */
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: left }
 .service-card {
   background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 32px;
@@ -224,6 +233,7 @@ h1 span { color: var(--yellow) }
 }
 .service-card a:hover { color: var(--blue2); gap: 10px; }
 
+/* DUAL PANEL SECTIONS Split */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; text-align: left }
 .image-panel { position: relative; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-hover); height: 560px }
 .image-panel img { width: 100%; height: 100%; object-fit: cover; }
@@ -237,11 +247,12 @@ h1 span { color: var(--yellow) }
 .panel-card p { margin-top: 8px; color: var(--muted); line-height: 1.5; font-size: 14px }
 
 .content-list { display: grid; gap: 16px; margin-top: 32px }
-.content-list div.content-item { display: flex; gap: 18px; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: var(--shadow) }
+.content-item { display: flex; gap: 18px; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: var(--shadow) }
 .content-item .check { margin-top: 2px }
 .content-item h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 6px }
 .content-item p { color: var(--muted); line-height: 1.55; font-size: 14.5px }
 
+/* STRIP INDUSTRIES MATRIX ROW */
 .industries {
   background: var(--navy); color: #fff; padding: 100px 6%; text-align: center; position: relative; overflow: hidden;
 }
@@ -260,6 +271,7 @@ h1 span { color: var(--yellow) }
 .industry-icon-wrap svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 2px; }
 .industry strong { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #f1f5f9 }
 
+/* WORKFLOW PROCESS BLOCKS */
 .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: left }
 .step { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 32px; box-shadow: var(--shadow) }
 .num {
@@ -269,6 +281,7 @@ h1 span { color: var(--yellow) }
 .step h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px }
 .step p { color: var(--muted); line-height: 1.6; font-size: 14.5px }
 
+/* INTERACTION SECTION CALL-TO-ACTION Strip */
 .cta {
   background: linear-gradient(135deg, #0b1c33, #041021); border-radius: 16px; margin: 40px 6%;
   padding: 56px; display: flex; justify-content: space-between; align-items: center;
@@ -279,120 +292,1029 @@ h1 span { color: var(--yellow) }
 .cta .btn { background: var(--blue); color: #fff; box-shadow: 0 10px 25px rgba(0,111,230,0.3) }
 .cta .btn:hover { background: var(--blue2); }
 
-<section id="contact" class="contact">
-  <div>
-    <h2>Get in Touch</h2>
-    <p>We provide remote support tailored to your project's specific tracking needs. Reach out directly or complete our form.</p>
-    <div class="contact-list">
-      <div>
-        <strong>Email Address</strong>
-        <a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a>
-      </div>
-      <div>
-        <strong>Phone Number</strong>
-        <a href="tel:+17703558848">+1 (770) 355-8848</a>
-      </div>
-      <div>
-        <strong>Business Hours</strong>
-        <span>Monday – Friday: 8:00 AM – 6:00 PM EST</span>
-      </div>
+/* CONTACT INTENSIVE LAYOUT MATRIX */
+.contact { padding: 120px 6%; background: var(--navy); color: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 80px }
+.contact h2 { font-size: clamp(36px, 4.5vw, 54px); line-height: 1.1; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 20px }
+.contact p { color: #94a3b8; line-height: 1.65; font-size: 17px; margin-bottom: 32px }
+.contact-list { display: grid; gap: 16px; margin-top: 32px }
+.contact-list div { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 8px; padding: 20px }
+.contact-list strong { display: block; color: var(--yellow); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px }
+.contact-list a { font-size: 16px; font-weight: 600; color: #f1f5f9; transition: color 0.2s ease; }
+.contact-list a:hover { color: var(--yellow); }
+.contact-list span { font-size: 15px; color: #cbd5e1; }
+
+.form-card { background: #fff; color: var(--ink); border-radius: 16px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.25) }
+.form-card h3 { font-size: 26px; font-weight: 800; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.5px }
+.form-card p { color: var(--muted); font-size: 14.5px; margin-bottom: 28px }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px }
+.form-group { display: flex; flex-direction: column; gap: 8px }
+.full { grid-column: 1/-1 }
+label { font-size: 12px; font-weight: 700; color: var(--navy3); text-transform: uppercase; letter-spacing: 0.5px }
+input, select, textarea {
+  width: 100%; border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px;
+  font-family: var(--font); color: var(--ink); font-size: 14.5px; outline: none; background: #f8fafc;
+  transition: all 0.2s ease;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--blue); background: #fff; box-shadow: 0 0 0 4px rgba(0,111,230,.1) }
+textarea { min-height: 120px; resize: vertical }
+.submit { width: 100%; margin-top: 20px }
+
+
+/* PLATFORM CORPORATE FOOTER AREA - CLEAN 3-ZONE FOOTER */
+.footer{
+  background:#020912;
+  color:#cbd5e1;
+  padding:0;
+}
+.footer-main{
+  padding:58px 6% 42px;
+  display:grid;
+  grid-template-columns:minmax(280px,1.25fr) minmax(420px,1.55fr) minmax(240px,.9fr);
+  gap:44px;
+  align-items:start;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-brand-card{
+  max-width:430px;
+}
+.footer-logo-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+.footer-logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:10px;
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  flex:0 0 44px;
+}
+.footer-logo-mark:before{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:58%;
+  height:62%;
+  background:var(--blue);
+  clip-path:polygon(0 28%,100% 0,100% 100%,0 100%);
+}
+.footer-logo-mark:after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0;
+  width:38%;
+  height:45%;
+  background:var(--yellow);
+  clip-path:polygon(0 0,100% 0,100% 100%,0 75%);
+}
+.footer-logo-text{
+  color:#fff;
+  font-size:20px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:.5px;
+}
+.footer-logo-text span{
+  display:block;
+  margin-top:5px;
+  font-size:10px;
+  letter-spacing:3px;
+  font-weight:500;
+  color:#d9eaff;
+}
+.footer-brand-card p{
+  color:#94a3b8;
+  font-size:14px;
+  line-height:1.7;
+  margin-bottom:22px;
+}
+.footer-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(0,111,230,.12);
+  color:#dbeafe;
+  border:1px solid rgba(0,111,230,.25);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+}
+.footer-menu-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+.footer-col h4,
+.footer-contact h4{
+  color:#fff;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.3px;
+  margin-bottom:18px;
+  position:relative;
+  padding-bottom:12px;
+}
+.footer-col h4:after,
+.footer-contact h4:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:34px;
+  height:2px;
+  background:var(--yellow);
+}
+.footer-col a{
+  display:block;
+  color:#94a3b8;
+  font-size:14px;
+  margin-bottom:11px;
+  line-height:1.35;
+  transition:.2s ease;
+}
+.footer-col a:hover{
+  color:var(--yellow);
+  transform:translateX(3px);
+}
+.footer-contact-card{
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  padding:24px;
+}
+.footer-contact-card a,
+.footer-contact-card span{
+  display:block;
+  color:#cbd5e1;
+  font-size:14px;
+  margin-bottom:13px;
+  line-height:1.45;
+}
+.footer-contact-card a:hover{color:var(--yellow)}
+.footer-contact-label{
+  color:var(--yellow);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.9px;
+  margin-bottom:4px;
+}
+.footer-mini-cta{
+  margin-top:18px;
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:44px;
+  border-radius:6px;
+  background:var(--yellow);
+  color:#071523!important;
+  font-size:12px!important;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
+.footer-mini-cta:hover{background:var(--yellow2);color:#071523!important}
+.footer-bottom{
+  padding:22px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+  color:#64748b;
+  font-size:12px;
+}
+.footer-bottom-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+.footer-bottom-links a{
+  color:#64748b;
+}
+.footer-bottom-links a:hover{color:var(--yellow)}
+
+
+/* FLOATING PRIMARY CONTACT BUTTON */
+.float {
+  position: fixed; right: 24px; bottom: 24px; z-index: 999; background: var(--yellow); color: #071523;
+  border-radius: 50px; padding: 14px 24px; font-size: 13px; font-weight: 800; text-transform: uppercase;
+  box-spacing: 0.5px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.2s ease;
+}
+.float:hover { transform: translateY(-2px); background: var(--yellow2); }
+
+/* INTERACTION SECTION CALL-TO-ACTION Strip */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) }
+.reveal.show { opacity: 1; transform: translateY(0) }
+
+
+@media(max-width:1250px){
+  .footer-main{grid-template-columns:1fr;gap:38px}
+  .footer-brand-card{max-width:720px}
+  .footer-menu-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:800px){
+  .footer-main{padding:46px 6% 34px}
+  .footer-menu-grid{grid-template-columns:1fr;gap:28px}
+  .footer-contact-card{padding:22px}
+  .footer-bottom{align-items:flex-start;flex-direction:column}
+}
+
+/* ADAPTABILITY MEDIA BREAKPOINTS */
+@media(max-width:1250px){
+  .services-grid { grid-template-columns: repeat(2, 1fr) }
+  .process-grid { grid-template-columns: repeat(2, 1fr) }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); position: relative; transform: translateY(40px); left: 0; right: 0; margin-bottom: 40px; }
+  .stat { border-right: 0 }
+  .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08) }
+  .stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08) }
+  .footer-top { grid-template-columns: repeat(3, 1fr) }
+  .footer-top > div:first-child { grid-column: 1/-1; max-width: 500px; }
+}
+
+@media(max-width:900px){
+  .header { height: 80px }
+  .mobile-menu { display: block }
+  .nav {
+    display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #03101f;
+    padding: 32px; flex-direction: column; gap: 20px; border-bottom: 3px solid var(--blue);
+  }
+  .nav.active { display: flex }
+  .hero { min-height: auto; padding-bottom: 80px; }
+  .hero-bg { top: 80px; opacity: 0.35 }
+  .hero-content { padding: 80px 0 20px }
+  .split, .contact { grid-template-columns: 1fr; gap: 48px }
+  .industry-grid { grid-template-columns: repeat(3, 1fr) }
+  .cta { flex-direction: column; align-items: flex-start; padding: 40px; margin: 20px 0; }
+  .btn { width: 100%; max-width: 360px; }
+}
+
+@media(max-width:600px){
+  .stats-bar { grid-template-columns: 1fr }
+  .stat:nth-child(odd) { border-right: 0 }
+  .stat:not(:last-child) { border-bottom: 1px solid rgba(255,255,255,0.08) }
+  .industry-grid { grid-template-columns: repeat(2, 1fr) }
+  .image-panel { height: 380px }
+  .panel-card { left: 16px; right: 16px; bottom: 16px; padding: 20px; }
+  .form-card { padding: 24px }
+  .form-grid { grid-template-columns: 1fr }
+  .footer-top { grid-template-columns: 1fr }
+}
+
+
+/* =========================================================
+   FINAL LAYOUT FIXES: visible top menu + anti-collapse rules
+   ========================================================= */
+.header{
+  min-height:90px;
+  height:auto;
+  gap:24px;
+}
+.nav{
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  position:static !important;
+  width:auto;
+  background:transparent !important;
+  padding:0 !important;
+  border:0 !important;
+  flex-direction:row !important;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:18px 24px;
+}
+.mobile-menu{display:none !important;}
+.hero-content{width:100%;}
+.services-grid,.process-grid,.industry-grid,.footer-main,.footer-menu-grid,.contact,.split{min-width:0;}
+.service-card,.step,.industry,.content-item,.form-card,.footer-brand-card,.footer-contact-card{min-width:0;}
+
+@media(max-width:1100px){
+  .header{
+    padding:14px 5%;
+    align-items:center;
+  }
+  .brand{flex:0 0 auto;}
+  .nav{
+    flex:1 1 auto;
+    justify-content:flex-end;
+    gap:12px 16px;
+    font-size:11px;
+  }
+  .nav-cta{
+    padding:10px 14px;
+  }
+  .hero{
+    padding-top:112px;
+  }
+  .hero-bg{top:0;}
+}
+
+@media(max-width:820px){
+  .header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+    padding:14px 5% 12px;
+  }
+  .brand{width:100%;}
+  .nav{
+    width:100%;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    white-space:nowrap;
+    gap:12px;
+    padding-bottom:4px !important;
+    scrollbar-width:thin;
+  }
+  .nav a{
+    flex:0 0 auto;
+    font-size:11px;
+  }
+  .nav-cta{
+    padding:10px 14px;
+  }
+  .hero{
+    padding-top:150px;
+    padding-bottom:52px;
+  }
+  .hero-content{
+    padding:70px 6% 24px !important;
+    max-width:100%;
+  }
+  .hero p{font-size:16px;}
+  .hero-actions{align-items:stretch;}
+  .btn{width:auto;max-width:none;}
+  .hero-actions .btn{width:100%;max-width:420px;}
+  .stats-bar{
+    width:88%;
+    margin:20px auto 0;
+    transform:none !important;
+  }
+  .section{padding:76px 6%;}
+  .services-grid,.process-grid{grid-template-columns:1fr !important;}
+  .split,.contact{grid-template-columns:1fr !important;}
+  .industry-grid{grid-template-columns:repeat(2,1fr) !important;}
+  .cta{margin:0 6% 60px !important;}
+}
+
+@media(max-width:520px){
+  .logo-text{font-size:18px;}
+  .logo-mark{width:40px;height:40px;}
+  h1{font-size:38px;letter-spacing:-1px;}
+  .hero-content{padding-top:52px !important;}
+  .hero-bullets div{font-size:13.5px;align-items:flex-start;}
+  .industry-grid{grid-template-columns:1fr !important;}
+  .contact{padding:76px 6%;}
+  .cta{padding:30px 24px;}
+  .float{right:14px;bottom:14px;padding:12px 16px;font-size:11px;}
+}
+
+
+
+/* =========================================================
+   FINAL HERO/STATS COLLISION FIX
+   This moves the USA / 6+ / Fast / Lean feature bar into
+   the normal page flow so it cannot overlap the Services title.
+   ========================================================= */
+.hero{
+  display:block !important;
+  min-height:0 !important;
+  padding-top:90px !important;
+  padding-bottom:48px !important;
+  overflow:hidden !important;
+}
+.hero-bg{
+  top:90px !important;
+  bottom:0 !important;
+  height:auto !important;
+}
+.hero-content{
+  padding:86px 6% 34px !important;
+  max-width:800px !important;
+}
+.stats-bar{
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:none !important;
+  width:auto !important;
+  margin:0 6% !important;
+  z-index:8 !important;
+}
+.section#services{
+  padding-top:100px !important;
+}
+.stat{
+  min-width:0 !important;
+}
+.stat strong, .stat span{
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+}
+
+@media(max-width:1250px){
+  .hero{padding-top:112px !important;}
+  .hero-bg{top:0 !important;}
+  .stats-bar{
+    grid-template-columns:repeat(2,1fr) !important;
+    margin:0 6% !important;
+  }
+  .section#services{padding-top:90px !important;}
+}
+
+@media(max-width:820px){
+  .hero{
+    padding-top:150px !important;
+    padding-bottom:40px !important;
+  }
+  .hero-content{
+    padding:58px 6% 28px !important;
+    max-width:100% !important;
+  }
+  .stats-bar{
+    width:auto !important;
+    margin:0 6% !important;
+    grid-template-columns:1fr !important;
+  }
+  .stat{
+    border-right:0 !important;
+  }
+  .stat:not(:last-child){
+    border-bottom:1px solid rgba(255,255,255,0.08) !important;
+  }
+  .section#services{padding-top:76px !important;}
+}
+
+
+
+/* =========================================================
+   FINAL NAVIGATION CONNECTION FIX
+   Every top/footer/button anchor lands below the fixed header.
+   ========================================================= */
+html{scroll-padding-top:132px;}
+#home,#services,#estimating,#takeoffs,#cad,#documents,#coordination,#admin,#scheduling,#support,#why,#industries,#roofing,#civil,#commercial,#residential,#industrial,#renewable,#process,#contact{
+  scroll-margin-top:132px;
+}
+.nav a,.footer a,.service-link,.btn,.float{cursor:pointer;}
+
+@media(max-width:820px){
+  html{scroll-padding-top:178px;}
+  #home,#services,#estimating,#takeoffs,#cad,#documents,#coordination,#admin,#scheduling,#support,#why,#industries,#roofing,#civil,#commercial,#residential,#industrial,#renewable,#process,#contact{
+    scroll-margin-top:178px;
+  }
+}
+
+
+
+/* =========================================================
+   MOBILE-FIRST UPGRADE: same website, optimized mobile layout
+   ========================================================= */
+@media (max-width: 900px){
+  body{padding-bottom:74px;}
+  .header{
+    height:72px !important;
+    min-height:72px !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:12px 5% !important;
+    gap:12px !important;
+  }
+  .brand{width:auto !important;}
+  .logo-mark{width:40px;height:40px;}
+  .logo-text{font-size:18px;}
+  .logo-text span{font-size:9px;letter-spacing:2.4px;}
+  .mobile-menu{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    min-width:46px;
+    height:42px;
+    padding:0 12px !important;
+    border-radius:8px;
+    background:rgba(255,255,255,.06);
+  }
+  .nav{
+    display:none !important;
+    position:absolute !important;
+    top:72px !important;
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+    background:rgba(3,16,31,.98) !important;
+    border-top:1px solid rgba(255,255,255,.08) !important;
+    border-bottom:3px solid var(--blue) !important;
+    padding:18px 5% 22px !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:0 !important;
+    max-height:calc(100vh - 72px);
+    overflow-y:auto;
+  }
+  .nav.active{display:flex !important;}
+  .nav a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding:15px 2px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:13px !important;
+    white-space:normal !important;
+  }
+  .nav a:after{content:'›';opacity:.45;font-size:18px;}
+  .nav-cta{
+    margin-top:14px;
+    justify-content:center !important;
+    border-bottom:0 !important;
+    border-radius:8px !important;
+    padding:14px 18px !important;
+    background:var(--blue) !important;
+  }
+  .nav-cta:after{display:none;}
+
+  html{scroll-padding-top:92px !important;}
+  #home,#services,#estimating,#takeoffs,#cad,#documents,#coordination,#admin,#scheduling,#support,#why,#industries,#roofing,#civil,#commercial,#residential,#industrial,#renewable,#process,#contact{scroll-margin-top:92px !important;}
+
+  .hero{
+    padding-top:72px !important;
+    padding-bottom:30px !important;
+  }
+  .hero-bg{top:72px !important;opacity:.45 !important;}
+  .hero-bg:before{background:linear-gradient(180deg, rgba(3,16,31,.96) 0%, rgba(3,16,31,.90) 62%, rgba(3,16,31,.74) 100%) !important;}
+  .hero-content{
+    padding:50px 6% 24px !important;
+  }
+  h1{font-size:clamp(34px, 10vw, 48px) !important;line-height:1.06 !important;letter-spacing:-1px !important;}
+  .hero p{font-size:15.5px !important;line-height:1.6 !important;margin-bottom:26px !important;}
+  .hero-bullets{gap:10px !important;margin-bottom:28px !important;}
+  .hero-bullets div{font-size:13.5px !important;align-items:flex-start !important;}
+  .hero-actions{gap:12px !important;}
+  .hero-actions .btn{width:100% !important;max-width:none !important;}
+  .stats-bar{
+    grid-template-columns:1fr !important;
+    margin:0 6% !important;
+    border-radius:12px !important;
+  }
+  .stat{padding:18px !important;}
+  .stat strong{font-size:20px !important;}
+
+  .section{padding:68px 6% !important;}
+  .section-head{margin-bottom:36px !important;}
+  .section h2{font-size:30px !important;}
+  .section-head p{font-size:15.5px !important;}
+  .services-grid,.process-grid{grid-template-columns:1fr !important;gap:16px !important;}
+  .service-card,.step{padding:24px !important;min-height:auto !important;}
+  .split,.contact{grid-template-columns:1fr !important;gap:36px !important;}
+  .image-panel{height:360px !important;}
+  .content-item{padding:18px !important;}
+  .industries{padding:68px 6% !important;}
+  .industry-grid{grid-template-columns:1fr 1fr !important;gap:14px !important;}
+  .industry{padding:22px 12px !important;}
+  .cta{
+    margin:0 6% 54px !important;
+    padding:30px 24px !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    text-align:left !important;
+  }
+  .cta h2{font-size:27px !important;}
+  .cta .btn{width:100% !important;max-width:none !important;}
+  .contact{padding:68px 6% !important;}
+  .contact h2{font-size:34px !important;}
+  .form-card{padding:24px !important;}
+  .form-grid{grid-template-columns:1fr !important;}
+  .footer-main{padding:42px 6% 32px !important;grid-template-columns:1fr !important;}
+  .footer-menu-grid{grid-template-columns:1fr !important;gap:26px !important;}
+  .float{display:none !important;}
+  .mobile-quick-actions{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1001;
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(2,9,18,.96);
+    border-top:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .mobile-quick-actions a{
+    min-height:48px;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+  }
+  .mobile-quick-actions .call{background:#fff;color:#071523;}
+  .mobile-quick-actions .quote{background:var(--yellow);color:#071523;}
+}
+
+@media (min-width: 901px){
+  .mobile-quick-actions{display:none !important;}
+}
+
+@media (max-width: 480px){
+  .industry-grid{grid-template-columns:1fr !important;}
+  .panel-card{left:14px !important;right:14px !important;bottom:14px !important;padding:18px !important;}
+  .contact-list div{padding:16px !important;}
+  input,select,textarea{font-size:16px !important;}
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Horizon Stone Pro LLC",
+  "url":"https://www.horizonstonepro.com",
+  "telephone":"+1-770-355-8848",
+  "email":"info@horizonstonepro.com",
+  "areaServed":"United States",
+  "description":"Construction support services including estimating, quantity takeoffs, CAD drafting, document control, project coordination and construction administration for contractors across the United States.",
+  "serviceType":["Construction Estimating","Quantity Takeoffs","CAD Drafting","Document Control","Project Coordination","Construction Administration"]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <a href="#home" class="brand" aria-label="Horizon Stone Pro Home">
+    <div class="logo-mark"></div>
+    <div class="logo-text">HORIZON <span>STONE PRO</span></div>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#industries">Industries</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta service-link" data-service="Other">Request a Quote</a>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">MENU</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true">
+    <img class="hero-main-img" src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1800&q=85" alt="Construction plans on-site review" />
+  </div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">Professional Construction Support</div>
+    <h1>Your Back-Office Support Team Behind Every <span>Successful Build.</span></h1>
+    <p>Horizon Stone Pro empowers contractors to estimate faster, control submittals, manage technical drawings, and protect margins without growing internal payroll.</p>
+    <div class="hero-bullets">
+      <div><span class="check">✓</span> Precise Estimating & Detailed Takeoffs</div>
+      <div><span class="check">✓</span> Professional CAD Drafting, Exhibits & As-Builts</div>
+      <div><span class="check">✓</span> Seamless Document Control, RFIs & Logs</div>
+      <div><span class="check">✓</span> 100% Remote, Dedicated Support Nationwide</div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn" href="#services">
+        Our Services 
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 15"></polyline></svg>
+      </a>
+      <a class="btn btn-yellow" href="tel:7703558848">Call (770) 355-8848</a>
     </div>
   </div>
-
-  <div class="form-card">
-    <h3>Request a Quote</h3>
-    <p>Fill out the parameters below and our engineering desk will respond within 24 hours.</p>
-    
-    <form id="contact-form">
-      <div class="form-grid">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" name="first_name" required placeholder="John">
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" name="last_name" required placeholder="Doe">
-        </div>
-        <div class="form-group full">
-          <label>Email Address</label>
-          <input type="email" name="email" required placeholder="john@company.com">
-        </div>
-        <div class="form-group full">
-          <label>Company Name</label>
-          <input type="text" name="company" required placeholder="Horizon Builders LLC">
-        </div>
-        <div class="form-group full">
-          <label>Service Needed</label>
-          <select name="service" id="service" required>
-            <option value="">Select a service...</option>
-            <option value="Estimating">Construction Estimating & Takeoffs</option>
-            <option value="CAD">CAD Drafting & Shop Drawings</option>
-            <option value="Document Control">Document Control & Administration</option>
-            <option value="Coordination">Project Coordination Support</option>
-            <option value="Other">Other Remote Support</option>
-          </select>
-        </div>
-        <div class="form-group full">
-          <label>Message / Project Details</label>
-          <textarea name="message" required placeholder="Tell us about your project scope, timeline, and requirements..."></textarea>
-        </div>
+  
+  <div class="stats-bar reveal">
+    <div class="stat">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
       </div>
-      <button type="submit" class="btn submit">Send Message</button>
-    </form>
-    
-    <div id="form-success" style="display: none; text-align: center; padding: 40px 20px;">
-      <div style="width: 60px; height: 60px; background: #eef4fc; color: var(--blue); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 16px;">✓</div>
-      <h4 style="font-size: 22px; color: var(--navy); margin-bottom: 8px;">Message Sent Successfully!</h4>
-      <p style="color: var(--muted); font-size: 15px;">Thank you for reaching out. Our engineering desk will review your requirements and get back to you within 24 hours.</p>
+      <div><strong>USA</strong><span>Nationwide Support</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+      </div>
+      <div><strong>6+</strong><span>Core Services</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </div>
+      <div><strong>Fast</strong><span>Remote Delivery</span></div>
+    </div>
+    <div class="stat">
+      <div class="stat-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+      </div>
+      <div><strong>Lean</strong><span>Lower Overhead</span></div>
     </div>
   </div>
 </section>
+
+<section class="section" id="services">
+  <div class="section-head reveal">
+    <div class="label">Expert Capabilities</div>
+    <h2>Services Designed to Keep Your Operations <span>Structured and Profitable.</span></h2>
+    <p>We take care of the crucial technical, visual, and administrative tasks required across a project's entire lifecycle.</p>
+  </div>
+  
+  <div class="services-grid">
+    <article class="service-card reveal" id="estimating">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      </div>
+      <h3>Estimating & Bid Support</h3>
+      <p>Detailed itemized costing, strict scope analysis, bid package assembly, and structural proposal compilation.</p>
+      <a class="service-link" href="#contact" data-service="Estimating">Request Estimating &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="takeoffs">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+      </div>
+      <h3>Quantity Takeoffs</h3>
+      <p>Highly precise material, equipment, and structural component metrics extracted clean from blueprints.</p>
+      <a class="service-link" href="#contact" data-service="Quantity Takeoffs">Request Takeoffs &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="cad">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+      </div>
+      <h3>CAD Drafting</h3>
+      <p>Clean technical drawing updates, redline revisions, layout displays, as-built mapping, and detail drafting.</p>
+      <a class="service-link" href="#contact" data-service="CAD Drafting">Request CAD Support &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="documents">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+      </div>
+      <h3>Document Control</h3>
+      <p>Systematic lifecycle organization and logging of submittals, vendor RFIs, transmittals, and field records.</p>
+      <a class="service-link" href="#contact" data-service="Document Control">Request Document Control &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="coordination">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
+      <h3>Project Coordination</h3>
+      <p>Proactive stakeholder management, task log tracking, engineer updates, and cross-party communication flows.</p>
+      <a class="service-link" href="#contact" data-service="Project Coordination">Request Coordination &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="admin">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      </div>
+      <h3>Construction Administration</h3>
+      <p>Clean administrative support for operational change tracking orders, purchase accounts, and closeout records.</p>
+      <a class="service-link" href="#contact" data-service="Construction Administration">Request Admin Support &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="scheduling">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      </div>
+      <h3>Scheduling Support</h3>
+      <p>Look-ahead tracking schedules, critical milestone monitoring, delay records, and progress logging.</p>
+      <a class="service-link" href="#contact" data-service="Scheduling Support">Request Scheduling &rarr;</a>
+    </article>
+
+    <article class="service-card reveal" id="support">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l-7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+      </div>
+      <h3>Project Support Plans</h3>
+      <p>Custom ongoing monthly allocations or dedicated per-project arrangements built explicitly for your pipeline.</p>
+      <a class="service-link" href="#contact" data-service="Other">Build My Plan &rarr;</a>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="why">
+  <div class="split">
+    <div class="image-panel reveal">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85" alt="Construction project coordination" />
+      <div class="panel-card">
+        <strong>More time building. Less time buried in paperwork.</strong>
+        <p>We become the back-office and technical support extension your team needs to stay highly productive.</p>
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <div class="label">Strategic Advantage</div>
+      <h2>Built for Contractors Who Demand Execution.</h2>
+      <p style="color:var(--muted); line-height:1.65; font-size:17px; margin-top:12px;">Our workflows scale your capacity immediately, reduce corporate administration bottlenecks, and accelerate response times to bids, engineers, and project owners.</p>
+      
+      <div class="content-list">
+        <div class="content-item">
+          <span class="check">✓</span>
+          <div>
+            <h3>Minimize Payroll Overhead</h3>
+            <p>Access high-tier back-office support mechanics without incurring fixed internal benefits or onboarding drag.</p>
+          </div>
+        </div>
+        <div class="content-item">
+          <span class="check">✓</span>
+          <div>
+            <h3>Institutional Organization</h3>
+            <p>Keep change tracking logs, drawing sets, and record models completely secure, crisp, and verifiable.</p>
+          </div>
+        </div>
+        <div class="content-item">
+          <span class="check">✓</span>
+          <div>
+            <h3>Accelerate Turnarounds</h3>
+            <p>Maintain momentum across active jobsites with systematic, punctual submittal and drafting operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="industries" id="industries">
+  <div class="label">Sectors Enabled</div>
+  <h2>Industries We Empower Nationwide</h2>
+  <p>Horizon Stone Pro aligns with trade partners across multiple markets, ensuring robust technical execution for distinct field applications.</p>
+  
+  <div class="industry-grid">
+    <div class="industry reveal" id="roofing">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+      <strong>Roofing</strong>
+    </div>
+    <div class="industry reveal" id="civil">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83 2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+      <strong>Civil</strong>
+    </div>
+    <div class="industry reveal" id="commercial">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg></div>
+      <strong>Commercial</strong>
+    </div>
+    <div class="industry reveal" id="residential">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
+      <strong>Residential</strong>
+    </div>
+    <div class="industry reveal" id="industrial">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 21H2V3l7 4 7-4 6 4v14z"></path><path d="M14 17H10v4h4v-4z"></path></svg></div>
+      <strong>Industrial</strong>
+    </div>
+    <div class="industry reveal" id="renewable">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div>
+      <strong>Renewable Energy / BESS</strong>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="section-head reveal">
+    <div class="label">Operational Pipeline</div>
+    <h2>How We Support Your Project</h2>
+    <p>A simple, transparent onboarding sequence designed to plug straight into your standard workflows.</p>
+  </div>
+  <div class="process-grid">
+    <div class="step reveal"><div class="num">01</div><h3>Send Request</h3><p>Upload project documents, blueprint links, spec books, or specific execution directives.</p></div>
+    <div class="step reveal"><div class="num">02</div><h3>Scope Review</h3><p>Our managers evaluate information dependencies to fix target parameters and deliverables.</p></div>
+    <div class="step reveal"><div class="num">03</div><h3>Core Execution</h3><p>We build out your takeoffs, drafting requests, document registers, or scheduling trackers.</p></div>
+    <div class="step reveal"><div class="num">04</div><h3>Direct Delivery</h3><p>Your team receives accurate, clean files ready to drop straight into field loops or client reviews.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Ready to optimize your project lifecycles?</h2>
+    <p>Transmit your blueprint layouts or operational scopes and secure an structural plan line.</p>
+  </div>
+  <a class="btn btn-yellow service-link" href="#contact" data-service="Other">Request Your Quote &rarr;</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="eyebrow">Engagement Center</div>
+    <h2>Let’s Structuralize Your Remote Operations.</h2>
+    <p>Specify your current workflow friction. Our team manages complete estimating runs, deep drafting updates, or comprehensive project logging support.</p>
+    <div class="contact-list">
+      <div><strong>Primary Operations</strong><a href="mailto:info@horizonstonepro.com">info@horizonstonepro.com</a></div>
+      <div><strong>Account Solutions</strong><a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a></div>
+      <div><strong>Telephone Support</strong><a href="tel:7703558848">(770) 355-8848</a></div>
+      <div><strong>Territorial Domain</strong><span>Dedicated Back-Office Support Across the United States</span></div>
+    </div>
+  </div>
+  
+  <form class="form-card reveal" action="https://formsubmit.co/sales@horizonstonepro.com" method="POST">
+    <h3>Request Support</h3>
+    <p>Complete execution parameters below for rapid scoping turnaround.</p>
+    <input type="hidden" name="_subject" value="New Horizon Stone Pro Website Request" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_captcha" value="false" />
+    <div class="form-grid">
+      <div class="form-group"><label for="firstName">First Name *</label><input id="firstName" name="First Name" type="text" required /></div>
+      <div class="form-group"><label for="lastName">Last Name *</label><input id="lastName" name="Last Name" type="text" required /></div>
+      <div class="form-group"><label for="company">Company</label><input id="company" name="Company" type="text" /></div>
+      <div class="form-group"><label for="email">Email *</label><input id="email" name="Email" type="email" required /></div>
+      <div class="form-group"><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" /></div>
+      <div class="form-group"><label for="service">Service Needed</label>
+        <select id="service" name="Service Needed">
+          <option>Estimating</option>
+          <option>Quantity Takeoffs</option>
+          <option>CAD Drafting</option>
+          <option>Document Control</option>
+          <option>Project Coordination</option>
+          <option>Construction Administration</option>
+          <option>Scheduling Support</option>
+          <option>Roofing Support</option>
+          <option>Civil Support</option>
+          <option>Commercial Support</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group full"><label for="message">Project Description *</label><textarea id="message" name="Project Description" required placeholder="Detail explicit workflow deliverables, target scope dates, drawing links, and deadline bounds..."></textarea></div>
+    </div>
+    <button class="btn submit" type="submit">Send Request</button>
+  </form>
+</section>
+</main>
 
 <footer class="footer">
   <div class="footer-main">
     <div class="footer-brand-card">
       <div class="footer-logo-row">
         <div class="footer-logo-mark"></div>
-        <div class="footer-logo-text">Horizon Stone Pro<span>Technical Support Services</span></div>
+        <div class="footer-logo-text">HORIZON <span>STONE PRO</span></div>
       </div>
-      <p>Providing specialized remote support services for construction contractors across the United States. Delivering high-precision quantity takeoffs, professional CAD drafting, and robust administrative project coordination.</p>
-      <div class="footer-badge">National Coverage</div>
+      <p>Remote construction support for contractors that need estimating, quantity takeoffs, CAD drafting, document control, project coordination, and construction administration without adding full-time payroll.</p>
+      <div class="footer-badge">Nationwide Construction Support</div>
     </div>
-    
+
     <div class="footer-menu-grid">
       <div class="footer-col">
         <h4>Services</h4>
-        <a href="#services" class="service-link" data-service="Estimating">Estimating & Takeoffs</a>
-        <a href="#services" class="service-link" data-service="CAD">CAD & Shop Drawings</a>
-        <a href="#services" class="service-link" data-service="Document Control">Document Control</a>
-        <a href="#services" class="service-link" data-service="Coordination">Project Coordination</a>
+        <a href="#estimating">Estimating & Bid Support</a>
+        <a href="#takeoffs">Quantity Takeoffs</a>
+        <a href="#cad">CAD Drafting</a>
+        <a href="#documents">Document Control</a>
+        <a href="#coordination">Project Coordination</a>
+        <a href="#admin">Construction Administration</a>
+        <a href="#scheduling">Scheduling Support</a>
+        <a href="#support">Project Support Plans</a>
       </div>
+
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <a href="#roofing">Roofing</a>
+        <a href="#civil">Civil & Sitework</a>
+        <a href="#commercial">Commercial Construction</a>
+        <a href="#residential">Residential</a>
+        <a href="#industrial">Industrial</a>
+        <a href="#renewable">Renewable Energy / BESS</a>
+      </div>
+
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="#about">About Our Desk</a>
-        <a href="#process">How We Work</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Horizon Stone Pro</a>
         <a href="#industries">Industries</a>
-        <a href="#contact">Request Quote</a>
-      </div>
-      <div class="footer-col">
-        <h4>Solutions</h4>
-        <a href="#services" class="service-link" data-service="Estimating">Roofing Takeoffs</a>
-        <a href="#services" class="service-link" data-service="Estimating">Civil Estimation</a>
-        <a href="#services" class="service-link" data-service="CAD">As-Built Assemblies</a>
-        <a href="#services" class="service-link" data-service="Other">Bid Support</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Request Support</a>
       </div>
     </div>
 
     <div class="footer-contact">
-      <h4>Direct Contact</h4>
+      <h4>Contact</h4>
       <div class="footer-contact-card">
-        <div class="footer-contact-label">Email Support</div>
+        <div class="footer-contact-label">Email</div>
+        <a href="mailto:info@horizonstonepro.com">info@horizonstonepro.com</a>
+
+        <div class="footer-contact-label">Sales</div>
         <a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a>
-        <div class="footer-contact-label">Phone Desk</div>
-        <a href="tel:+17703558848">+1 (770) 355-8848</a>
-        <div class="footer-contact-label">Coverage Area</div>
-        <span>All US Timezones</span>
-        <a href="#contact" class="footer-mini-cta">Get a Quote</a>
+
+        <div class="footer-contact-label">Phone</div>
+        <a href="tel:7703558848">(770) 355-8848</a>
+
+        <div class="footer-contact-label">Service Area</div>
+        <span>United States</span>
+
+        <a class="footer-mini-cta service-link" href="#contact" data-service="Other">Request a Quote</a>
       </div>
     </div>
   </div>
@@ -400,13 +1322,21 @@ h1 span { color: var(--yellow) }
   <div class="footer-bottom">
     <div>&copy; 2026 Horizon Stone Pro LLC. All rights reserved.</div>
     <div class="footer-bottom-links">
-      <a href="#privacy">Privacy Policy</a>
-      <a href="#terms">Terms of Service</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#industries">Industries</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </footer>
 
-<a class="float" href="#contact">Get a Quote</a>
+<a class="float service-link" href="#contact" data-service="Other">Request a Quote &rarr;</a>
+<div class="mobile-quick-actions" aria-label="Mobile quick actions">
+  <a class="call" href="tel:7703558848">Call Now</a>
+  <a class="quote service-link" href="#contact" data-service="Other">Get a Quote</a>
+</div>
+
 
 <script>
 const nav=document.getElementById('nav');
@@ -416,7 +1346,13 @@ if(mobileMenu&&nav){
 }
 
 const reveals=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver(entries=>{\n  entries.forEach(entry=>{\n    if(entry.isIntersecting){\n      entry.target.classList.add('show');\n    }\n  });\n},{threshold:.1});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:.1});
 reveals.forEach(el=>observer.observe(el));
 
 function getHeaderOffset(){
@@ -446,47 +1382,11 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
     const top=target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
     window.scrollTo({top:Math.max(top,0),behavior:'smooth'});
     history.pushState(null,'',href);
+
+    if(nav && nav.classList.contains('active')){
+      nav.classList.remove('active');
+    }
   });
-});
-
-// ENVÍO DE FORMULARIO POR OBJETO JSON SEGURO PARA AJAX
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const form = this;
-    const successMessage = document.getElementById('form-success');
-
-    const data = {
-        first_name: form.first_name.value,
-        last_name: form.last_name.value,
-        email: form.email.value,
-        company: form.company.value,
-        service: form.service.value,
-        message: form.message.value
-    };
-
-    fetch('https://formsubmit.co/ajax/sales@horizonstonepro.com', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response error');
-        }
-        return response.json();
-    })
-    .then(res => {
-        form.style.display = 'none';
-        successMessage.style.display = 'block';
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was a problem submitting your form. Please try again.');
-    });
 });
 </script>
 </body>
