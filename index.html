@@ -807,587 +807,110 @@ html{scroll-padding-top:132px;}
     border-radius:8px;
     background:rgba(255,255,255,.06);
   }
-  .nav{
-    display:none !important;
-    position:absolute !important;
-    top:72px !important;
-    left:0 !important;
-    right:0 !important;
-    width:100% !important;
-    background:rgba(3,16,31,.98) !important;
-    border-top:1px solid rgba(255,255,255,.08) !important;
-    border-bottom:3px solid var(--blue) !important;
-    padding:18px 5% 22px !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    gap:0 !important;
-    max-height:calc(100vh - 72px);
-    overflow-y:auto;
-  }
-  .nav.active{display:flex !important;}
-  .nav a{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    width:100%;
-    padding:15px 2px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    font-size:13px !important;
-    white-space:normal !important;
-  }
-  .nav a:after{content:'›';opacity:.45;font-size:18px;}
-  .nav-cta{
-    margin-top:14px;
-    justify-content:center !important;
-    border-bottom:0 !important;
-    border-radius:8px !important;
-    padding:14px 18px !important;
-    background:var(--blue) !important;
-  }
-  .nav-cta:after{display:none;}
-
-  html{scroll-padding-top:92px !important;}
-  #home,#services,#estimating,#takeoffs,#cad,#documents,#coordination,#admin,#scheduling,#support,#why,#industries,#roofing,#civil,#commercial,#residential,#industrial,#renewable,#process,#contact{scroll-margin-top:92px !important;}
-
-  .hero{
-    padding-top:72px !important;
-    padding-bottom:30px !important;
-  }
-  .hero-bg{top:72px !important;opacity:.45 !important;}
-  .hero-bg:before{background:linear-gradient(180deg, rgba(3,16,31,.96) 0%, rgba(3,16,31,.90) 62%, rgba(3,16,31,.74) 100%) !important;}
-  .hero-content{
-    padding:50px 6% 24px !important;
-  }
-  h1{font-size:clamp(34px, 10vw, 48px) !important;line-height:1.06 !important;letter-spacing:-1px !important;}
-  .hero p{font-size:15.5px !important;line-height:1.6 !important;margin-bottom:26px !important;}
-  .hero-bullets{gap:10px !important;margin-bottom:28px !important;}
-  .hero-bullets div{font-size:13.5px !important;align-items:flex-start !important;}
-  .hero-actions{gap:12px !important;}
-  .hero-actions .btn{width:100% !important;max-width:none !important;}
-  .stats-bar{
-    grid-template-columns:1fr !important;
-    margin:0 6% !important;
-    border-radius:12px !important;
-  }
-  .stat{padding:18px !important;}
-  .stat strong{font-size:20px !important;}
-
-  .section{padding:68px 6% !important;}
-  .section-head{margin-bottom:36px !important;}
-  .section h2{font-size:30px !important;}
-  .section-head p{font-size:15.5px !important;}
-  .services-grid,.process-grid{grid-template-columns:1fr !important;gap:16px !important;}
-  .service-card,.step{padding:24px !important;min-height:auto !important;}
-  .split,.contact{grid-template-columns:1fr !important;gap:36px !important;}
-  .image-panel{height:360px !important;}
-  .content-item{padding:18px !important;}
-  .industries{padding:68px 6% !important;}
-  .industry-grid{grid-template-columns:1fr 1fr !important;gap:14px !important;}
-  .industry{padding:22px 12px !important;}
-  .cta{
-    margin:0 6% 54px !important;
-    padding:30px 24px !important;
-    flex-direction:column !important;
-    align-items:stretch !important;
-    text-align:left !important;
-  }
-  .cta h2{font-size:27px !important;}
-  .cta .btn{width:100% !important;max-width:none !important;}
-  .contact{padding:68px 6% !important;}
-  .contact h2{font-size:34px !important;}
-  .form-card{padding:24px !important;}
-  .form-grid{grid-template-columns:1fr !important;}
-  .footer-main{padding:42px 6% 32px !important;grid-template-columns:1fr !important;}
-  .footer-menu-grid{grid-template-columns:1fr !important;gap:26px !important;}
-  .float{display:none !important;}
-  .mobile-quick-actions{
-    display:grid !important;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:1001;
-    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-    background:rgba(2,9,18,.96);
-    border-top:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-  }
-  .mobile-quick-actions a{
-    min-height:48px;
-    border-radius:8px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:.3px;
-  }
-  .mobile-quick-actions .call{background:#fff;color:#071523;}
-  .mobile-quick-actions .quote{background:var(--yellow);color:#071523;}
 }
-
-@media (min-width: 901px){
-  .mobile-quick-actions{display:none !important;}
-}
-
-@media (max-width: 480px){
-  .industry-grid{grid-template-columns:1fr !important;}
-  .panel-card{left:14px !important;right:14px !important;bottom:14px !important;padding:18px !important;}
-  .contact-list div{padding:16px !important;}
-  input,select,textarea{font-size:16px !important;}
-}
-
 </style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Horizon Stone Pro LLC",
-  "url":"https://www.horizonstonepro.com",
-  "telephone":"+1-770-355-8848",
-  "email":"info@horizonstonepro.com",
-  "areaServed":"United States",
-  "description":"Construction support services including estimating, quantity takeoffs, CAD drafting, document control, project coordination and construction administration for contractors across the United States.",
-  "serviceType":["Construction Estimating","Quantity Takeoffs","CAD Drafting","Document Control","Project Coordination","Construction Administration"]
-}
-</script>
 </head>
 <body>
 
-<header class="header">
-  <a href="#home" class="brand" aria-label="Horizon Stone Pro Home">
-    <div class="logo-mark"></div>
-    <div class="logo-text">HORIZON <span>STONE PRO</span></div>
-  </a>
-  <nav class="nav" id="nav" aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#industries">Industries</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="nav-cta service-link" data-service="Other">Request a Quote</a>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">MENU</div>
-</header>
-
-<main>
-<section class="hero" id="home">
-  <div class="hero-bg" aria-hidden="true">
-    <img class="hero-main-img" src="https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1800&q=85" alt="Construction plans on-site review" />
-  </div>
-  <div class="hero-content reveal">
-    <div class="eyebrow">Professional Construction Support</div>
-    <h1>Your Back-Office Support Team Behind Every <span>Successful Build.</span></h1>
-    <p>Horizon Stone Pro empowers contractors to estimate faster, control submittals, manage technical drawings, and protect margins without growing internal payroll.</p>
-    <div class="hero-bullets">
-      <div><span class="check">✓</span> Precise Estimating & Detailed Takeoffs</div>
-      <div><span class="check">✓</span> Professional CAD Drafting, Exhibits & As-Builts</div>
-      <div><span class="check">✓</span> Seamless Document Control, RFIs & Logs</div>
-      <div><span class="check">✓</span> 100% Remote, Dedicated Support Nationwide</div>
-    </div>
-    <div class="hero-actions">
-      <a class="btn" href="#services">
-        Our Services 
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 15"></polyline></svg>
-      </a>
-      <a class="btn btn-yellow" href="tel:7703558848">Call (770) 355-8848</a>
-    </div>
-  </div>
-  
-  <div class="stats-bar reveal">
-    <div class="stat">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-      </div>
-      <div><strong>USA</strong><span>Nationwide Support</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-      </div>
-      <div><strong>6+</strong><span>Core Services</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      </div>
-      <div><strong>Fast</strong><span>Remote Delivery</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-      </div>
-      <div><strong>Lean</strong><span>Lower Overhead</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="services">
-  <div class="section-head reveal">
-    <div class="label">Expert Capabilities</div>
-    <h2>Services Designed to Keep Your Operations <span>Structured and Profitable.</span></h2>
-    <p>We take care of the crucial technical, visual, and administrative tasks required across a project's entire lifecycle.</p>
-  </div>
-  
-  <div class="services-grid">
-    <article class="service-card reveal" id="estimating">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-      </div>
-      <h3>Estimating & Bid Support</h3>
-      <p>Detailed itemized costing, strict scope analysis, bid package assembly, and structural proposal compilation.</p>
-      <a class="service-link" href="#contact" data-service="Estimating">Request Estimating &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="takeoffs">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
-      </div>
-      <h3>Quantity Takeoffs</h3>
-      <p>Highly precise material, equipment, and structural component metrics extracted clean from blueprints.</p>
-      <a class="service-link" href="#contact" data-service="Quantity Takeoffs">Request Takeoffs &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="cad">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-      </div>
-      <h3>CAD Drafting</h3>
-      <p>Clean technical drawing updates, redline revisions, layout displays, as-built mapping, and detail drafting.</p>
-      <a class="service-link" href="#contact" data-service="CAD Drafting">Request CAD Support &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="documents">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-      </div>
-      <h3>Document Control</h3>
-      <p>Systematic lifecycle organization and logging of submittals, vendor RFIs, transmittals, and field records.</p>
-      <a class="service-link" href="#contact" data-service="Document Control">Request Document Control &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="coordination">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-      </div>
-      <h3>Project Coordination</h3>
-      <p>Proactive stakeholder management, task log tracking, engineer updates, and cross-party communication flows.</p>
-      <a class="service-link" href="#contact" data-service="Project Coordination">Request Coordination &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="admin">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-      </div>
-      <h3>Construction Administration</h3>
-      <p>Clean administrative support for operational change tracking orders, purchase accounts, and closeout records.</p>
-      <a class="service-link" href="#contact" data-service="Construction Administration">Request Admin Support &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="scheduling">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-      </div>
-      <h3>Scheduling Support</h3>
-      <p>Look-ahead tracking schedules, critical milestone monitoring, delay records, and progress logging.</p>
-      <a class="service-link" href="#contact" data-service="Scheduling Support">Request Scheduling &rarr;</a>
-    </article>
-
-    <article class="service-card reveal" id="support">
-      <div class="icon">
-        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l-7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-      </div>
-      <h3>Project Support Plans</h3>
-      <p>Custom ongoing monthly allocations or dedicated per-project arrangements built explicitly for your pipeline.</p>
-      <a class="service-link" href="#contact" data-service="Other">Build My Plan &rarr;</a>
-    </article>
-  </div>
-</section>
-
-<section class="section alt" id="why">
-  <div class="split">
-    <div class="image-panel reveal">
-      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85" alt="Construction project coordination" />
-      <div class="panel-card">
-        <strong>More time building. Less time buried in paperwork.</strong>
-        <p>We become the back-office and technical support extension your team needs to stay highly productive.</p>
+  <!-- SECCIÓN FORMULARIO DE CONTACTO -->
+  <section class="contact" id="contact">
+    <div>
+      <h2>Let's build something <span>together</span></h2>
+      <p>Ready to streamline your preconstruction workflow? Contact us today to discuss your upcoming project requirements.</p>
+      <div class="contact-list">
+        <div>
+          <strong>Email us</strong>
+          <a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a>
+        </div>
+        <div>
+          <strong>Call us</strong>
+          <a href="tel:+14043977699">+1 (404) 397-7699</a>
+        </div>
       </div>
     </div>
-    
-    <div class="reveal">
-      <div class="label">Strategic Advantage</div>
-      <h2>Built for Contractors Who Demand Execution.</h2>
-      <p style="color:var(--muted); line-height:1.65; font-size:17px; margin-top:12px;">Our workflows scale your capacity immediately, reduce corporate administration bottlenecks, and accelerate response times to bids, engineers, and project owners.</p>
+
+    <div class="form-card">
+      <h3>Request a Quote</h3>
+      <p>Submit your project details and drawings below.</p>
       
-      <div class="content-list">
-        <div class="content-item">
-          <span class="check">✓</span>
-          <div>
-            <h3>Minimize Payroll Overhead</h3>
-            <p>Access high-tier back-office support mechanics without incurring fixed internal benefits or onboarding drag.</p>
+      <!-- FORMULARIO CORREGIDO CON ID PARA AJAX -->
+      <form id="contact-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" required placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" required placeholder="Doe">
+          </div>
+          <div class="form-group full">
+            <label>Company Email</label>
+            <input type="email" name="email" required placeholder="john@company.com">
+          </div>
+          <div class="form-group full">
+            <label>Company Name</label>
+            <input type="text" name="company" required placeholder="EPC Engineering LLC">
+          </div>
+          <div class="form-group full">
+            <label>Service Needed</label>
+            <select name="service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="estimating">Construction Estimating</option>
+              <option value="takeoffs">Quantity Takeoffs</option>
+              <option value="cad">CAD Drafting</option>
+              <option value="document_control">Document Control</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Project Details</label>
+            <textarea name="message" required placeholder="Tell us about your project timeline and required scope..."></textarea>
           </div>
         </div>
-        <div class="content-item">
-          <span class="check">✓</span>
-          <div>
-            <h3>Institutional Organization</h3>
-            <p>Keep change tracking logs, drawing sets, and record models completely secure, crisp, and verifiable.</p>
-          </div>
-        </div>
-        <div class="content-item">
-          <span class="check">✓</span>
-          <div>
-            <h3>Accelerate Turnarounds</h3>
-            <p>Maintain momentum across active jobsites with systematic, punctual submittal and drafting operations.</p>
-          </div>
-        </div>
+        <button type="submit" class="btn submit">Send Message</button>
+      </form>
+
+      <!-- CONTENEDOR OCULTO PARA EL MENSAJE DE ÉXITO -->
+      <div id="form-success" style="display:none; color: var(--blue); font-weight: 700; margin-top: 20px; text-align: center; padding: 15px; border: 2px solid var(--blue); border-radius: 8px; background: var(--soft);">
+         Thank you! Your message has been sent successfully. We'll get back to you shortly.
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="industries" id="industries">
-  <div class="label">Sectors Enabled</div>
-  <h2>Industries We Empower Nationwide</h2>
-  <p>Horizon Stone Pro aligns with trade partners across multiple markets, ensuring robust technical execution for distinct field applications.</p>
-  
-  <div class="industry-grid">
-    <div class="industry reveal" id="roofing">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
-      <strong>Roofing</strong>
-    </div>
-    <div class="industry reveal" id="civil">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83 2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
-      <strong>Civil</strong>
-    </div>
-    <div class="industry reveal" id="commercial">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg></div>
-      <strong>Commercial</strong>
-    </div>
-    <div class="industry reveal" id="residential">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
-      <strong>Residential</strong>
-    </div>
-    <div class="industry reveal" id="industrial">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 21H2V3l7 4 7-4 6 4v14z"></path><path d="M14 17H10v4h4v-4z"></path></svg></div>
-      <strong>Industrial</strong>
-    </div>
-    <div class="industry reveal" id="renewable">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div>
-      <strong>Renewable Energy / BESS</strong>
-    </div>
-  </div>
-</section>
+  <!-- SCRIPT DE ENVÍO SILENCIOSO (AJAX) -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Detiene la redirección automática
 
-<section class="section" id="process">
-  <div class="section-head reveal">
-    <div class="label">Operational Pipeline</div>
-    <h2>How We Support Your Project</h2>
-    <p>A simple, transparent onboarding sequence designed to plug straight into your standard workflows.</p>
-  </div>
-  <div class="process-grid">
-    <div class="step reveal"><div class="num">01</div><h3>Send Request</h3><p>Upload project documents, blueprint links, spec books, or specific execution directives.</p></div>
-    <div class="step reveal"><div class="num">02</div><h3>Scope Review</h3><p>Our managers evaluate information dependencies to fix target parameters and deliverables.</p></div>
-    <div class="step reveal"><div class="num">03</div><h3>Core Execution</h3><p>We build out your takeoffs, drafting requests, document registers, or scheduling trackers.</p></div>
-    <div class="step reveal"><div class="num">04</div><h3>Direct Delivery</h3><p>Your team receives accurate, clean files ready to drop straight into field loops or client reviews.</p></div>
-  </div>
-</section>
+        const form = this;
+        const formData = new FormData(form);
+        const successMessage = document.getElementById('form-success');
 
-<section class="cta">
-  <div>
-    <h2>Ready to optimize your project lifecycles?</h2>
-    <p>Transmit your blueprint layouts or operational scopes and secure an structural plan line.</p>
-  </div>
-  <a class="btn btn-yellow service-link" href="#contact" data-service="Other">Request Your Quote &rarr;</a>
-</section>
+        // ENVÍO DE DATOS EN SEGUNDO PLANO A FORMSUBMIT
+        // Comentario: Asegúrate de que este sea tu correo verificado en la plataforma
+        fetch('https://formsubmit.co/ajax/sales@horizonstonepro.com', { <!-- REEMPLAZAR AQUÍ SI ES NECESARIO -->
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success === "true" || data.status === "success") {
+                // Esconde el formulario y muestra el texto de éxito limpio
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+            } else {
+                alert('Oops! Something went wrong. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please verify your connection and try again.');
+        });
+    });
+  </script>
 
-<section class="contact" id="contact">
-  <div class="reveal">
-    <div class="eyebrow">Engagement Center</div>
-    <h2>Let’s Structuralize Your Remote Operations.</h2>
-    <p>Specify your current workflow friction. Our team manages complete estimating runs, deep drafting updates, or comprehensive project logging support.</p>
-    <div class="contact-list">
-      <div><strong>Primary Operations</strong><a href="mailto:info@horizonstonepro.com">info@horizonstonepro.com</a></div>
-      <div><strong>Account Solutions</strong><a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a></div>
-      <div><strong>Telephone Support</strong><a href="tel:7703558848">(770) 355-8848</a></div>
-      <div><strong>Territorial Domain</strong><span>Dedicated Back-Office Support Across the United States</span></div>
-    </div>
-  </div>
-  
-  <form class="form-card reveal" action="https://formsubmit.co/sales@horizonstonepro.com" method="POST">
-    <h3>Request Support</h3>
-    <p>Complete execution parameters below for rapid scoping turnaround.</p>
-    <input type="hidden" name="_subject" value="New Horizon Stone Pro Website Request" />
-    <input type="hidden" name="_template" value="table" />
-    <input type="hidden" name="_captcha" value="false" />
-    <div class="form-grid">
-      <div class="form-group"><label for="firstName">First Name *</label><input id="firstName" name="First Name" type="text" required /></div>
-      <div class="form-group"><label for="lastName">Last Name *</label><input id="lastName" name="Last Name" type="text" required /></div>
-      <div class="form-group"><label for="company">Company</label><input id="company" name="Company" type="text" /></div>
-      <div class="form-group"><label for="email">Email *</label><input id="email" name="Email" type="email" required /></div>
-      <div class="form-group"><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" /></div>
-      <div class="form-group"><label for="service">Service Needed</label>
-        <select id="service" name="Service Needed">
-          <option>Estimating</option>
-          <option>Quantity Takeoffs</option>
-          <option>CAD Drafting</option>
-          <option>Document Control</option>
-          <option>Project Coordination</option>
-          <option>Construction Administration</option>
-          <option>Scheduling Support</option>
-          <option>Roofing Support</option>
-          <option>Civil Support</option>
-          <option>Commercial Support</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group full"><label for="message">Project Description *</label><textarea id="message" name="Project Description" required placeholder="Detail explicit workflow deliverables, target scope dates, drawing links, and deadline bounds..."></textarea></div>
-    </div>
-    <button class="btn submit" type="submit">Send Request</button>
-  </form>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="footer-main">
-    <div class="footer-brand-card">
-      <div class="footer-logo-row">
-        <div class="footer-logo-mark"></div>
-        <div class="footer-logo-text">HORIZON <span>STONE PRO</span></div>
-      </div>
-      <p>Remote construction support for contractors that need estimating, quantity takeoffs, CAD drafting, document control, project coordination, and construction administration without adding full-time payroll.</p>
-      <div class="footer-badge">Nationwide Construction Support</div>
-    </div>
-
-    <div class="footer-menu-grid">
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#estimating">Estimating & Bid Support</a>
-        <a href="#takeoffs">Quantity Takeoffs</a>
-        <a href="#cad">CAD Drafting</a>
-        <a href="#documents">Document Control</a>
-        <a href="#coordination">Project Coordination</a>
-        <a href="#admin">Construction Administration</a>
-        <a href="#scheduling">Scheduling Support</a>
-        <a href="#support">Project Support Plans</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Industries</h4>
-        <a href="#roofing">Roofing</a>
-        <a href="#civil">Civil & Sitework</a>
-        <a href="#commercial">Commercial Construction</a>
-        <a href="#residential">Residential</a>
-        <a href="#industrial">Industrial</a>
-        <a href="#renewable">Renewable Energy / BESS</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why Horizon Stone Pro</a>
-        <a href="#industries">Industries</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Request Support</a>
-      </div>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <div class="footer-contact-card">
-        <div class="footer-contact-label">Email</div>
-        <a href="mailto:info@horizonstonepro.com">info@horizonstonepro.com</a>
-
-        <div class="footer-contact-label">Sales</div>
-        <a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a>
-
-        <div class="footer-contact-label">Phone</div>
-        <a href="tel:7703558848">(770) 355-8848</a>
-
-        <div class="footer-contact-label">Service Area</div>
-        <span>United States</span>
-
-        <a class="footer-mini-cta service-link" href="#contact" data-service="Other">Request a Quote</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div>&copy; 2026 Horizon Stone Pro LLC. All rights reserved.</div>
-    <div class="footer-bottom-links">
-      <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#industries">Industries</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</footer>
-
-<a class="float service-link" href="#contact" data-service="Other">Request a Quote &rarr;</a>
-<div class="mobile-quick-actions" aria-label="Mobile quick actions">
-  <a class="call" href="tel:7703558848">Call Now</a>
-  <a class="quote service-link" href="#contact" data-service="Other">Get a Quote</a>
-</div>
-
-
-<script>
-const nav=document.getElementById('nav');
-const mobileMenu=document.getElementById('mobileMenu');
-if(mobileMenu&&nav){
-  mobileMenu.addEventListener('click',()=>nav.classList.toggle('active'));
-}
-
-const reveals=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{threshold:.1});
-reveals.forEach(el=>observer.observe(el));
-
-function getHeaderOffset(){
-  const header=document.querySelector('.header');
-  return header ? header.offsetHeight + 22 : 120;
-}
-
-function setServiceValue(link){
-  const value=link.getAttribute('data-service');
-  const service=document.getElementById('service');
-  if(value && service){
-    service.value=value;
-  }
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-  link.addEventListener('click',event=>{
-    const href=link.getAttribute('href');
-    if(!href || href==='#') return;
-
-    const target=document.querySelector(href);
-    if(!target) return;
-
-    event.preventDefault();
-    setServiceValue(link);
-
-    const top=target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
-    window.scrollTo({top:Math.max(top,0),behavior:'smooth'});
-    history.pushState(null,'',href);
-
-    if(nav && nav.classList.contains('active')){
-      nav.classList.remove('active');
-    }
-  });
-});
-</script>
 </body>
 </html>
