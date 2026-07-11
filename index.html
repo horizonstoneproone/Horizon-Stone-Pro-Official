@@ -941,6 +941,27 @@ html{scroll-padding-top:132px;}
   input,select,textarea{font-size:16px !important;}
 }
 
+
+
+/* PROPOSAL PREVIEW: audience cards + in-page form success */
+.audience{padding:82px 6%;background:#eef4fc;text-align:center}
+.audience-head{max-width:760px;margin:0 auto 38px}
+.audience-head h2{font-size:clamp(30px,4vw,42px);color:var(--navy);margin:10px 0 14px;letter-spacing:-1px}
+.audience-head p{color:var(--muted);line-height:1.7}
+.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:left}
+.audience-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px;box-shadow:var(--shadow)}
+.audience-card strong{display:block;color:var(--navy);font-size:18px;margin-bottom:8px}
+.audience-card p{color:var(--muted);font-size:14px;line-height:1.6}
+.audience-kicker{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--blue)}
+.form-status{display:none;text-align:center;padding:42px 18px}
+.form-status.show{display:block}
+.form-status-icon{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--blue);font-size:28px;font-weight:800}
+.form-status h3{font-size:25px;color:var(--navy);margin-bottom:10px}
+.form-status p{color:var(--muted);font-size:15px;line-height:1.7;margin:0}
+.submit[disabled]{opacity:.7;cursor:not-allowed;transform:none}
+@media(max-width:1000px){.audience-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.audience{padding:64px 6%}.audience-grid{grid-template-columns:1fr}}
+
 </style>
 
 <script type="application/ld+json">
@@ -971,7 +992,7 @@ html{scroll-padding-top:132px;}
     <a href="#industries">Industries</a>
     <a href="#process">Process</a>
     <a href="#contact">Contact</a>
-    <a href="#contact" class="nav-cta service-link" data-service="Other">Request a Quote</a>
+    <a href="#contact" class="nav-cta service-link" data-track="quote" data-service="Other">Request a Quote</a>
   </nav>
   <div class="mobile-menu" id="mobileMenu">MENU</div>
 </header>
@@ -983,8 +1004,8 @@ html{scroll-padding-top:132px;}
   </div>
   <div class="hero-content reveal">
     <div class="eyebrow">Professional Construction Support</div>
-    <h1>Your Back-Office Support Team Behind Every <span>Successful Build.</span></h1>
-    <p>Horizon Stone Pro empowers contractors to estimate faster, control submittals, manage technical drawings, and protect margins without growing internal payroll.</p>
+    <h1>The Construction Support Team Behind Every <span>Successful Build.</span></h1>
+    <p>Horizon Stone Pro gives contractors reliable estimating, CAD, document control, and project coordination support—without the cost and delay of expanding full-time payroll.</p>
     <div class="hero-bullets">
       <div><span class="check">✓</span> Precise Estimating & Detailed Takeoffs</div>
       <div><span class="check">✓</span> Professional CAD Drafting, Exhibits & As-Builts</div>
@@ -992,11 +1013,11 @@ html{scroll-padding-top:132px;}
       <div><span class="check">✓</span> 100% Remote, Dedicated Support Nationwide</div>
     </div>
     <div class="hero-actions">
-      <a class="btn" href="#services">
+      <a class="btn" href="#services" data-track="services">
         Our Services 
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 15"></polyline></svg>
       </a>
-      <a class="btn btn-yellow" href="tel:7703558848">Call (770) 355-8848</a>
+      <a class="btn btn-yellow" href="tel:7703558848" data-track="call">Call (770) 355-8848</a>
     </div>
   </div>
   
@@ -1025,6 +1046,20 @@ html{scroll-padding-top:132px;}
       </div>
       <div><strong>Lean</strong><span>Lower Overhead</span></div>
     </div>
+  </div>
+</section>
+
+<section class="audience" id="who-we-help">
+  <div class="audience-head reveal">
+    <div class="audience-kicker">Who We Support</div>
+    <h2>Built for Construction Teams That Need More Capacity—Not More Overhead.</h2>
+    <p>Flexible support for companies that need dependable technical and administrative execution across bids, active projects, and closeout.</p>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-card reveal"><strong>General Contractors</strong><p>Bid support, submittal tracking, document control, schedule follow-up, and project coordination.</p></div>
+    <div class="audience-card reveal"><strong>Specialty Contractors</strong><p>Quantity takeoffs, proposal support, shop drawing coordination, RFIs, and organized field documentation.</p></div>
+    <div class="audience-card reveal"><strong>Developers & Owners</strong><p>Project reporting, drawing and document organization, vendor coordination, and progress tracking.</p></div>
+    <div class="audience-card reveal"><strong>Growing Construction Teams</strong><p>On-demand back-office capacity without immediately adding another full-time internal position.</p></div>
   </div>
 </section>
 
@@ -1213,44 +1248,48 @@ html{scroll-padding-top:132px;}
     <h2>Let’s Structuralize Your Remote Operations.</h2>
     <p>Specify your current workflow friction. Our team manages complete estimating runs, deep drafting updates, or comprehensive project logging support.</p>
     <div class="contact-list">
-      <div><strong>Primary Operations</strong><a href="mailto:info@horizonstonepro.com">info@horizonstonepro.com</a></div>
-      <div><strong>Account Solutions</strong><a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a></div>
+      <div><strong>Primary Operations</strong><a href="mailto:info@horizonstonepro.com" data-track="email">info@horizonstonepro.com</a></div>
+      <div><strong>Account Solutions</strong><a href="mailto:sales@horizonstonepro.com" data-track="email">sales@horizonstonepro.com</a></div>
       <div><strong>Telephone Support</strong><a href="tel:7703558848">(770) 355-8848</a></div>
       <div><strong>Territorial Domain</strong><span>Dedicated Back-Office Support Across the United States</span></div>
     </div>
   </div>
   
-  <form class="form-card reveal" action="https://formsubmit.co/sales@horizonstonepro.com" method="POST">
-    <h3>Request Support</h3>
-    <p>Complete execution parameters below for rapid scoping turnaround.</p>
-    <input type="hidden" name="_subject" value="New Horizon Stone Pro Website Request" />
-    <input type="hidden" name="_template" value="table" />
-    <input type="hidden" name="_captcha" value="false" />
-    <div class="form-grid">
-      <div class="form-group"><label for="firstName">First Name *</label><input id="firstName" name="First Name" type="text" required /></div>
-      <div class="form-group"><label for="lastName">Last Name *</label><input id="lastName" name="Last Name" type="text" required /></div>
-      <div class="form-group"><label for="company">Company</label><input id="company" name="Company" type="text" /></div>
-      <div class="form-group"><label for="email">Email *</label><input id="email" name="Email" type="email" required /></div>
-      <div class="form-group"><label for="phone">Phone</label><input id="phone" name="Phone" type="tel" /></div>
-      <div class="form-group"><label for="service">Service Needed</label>
-        <select id="service" name="Service Needed">
-          <option>Estimating</option>
-          <option>Quantity Takeoffs</option>
-          <option>CAD Drafting</option>
-          <option>Document Control</option>
-          <option>Project Coordination</option>
-          <option>Construction Administration</option>
-          <option>Scheduling Support</option>
-          <option>Roofing Support</option>
-          <option>Civil Support</option>
-          <option>Commercial Support</option>
-          <option>Other</option>
-        </select>
+  <div class="form-card reveal">
+    <form id="contact-form">
+      <h3>Request Support</h3>
+      <p>Tell us what your team needs and a member of Horizon Stone Pro will follow up with you.</p>
+      <div class="form-grid">
+        <div class="form-group"><label for="firstName">First Name *</label><input id="firstName" name="first_name" type="text" required /></div>
+        <div class="form-group"><label for="lastName">Last Name *</label><input id="lastName" name="last_name" type="text" required /></div>
+        <div class="form-group"><label for="company">Company</label><input id="company" name="company" type="text" /></div>
+        <div class="form-group"><label for="email">Email *</label><input id="email" name="email" type="email" required /></div>
+        <div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
+        <div class="form-group"><label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="Estimating">Estimating</option>
+            <option value="Quantity Takeoffs">Quantity Takeoffs</option>
+            <option value="CAD Drafting">CAD Drafting</option>
+            <option value="Document Control">Document Control</option>
+            <option value="Project Coordination">Project Coordination</option>
+            <option value="Construction Administration">Construction Administration</option>
+            <option value="Scheduling Support">Scheduling Support</option>
+            <option value="Roofing Support">Roofing Support</option>
+            <option value="Civil Support">Civil Support</option>
+            <option value="Commercial Support">Commercial Support</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group full"><label for="message">Project Description *</label><textarea id="message" name="message" required placeholder="Tell us about the scope, drawings, timeline, and support your team needs..."></textarea></div>
       </div>
-      <div class="form-group full"><label for="message">Project Description *</label><textarea id="message" name="Project Description" required placeholder="Detail explicit workflow deliverables, target scope dates, drawing links, and deadline bounds..."></textarea></div>
+      <button id="submit-button" class="btn submit" type="submit">Send Request</button>
+    </form>
+    <div id="form-success" class="form-status" role="status" aria-live="polite">
+      <div class="form-status-icon">✓</div>
+      <h3>Thank You for Reaching Out.</h3>
+      <p>Your request has been received. A member of the Horizon Stone Pro team will review your project details and contact you shortly.</p>
     </div>
-    <button class="btn submit" type="submit">Send Request</button>
-  </form>
+  </div>
 </section>
 </main>
 
@@ -1303,10 +1342,10 @@ html{scroll-padding-top:132px;}
       <h4>Contact</h4>
       <div class="footer-contact-card">
         <div class="footer-contact-label">Email</div>
-        <a href="mailto:info@horizonstonepro.com">info@horizonstonepro.com</a>
+        <a href="mailto:info@horizonstonepro.com" data-track="email">info@horizonstonepro.com</a>
 
         <div class="footer-contact-label">Sales</div>
-        <a href="mailto:sales@horizonstonepro.com">sales@horizonstonepro.com</a>
+        <a href="mailto:sales@horizonstonepro.com" data-track="email">sales@horizonstonepro.com</a>
 
         <div class="footer-contact-label">Phone</div>
         <a href="tel:7703558848">(770) 355-8848</a>
@@ -1331,10 +1370,10 @@ html{scroll-padding-top:132px;}
   </div>
 </footer>
 
-<a class="float service-link" href="#contact" data-service="Other">Request a Quote &rarr;</a>
+<a class="float service-link" href="#contact" data-track="quote" data-service="Other">Request a Quote &rarr;</a>
 <div class="mobile-quick-actions" aria-label="Mobile quick actions">
-  <a class="call" href="tel:7703558848">Call Now</a>
-  <a class="quote service-link" href="#contact" data-service="Other">Get a Quote</a>
+  <a class="call" href="tel:7703558848" data-track="call">Call Now</a>
+  <a class="quote service-link" href="#contact" data-track="quote" data-service="Other">Get a Quote</a>
 </div>
 
 
@@ -1388,6 +1427,54 @@ document.querySelectorAll('a[href^="#"]').forEach(link=>{
     }
   });
 });
+
+// Stable tracking attributes keep analytics working even if button text/design changes.
+document.querySelectorAll('[data-track]').forEach(el=>{
+  el.addEventListener('click',()=>{
+    const action=el.dataset.track;
+    if(typeof fbq==='function'){
+      if(action==='quote') fbq('trackCustom','RequestQuote');
+      if(action==='call' || action==='email') fbq('track','Contact',{method:action});
+    }
+    if(typeof gtag==='function') gtag('event',action,{event_category:'engagement'});
+  });
+});
+
+const contactForm=document.getElementById('contact-form');
+if(contactForm){
+  contactForm.addEventListener('submit',async function(event){
+    event.preventDefault();
+    const button=document.getElementById('submit-button');
+    const success=document.getElementById('form-success');
+    const originalText=button.textContent;
+    button.disabled=true;
+    button.textContent='Sending...';
+
+    const payload=Object.fromEntries(new FormData(contactForm).entries());
+    payload._subject='New Horizon Stone Pro Website Request';
+    payload._template='table';
+    payload._captcha='false';
+
+    try{
+      const response=await fetch('https://formsubmit.co/ajax/sales@horizonstonepro.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      if(!response.ok) throw new Error('Submission failed');
+      contactForm.style.display='none';
+      success.classList.add('show');
+      if(typeof fbq==='function') fbq('track','Lead');
+      if(typeof gtag==='function') gtag('event','generate_lead',{event_category:'form'});
+    }catch(error){
+      console.error(error);
+      button.disabled=false;
+      button.textContent=originalText;
+      alert('We could not send your request. Please try again or email sales@horizonstonepro.com.');
+    }
+  });
+}
+
 </script>
 </body>
 </html>
