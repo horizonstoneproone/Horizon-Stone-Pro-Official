@@ -174,11 +174,11 @@ img{max-width:100%;display:block}
 
 .hero-content { position: relative; z-index: 5; padding: 80px 6%; max-width: 800px }
 .eyebrow { color: var(--blue2); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px }
-h1 { font-size: clamp(44px, 5.5vw, 68px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 24px }
+h1 { font-size: clamp(38px, 5vw, 60px); line-height: 1.06; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 16px }
 h1 span { color: var(--yellow) }
-.hero p { font-size: 18px; line-height: 1.65; color: #cbd5e1; max-width: 620px; margin-bottom: 36px }
+.hero p { font-size: 17px; line-height: 1.55; color: #cbd5e1; max-width: 620px; margin-bottom: 24px }
 
-.hero-bullets { display: grid; gap: 14px; margin-bottom: 40px; max-width: 600px }
+.hero-bullets { display: grid; gap: 10px; margin-bottom: 26px; max-width: 600px }
 .hero-bullets div { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 600; color: #f1f5f9 }
 .check { width: 20px; height: 20px; border-radius: 50%; background: rgba(0, 111, 230, 0.2); color: var(--blue2); display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; flex-shrink: 0; border: 1px solid rgba(0, 111, 230, 0.4); }
 .hero-bullets .check { background: rgba(255, 179, 0, 0.15); color: var(--yellow); border-color: rgba(255, 179, 0, 0.4); }
@@ -203,9 +203,9 @@ h1 span { color: var(--yellow) }
 .stat span { display: block; color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px }
 
 /* STRUCTURAL LAYOUT SECTIONS */
-.section { padding: 140px 6% 100px; background: var(--white); text-align: center }
+.section { padding: 84px 6% 64px; background: var(--white); text-align: center }
 .section.alt { background: var(--light) }
-.section-head { max-width: 800px; margin: 0 auto 64px }
+.section-head { max-width: 800px; margin: 0 auto 40px }
 .label { color: var(--blue); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px }
 .section h2 { font-size: clamp(32px, 4vw, 44px); line-height: 1.15; letter-spacing: -1px; font-weight: 800; color: var(--navy); margin-bottom: 18px }
 .section h2 span { color: var(--blue) }
@@ -254,7 +254,7 @@ h1 span { color: var(--yellow) }
 
 /* STRIP INDUSTRIES MATRIX ROW */
 .industries {
-  background: var(--navy); color: #fff; padding: 100px 6%; text-align: center; position: relative; overflow: hidden;
+  background: var(--navy); color: #fff; padding: 64px 6%; text-align: center; position: relative; overflow: hidden;
 }
 .industries:before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(0,111,230,0.15), transparent 45%) }
 .industries > * { position: relative; z-index: 2 }
@@ -263,11 +263,15 @@ h1 span { color: var(--yellow) }
 .industries p { color: #94a3b8; max-width: 700px; margin: 0 auto 48px; line-height: 1.65; font-size: 16px }
 .industry-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px }
 .industry {
-  background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px; padding: 32px 16px; transition: all 0.25s ease;
+  position: relative; overflow: hidden; background-size: cover; background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px; padding: 32px 16px; transition: all 0.25s ease; min-height: 130px;
+  display: flex; flex-direction: column; justify-content: flex-end;
 }
-.industry:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.06); border-color: rgba(255,255,255,0.2); }
-.industry-icon-wrap { font-size: 32px; margin-bottom: 16px; color: var(--yellow); display: flex; justify-content: center; }
+.industry:before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,16,31,.35), rgba(3,16,31,.82)); }
+.industry:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.3); }
+.industry-icon-wrap { position: relative; z-index: 2; font-size: 32px; margin-bottom: 10px; color: var(--yellow); display: flex; justify-content: center; }
+.industry strong{ position: relative; z-index: 2; }
 .industry-icon-wrap svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 2px; }
 .industry strong { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #f1f5f9 }
 
@@ -293,7 +297,7 @@ h1 span { color: var(--yellow) }
 .cta .btn:hover { background: var(--blue2); }
 
 /* CONTACT INTENSIVE LAYOUT MATRIX */
-.contact { padding: 120px 6%; background: var(--navy); color: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 80px }
+.contact { padding: 72px 6%; background: var(--navy); color: #fff; display: grid; grid-template-columns: 1fr 1fr; gap: 56px }
 .contact h2 { font-size: clamp(36px, 4.5vw, 54px); line-height: 1.1; letter-spacing: -1.5px; font-weight: 800; margin-bottom: 20px }
 .contact p { color: #94a3b8; line-height: 1.65; font-size: 17px; margin-bottom: 32px }
 .contact-list { display: grid; gap: 16px; margin-top: 32px }
@@ -662,7 +666,7 @@ textarea { min-height: 120px; resize: vertical }
     margin:20px auto 0;
     transform:none !important;
   }
-  .section{padding:76px 6%;}
+  .section{padding:52px 6%;}
   .services-grid,.process-grid{grid-template-columns:1fr !important;}
   .split,.contact{grid-template-columns:1fr !important;}
   .industry-grid{grid-template-columns:repeat(2,1fr) !important;}
@@ -676,7 +680,7 @@ textarea { min-height: 120px; resize: vertical }
   .hero-content{padding-top:52px !important;}
   .hero-bullets div{font-size:13.5px;align-items:flex-start;}
   .industry-grid{grid-template-columns:1fr !important;}
-  .contact{padding:76px 6%;}
+  .contact{padding:52px 6%;}
   .cta{padding:30px 24px;}
   .float{right:14px;bottom:14px;padding:12px 16px;font-size:11px;}
 }
@@ -692,7 +696,7 @@ textarea { min-height: 120px; resize: vertical }
   display:block !important;
   min-height:0 !important;
   padding-top:90px !important;
-  padding-bottom:48px !important;
+  padding-bottom:28px !important;
   overflow:hidden !important;
 }
 .hero-bg{
@@ -701,7 +705,7 @@ textarea { min-height: 120px; resize: vertical }
   height:auto !important;
 }
 .hero-content{
-  padding:86px 6% 34px !important;
+  padding:56px 6% 24px !important;
   max-width:800px !important;
 }
 .stats-bar{
@@ -715,7 +719,7 @@ textarea { min-height: 120px; resize: vertical }
   z-index:8 !important;
 }
 .section#services{
-  padding-top:100px !important;
+  padding-top:56px !important;
 }
 .stat{
   min-width:0 !important;
@@ -783,7 +787,7 @@ html{scroll-padding-top:132px;}
    MOBILE-FIRST UPGRADE: same website, optimized mobile layout
    ========================================================= */
 @media (max-width: 900px){
-  body{padding-bottom:74px;}
+  body{padding-bottom:56px;}
   .header{
     height:72px !important;
     min-height:72px !important;
@@ -872,7 +876,7 @@ html{scroll-padding-top:132px;}
   .stat{padding:18px !important;}
   .stat strong{font-size:20px !important;}
 
-  .section{padding:68px 6% !important;}
+  .section{padding:44px 6% !important;}
   .section-head{margin-bottom:36px !important;}
   .section h2{font-size:30px !important;}
   .section-head p{font-size:15.5px !important;}
@@ -881,7 +885,7 @@ html{scroll-padding-top:132px;}
   .split,.contact{grid-template-columns:1fr !important;gap:36px !important;}
   .image-panel{height:360px !important;}
   .content-item{padding:18px !important;}
-  .industries{padding:68px 6% !important;}
+  .industries{padding:40px 6% !important;}
   .industry-grid{grid-template-columns:1fr 1fr !important;gap:14px !important;}
   .industry{padding:22px 12px !important;}
   .cta{
@@ -893,7 +897,7 @@ html{scroll-padding-top:132px;}
   }
   .cta h2{font-size:27px !important;}
   .cta .btn{width:100% !important;max-width:none !important;}
-  .contact{padding:68px 6% !important;}
+  .contact{padding:44px 6% !important;}
   .contact h2{font-size:34px !important;}
   .form-card{padding:24px !important;}
   .form-grid{grid-template-columns:1fr !important;}
@@ -903,25 +907,25 @@ html{scroll-padding-top:132px;}
   .mobile-quick-actions{
     display:grid !important;
     grid-template-columns:1fr 1fr;
-    gap:10px;
+    gap:8px;
     position:fixed;
     left:0;
     right:0;
     bottom:0;
     z-index:1001;
-    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    padding:7px 10px calc(7px + env(safe-area-inset-bottom));
     background:rgba(2,9,18,.96);
     border-top:1px solid rgba(255,255,255,.08);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
   }
   .mobile-quick-actions a{
-    min-height:48px;
-    border-radius:8px;
+    min-height:36px;
+    border-radius:7px;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:12px;
+    font-size:11px;
     font-weight:800;
     text-transform:uppercase;
     letter-spacing:.3px;
@@ -944,7 +948,7 @@ html{scroll-padding-top:132px;}
 
 
 /* PROPOSAL PREVIEW: audience cards + in-page form success */
-.audience{padding:82px 6%;background:#eef4fc;text-align:center}
+.audience{padding:56px 6%;background:#eef4fc;text-align:center}
 .audience-head{max-width:760px;margin:0 auto 38px}
 .audience-head h2{font-size:clamp(30px,4vw,42px);color:var(--navy);margin:10px 0 14px;letter-spacing:-1px}
 .audience-head p{color:var(--muted);line-height:1.7}
@@ -961,6 +965,53 @@ html{scroll-padding-top:132px;}
 .submit[disabled]{opacity:.7;cursor:not-allowed;transform:none}
 @media(max-width:1000px){.audience-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.audience{padding:64px 6%}.audience-grid{grid-template-columns:1fr}}
+
+/* PROOF & PRICING ADDITIONS */
+.proof-section{padding:64px 6%;background:var(--navy);color:#fff;text-align:center;position:relative;overflow:hidden}
+.proof-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 15%,rgba(0,111,230,0.16),transparent 42%)}
+.proof-section>*{position:relative;z-index:2}
+.proof-section .label{color:var(--yellow)}
+.proof-section h2{color:#fff;font-size:clamp(32px,4vw,42px);font-weight:800;margin-bottom:16px;letter-spacing:-1px}
+.proof-section .section-head p{color:#94a3b8}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.proof-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:30px}
+.proof-quote-mark{color:var(--yellow);font-size:40px;font-weight:800;line-height:1;margin-bottom:6px;display:block}
+.proof-card p.quote{color:#e2e8f0;font-size:15px;line-height:1.65;margin-bottom:20px;min-height:96px}
+.proof-person{border-top:1px solid rgba(255,255,255,0.09);padding-top:14px}
+.proof-person strong{display:block;color:#fff;font-size:14.5px}
+.proof-person span{display:block;color:#94a3b8;font-size:13px;margin-top:2px}
+.proof-note{margin-top:36px;color:#64748b;font-size:13px;max-width:640px;margin-left:auto;margin-right:auto}
+
+.pricing-section{padding:64px 6%;background:var(--light);text-align:center}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left;margin-top:8px}
+.pricing-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:32px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.pricing-card.featured{border:2px solid var(--blue);box-shadow:var(--shadow-hover);position:relative}
+.pricing-badge{position:absolute;top:-13px;left:32px;background:var(--blue);color:#fff;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;padding:6px 12px;border-radius:999px}
+.pricing-card h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.pricing-card .price{font-size:28px;font-weight:800;color:var(--blue);margin-bottom:4px}
+.pricing-card .price span{font-size:13px;color:var(--muted);font-weight:600}
+.pricing-card p.desc{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:18px}
+.pricing-list{list-style:none;display:grid;gap:10px;margin-bottom:24px;flex:1}
+.pricing-list li{display:flex;gap:10px;align-items:flex-start;color:var(--navy3);font-size:13.5px;line-height:1.5}
+.pricing-list li:before{content:"✓";color:var(--blue);font-weight:800;flex-shrink:0}
+.pricing-note{margin-top:32px;color:var(--muted);font-size:13.5px}
+
+.samples-section{padding:64px 6%;background:var(--white);text-align:center}
+.samples-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.sample-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:#fff;transition:all .3s cubic-bezier(0.4,0,0.2,1)}
+.sample-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
+.sample-thumb{height:170px;background:var(--soft) center/cover no-repeat;border-bottom:1px solid var(--border)}
+.sample-body{padding:22px}
+.sample-body .tag{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--blue);background:var(--soft);padding:5px 10px;border-radius:999px;margin-bottom:12px}
+.sample-body h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.sample-body p{color:var(--muted);font-size:13.5px;line-height:1.6}
+
+@media(max-width:1000px){
+  .proof-grid,.pricing-grid,.samples-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .proof-section,.pricing-section,.samples-section{padding:64px 6%}
+}
 
 </style>
 
@@ -990,6 +1041,7 @@ html{scroll-padding-top:132px;}
     <a href="#services">Services</a>
     <a href="#why">Why Us</a>
     <a href="#industries">Industries</a>
+    <a href="#pricing">Pricing</a>
     <a href="#process">Process</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="nav-cta service-link" data-track="quote" data-service="Other">Request a Quote</a>
@@ -1004,13 +1056,13 @@ html{scroll-padding-top:132px;}
   </div>
   <div class="hero-content reveal">
     <div class="eyebrow">Professional Construction Support</div>
-    <h1>The Construction Support Team Behind Every <span>Successful Build.</span></h1>
-    <p>Horizon Stone Pro gives contractors reliable estimating, CAD, document control, and project coordination support—without the cost and delay of expanding full-time payroll.</p>
+    <h1>Your Back-Office Team For <span>Every Build.</span></h1>
+    <p>Estimating, takeoffs, CAD, and document control — done remotely, without adding full-time staff.</p>
     <div class="hero-bullets">
-      <div><span class="check">✓</span> Precise Estimating & Detailed Takeoffs</div>
-      <div><span class="check">✓</span> Professional CAD Drafting, Exhibits & As-Builts</div>
-      <div><span class="check">✓</span> Seamless Document Control, RFIs & Logs</div>
-      <div><span class="check">✓</span> 100% Remote, Dedicated Support Nationwide</div>
+      <div><span class="check">✓</span> Fast, accurate takeoffs & estimates</div>
+      <div><span class="check">✓</span> CAD drawings & as-builts</div>
+      <div><span class="check">✓</span> Document control & RFI tracking</div>
+      <div><span class="check">✓</span> 100% remote, nationwide support</div>
     </div>
     <div class="hero-actions">
       <a class="btn" href="#services" data-track="services">
@@ -1052,8 +1104,8 @@ html{scroll-padding-top:132px;}
 <section class="audience" id="who-we-help">
   <div class="audience-head reveal">
     <div class="audience-kicker">Who We Support</div>
-    <h2>Built for Construction Teams That Need More Capacity—Not More Overhead.</h2>
-    <p>Flexible support for companies that need dependable technical and administrative execution across bids, active projects, and closeout.</p>
+    <h2>More Capacity. Not More Overhead.</h2>
+    <p>Flexible support for teams that need reliable help on bids, active jobs, and closeout.</p>
   </div>
   <div class="audience-grid">
     <div class="audience-card reveal"><strong>General Contractors</strong><p>Bid support, submittal tracking, document control, schedule follow-up, and project coordination.</p></div>
@@ -1065,9 +1117,9 @@ html{scroll-padding-top:132px;}
 
 <section class="section" id="services">
   <div class="section-head reveal">
-    <div class="label">Expert Capabilities</div>
-    <h2>Services Designed to Keep Your Operations <span>Structured and Profitable.</span></h2>
-    <p>We take care of the crucial technical, visual, and administrative tasks required across a project's entire lifecycle.</p>
+    <div class="label">What We Do</div>
+    <h2>Services Built To Keep Jobs <span>On Track.</span></h2>
+    <p>We handle the technical and admin work behind every project, start to finish.</p>
   </div>
   
   <div class="services-grid">
@@ -1188,36 +1240,141 @@ html{scroll-padding-top:132px;}
 </section>
 
 <section class="industries" id="industries">
-  <div class="label">Sectors Enabled</div>
-  <h2>Industries We Empower Nationwide</h2>
-  <p>Horizon Stone Pro aligns with trade partners across multiple markets, ensuring robust technical execution for distinct field applications.</p>
+  <div class="label">Sectors</div>
+  <h2>Industries We Support</h2>
+  <p>Trade experience across every major construction sector.</p>
   
   <div class="industry-grid">
-    <div class="industry reveal" id="roofing">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
+    <div class="industry reveal" id="roofing" style="background-image:url('https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=700&q=80')">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></div>
       <strong>Roofing</strong>
     </div>
-    <div class="industry reveal" id="civil">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83 2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+    <div class="industry reveal" id="civil" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=700&q=80')">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83 2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
       <strong>Civil</strong>
     </div>
-    <div class="industry reveal" id="commercial">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg></div>
+    <div class="industry reveal" id="commercial" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80')">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line></svg></div>
       <strong>Commercial</strong>
     </div>
-    <div class="industry reveal" id="residential">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
+    <div class="industry reveal" id="residential" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=700&q=80')">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg></div>
       <strong>Residential</strong>
     </div>
-    <div class="industry reveal" id="industrial">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><path d="M22 21H2V3l7 4 7-4 6 4v14z"></path><path d="M14 17H10v4h4v-4z"></path></svg></div>
+    <div class="industry reveal" id="industrial" style="background-image:url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80')">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 21H2V3l7 4 7-4 6 4v14z"></path><path d="M14 17H10v4h4v-4z"></path></svg></div>
       <strong>Industrial</strong>
     </div>
-    <div class="industry reveal" id="renewable">
-      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div>
-      <strong>Renewable Energy / BESS</strong>
+    <div class="industry reveal" id="renewable" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=700&q=80')">
+      <div class="industry-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div>
+      <strong>Renewable / BESS</strong>
     </div>
   </div>
+</section>
+
+<section class="proof-section" id="proof">
+  <div class="section-head reveal">
+    <div class="label">EXAMPLE — REPLACE BEFORE LAUNCH</div>
+    <h2>Clear Work. Clear Communication.</h2>
+    <p>This is the kind of feedback we aim to earn on every project. Sample layout below — swap in real quotes once you have clients.</p>
+  </div>
+  <div class="proof-grid">
+    <div class="proof-card reveal">
+      <span class="proof-quote-mark">&ldquo;</span>
+      <p class="quote">[Example only — replace with a real quote about turnaround time or accuracy from your first client.]</p>
+      <div class="proof-person"><strong>[Client Name], [Company Name]</strong><span>General Contractor</span></div>
+    </div>
+    <div class="proof-card reveal">
+      <span class="proof-quote-mark">&ldquo;</span>
+      <p class="quote">[Example only — replace with a real quote comparing us to doing takeoffs in-house.]</p>
+      <div class="proof-person"><strong>[Client Name], [Company Name]</strong><span>Specialty Contractor</span></div>
+    </div>
+    <div class="proof-card reveal">
+      <span class="proof-quote-mark">&ldquo;</span>
+      <p class="quote">[Example only — replace with a real quote about document control or coordination.]</p>
+      <div class="proof-person"><strong>[Client Name], [Company Name]</strong><span>Developer / Owner</span></div>
+    </div>
+  </div>
+  <p class="proof-note">Do not publish this section live with placeholder quotes — fake testimonials can be considered deceptive advertising. Fill in real names and quotes once you have them, or remove this section until then.</p>
+</section>
+
+<section class="samples-section" id="samples">
+  <div class="section-head reveal">
+    <div class="label">Sample Work</div>
+    <h2>See The Quality First.</h2>
+    <p>What your team receives. Replace these with real client samples once you have them.</p>
+  </div>
+  <div class="samples-grid">
+    <div class="sample-card reveal">
+      <div class="sample-thumb" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="sample-body">
+        <span class="tag">Takeoff Sample</span>
+        <h3>Quantity takeoff, commercial roofing package</h3>
+        <p>[Placeholder image — swap for a real takeoff sheet once you have a client-approved sample.]</p>
+      </div>
+    </div>
+    <div class="sample-card reveal">
+      <div class="sample-thumb" style="background-image:url('https://images.unsplash.com/photo-1503387837-b154d5074bd2?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="sample-body">
+        <span class="tag">CAD Sample</span>
+        <h3>As-built drawing update</h3>
+        <p>[Placeholder image — swap for a real redline or as-built CAD example.]</p>
+      </div>
+    </div>
+    <div class="sample-card reveal">
+      <div class="sample-thumb" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80')"></div>
+      <div class="sample-body">
+        <span class="tag">Document Control Sample</span>
+        <h3>Submittal log / RFI tracker</h3>
+        <p>[Placeholder image — swap for a real submittal or RFI log screenshot.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing-section" id="pricing">
+  <div class="section-head reveal">
+    <div class="label">Investment</div>
+    <h2>Simple Pricing.</h2>
+    <p>Final price depends on scope. Here's a starting range so you know what to expect.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <h3>Per-Project</h3>
+      <div class="price">From $300<span> / project</span></div>
+      <p class="desc">One takeoff, estimate, or CAD request. Fixed price after a quick scope review.</p>
+      <ul class="pricing-list">
+        <li>One-time takeoff, estimate, or CAD request</li>
+        <li>Fixed price, no surprises</li>
+        <li>Delivered on your timeline</li>
+      </ul>
+      <a class="btn btn-yellow service-link" href="#contact" data-service="Other" style="width:100%">Get a Project Quote</a>
+    </div>
+    <div class="pricing-card featured reveal">
+      <div class="pricing-badge">Most Popular</div>
+      <h3>Monthly Support</h3>
+      <div class="price">From $1,500<span> / month</span></div>
+      <p class="desc">Ongoing back-office support across multiple active jobs.</p>
+      <ul class="pricing-list">
+        <li>Set monthly hours across all services</li>
+        <li>Priority turnaround</li>
+        <li>One point of contact</li>
+      </ul>
+      <a class="btn service-link" href="#contact" data-service="Other" style="width:100%">Get a Monthly Quote</a>
+    </div>
+    <div class="pricing-card reveal">
+      <h3>Dedicated Support</h3>
+      <div class="price">From $4,000<span> / month</span></div>
+      <p class="desc">Near full-time back-office extension for high-volume pipelines.</p>
+      <ul class="pricing-list">
+        <li>High-volume, multi-project workload</li>
+        <li>Custom reporting</li>
+        <li>Scales with your pipeline</li>
+      </ul>
+      <a class="btn service-link" href="#contact" data-service="Other" style="width:100%">Talk to Us</a>
+    </div>
+  </div>
+  <p class="pricing-note">Sample starting prices — adjust to match your real rates before this goes live.</p>
 </section>
 
 <section class="section" id="process">
@@ -1236,17 +1393,17 @@ html{scroll-padding-top:132px;}
 
 <section class="cta">
   <div>
-    <h2>Ready to optimize your project lifecycles?</h2>
-    <p>Transmit your blueprint layouts or operational scopes and secure an structural plan line.</p>
+    <h2>Ready to move faster on your next project?</h2>
+    <p>Send us your blueprints or project scope and we'll get back to you with a clear plan and timeline.</p>
   </div>
   <a class="btn btn-yellow service-link" href="#contact" data-service="Other">Request Your Quote &rarr;</a>
 </section>
 
 <section class="contact" id="contact">
   <div class="reveal">
-    <div class="eyebrow">Engagement Center</div>
-    <h2>Let’s Structuralize Your Remote Operations.</h2>
-    <p>Specify your current workflow friction. Our team manages complete estimating runs, deep drafting updates, or comprehensive project logging support.</p>
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Tell Us What Your Team Needs.</h2>
+    <p>Describe your current workflow bottleneck. Our team can take on full estimating runs, drafting updates, or ongoing project documentation support.</p>
     <div class="contact-list">
       <div><strong>Primary Operations</strong><a href="mailto:info@horizonstonepro.com" data-track="email">info@horizonstonepro.com</a></div>
       <div><strong>Account Solutions</strong><a href="mailto:sales@horizonstonepro.com" data-track="email">sales@horizonstonepro.com</a></div>
@@ -1333,6 +1490,7 @@ html{scroll-padding-top:132px;}
         <a href="#services">Services</a>
         <a href="#why">Why Horizon Stone Pro</a>
         <a href="#industries">Industries</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
         <a href="#contact">Request Support</a>
       </div>
@@ -1364,6 +1522,7 @@ html{scroll-padding-top:132px;}
       <a href="#services">Services</a>
       <a href="#why">Why Us</a>
       <a href="#industries">Industries</a>
+      <a href="#pricing">Pricing</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </div>
