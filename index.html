@@ -325,6 +325,7 @@ input, select, textarea {
 input:focus, select:focus, textarea:focus { border-color: var(--blue); background: #fff; box-shadow: 0 0 0 4px rgba(0,111,230,.1) }
 textarea { min-height: 120px; resize: vertical }
 .submit { width: 100%; margin-top: 20px }
+.form-guarantee { text-align: center; font-size: 12.5px; color: var(--muted); margin-top: 14px; }
 
 
 /* PLATFORM CORPORATE FOOTER AREA - CLEAN 3-ZONE FOOTER */
@@ -1017,6 +1018,16 @@ html{scroll-padding-top:132px;}
   .proof-section,.pricing-section,.samples-section{padding:64px 6%}
 }
 
+/* FAQ */
+.faq-section{padding:64px 6%;background:var(--white);text-align:center}
+.faq-list{max-width:800px;margin:0 auto;text-align:left}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:0;padding:22px 4px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-size:16.5px;font-weight:700;color:var(--navy);font-family:var(--font)}
+.faq-q .plus{color:var(--blue);font-size:20px;font-weight:800;transition:transform .25s ease;flex-shrink:0;margin-left:16px}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{font-size:14.5px;color:var(--muted);line-height:1.65;padding:0 4px 22px}
+
 </style>
 
 <script type="application/ld+json">
@@ -1047,6 +1058,7 @@ html{scroll-padding-top:132px;}
     <a href="#industries">Industries</a>
     <a href="#pricing">Pricing</a>
     <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="nav-cta service-link" data-track="quote" data-service="Other">Request a Quote</a>
   </nav>
@@ -1063,10 +1075,10 @@ html{scroll-padding-top:132px;}
     <h1>Your Back-Office Team For <span>Every Build.</span></h1>
     <p>Estimating, takeoffs, CAD, and document control — done remotely, without adding full-time staff.</p>
     <div class="hero-bullets">
-      <div><span class="check">✓</span> Fast, accurate takeoffs & estimates</div>
+      <div><span class="check">✓</span> Estimates and takeoffs delivered in 48–72 hours</div>
       <div><span class="check">✓</span> CAD drawings & as-builts</div>
       <div><span class="check">✓</span> Document control & RFI tracking</div>
-      <div><span class="check">✓</span> 100% remote, nationwide support</div>
+      <div><span class="check">✓</span> Free revision if a deliverable misses scope</div>
     </div>
     <div class="hero-actions">
       <a class="btn" href="#services" data-track="services">
@@ -1094,7 +1106,7 @@ html{scroll-padding-top:132px;}
       <div class="stat-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
       </div>
-      <div><strong>Fast</strong><span>Remote Delivery</span></div>
+      <div><strong>48-72h</strong><span>Standard Turnaround</span></div>
     </div>
     <div class="stat">
       <div class="stat-icon">
@@ -1132,7 +1144,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
       </div>
       <h3>Estimating & Bid Support</h3>
-      <p>Detailed itemized costing, strict scope analysis, bid package assembly, and structural proposal compilation.</p>
+      <p>Itemized costing, scope analysis, bid package assembly, and proposal compilation.</p>
       <a class="service-link" href="#contact" data-service="Estimating">Request Estimating &rarr;</a>
     </article>
 
@@ -1141,7 +1153,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
       </div>
       <h3>Quantity Takeoffs</h3>
-      <p>Highly precise material, equipment, and structural component metrics extracted clean from blueprints.</p>
+      <p>Precise material, equipment, and structural component metrics extracted cleanly from blueprints.</p>
       <a class="service-link" href="#contact" data-service="Quantity Takeoffs">Request Takeoffs &rarr;</a>
     </article>
 
@@ -1150,7 +1162,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
       </div>
       <h3>CAD Drafting</h3>
-      <p>Clean technical drawing updates, redline revisions, layout displays, as-built mapping, and detail drafting.</p>
+      <p>Technical drawing updates, redline revisions, layout displays, as-built mapping, and detail drafting.</p>
       <a class="service-link" href="#contact" data-service="CAD Drafting">Request CAD Support &rarr;</a>
     </article>
 
@@ -1159,7 +1171,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
       </div>
       <h3>Document Control</h3>
-      <p>Systematic lifecycle organization and logging of submittals, vendor RFIs, transmittals, and field records.</p>
+      <p>Lifecycle organization and logging of submittals, vendor RFIs, transmittals, and field records.</p>
       <a class="service-link" href="#contact" data-service="Document Control">Request Document Control &rarr;</a>
     </article>
 
@@ -1168,7 +1180,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
       </div>
       <h3>Project Coordination</h3>
-      <p>Proactive stakeholder management, task log tracking, engineer updates, and cross-party communication flows.</p>
+      <p>Stakeholder management, task log tracking, engineer updates, and cross-party communication flows.</p>
       <a class="service-link" href="#contact" data-service="Project Coordination">Request Coordination &rarr;</a>
     </article>
 
@@ -1177,7 +1189,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
       </div>
       <h3>Construction Administration</h3>
-      <p>Clean administrative support for operational change tracking orders, purchase accounts, and closeout records.</p>
+      <p>Administrative support for change order tracking, purchase accounts, and closeout records.</p>
       <a class="service-link" href="#contact" data-service="Construction Administration">Request Admin Support &rarr;</a>
     </article>
 
@@ -1186,7 +1198,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
       </div>
       <h3>Scheduling Support</h3>
-      <p>Look-ahead tracking schedules, critical milestone monitoring, delay records, and progress logging.</p>
+      <p>Look-ahead tracking schedules, milestone monitoring, delay records, and progress logging.</p>
       <a class="service-link" href="#contact" data-service="Scheduling Support">Request Scheduling &rarr;</a>
     </article>
 
@@ -1195,7 +1207,7 @@ html{scroll-padding-top:132px;}
         <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l-7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
       </div>
       <h3>Project Support Plans</h3>
-      <p>Custom ongoing monthly allocations or dedicated per-project arrangements built explicitly for your pipeline.</p>
+      <p>Ongoing monthly allocations or dedicated per-project arrangements built for your pipeline.</p>
       <a class="service-link" href="#contact" data-service="Other">Build My Plan &rarr;</a>
     </article>
   </div>
@@ -1207,35 +1219,35 @@ html{scroll-padding-top:132px;}
       <img src="https://images.unsplash.com/photo-1691047489143-79b91c648c85?auto=format&fit=crop&w=1200&q=85" alt="Bulldozer grading a lot at a construction site" />
       <div class="panel-card">
         <strong>More time building. Less time buried in paperwork.</strong>
-        <p>We become the back-office and technical support extension your team needs to stay highly productive.</p>
+        <p>We become the back-office and technical support extension your team needs to stay productive.</p>
       </div>
     </div>
     
     <div class="reveal">
       <div class="label">Strategic Advantage</div>
       <h2>Built for Contractors Who Demand Execution.</h2>
-      <p style="color:var(--muted); line-height:1.65; font-size:17px; margin-top:12px;">Our workflows scale your capacity immediately, reduce corporate administration bottlenecks, and accelerate response times to bids, engineers, and project owners.</p>
+      <p style="color:var(--muted); line-height:1.65; font-size:17px; margin-top:12px;">Our workflows scale your capacity immediately, reduce administrative bottlenecks, and accelerate response times to bids, engineers, and project owners.</p>
       
       <div class="content-list">
         <div class="content-item">
           <span class="check">✓</span>
           <div>
             <h3>Minimize Payroll Overhead</h3>
-            <p>Access high-tier back-office support mechanics without incurring fixed internal benefits or onboarding drag.</p>
+            <p>Access back-office support without incurring fixed benefits, onboarding cost, or full-time commitment.</p>
           </div>
         </div>
         <div class="content-item">
           <span class="check">✓</span>
           <div>
-            <h3>Institutional Organization</h3>
-            <p>Keep change tracking logs, drawing sets, and record models completely secure, crisp, and verifiable.</p>
+            <h3>Organized, Verifiable Records</h3>
+            <p>Change logs, drawing sets, and document registers stay complete, current, and easy to audit.</p>
           </div>
         </div>
         <div class="content-item">
           <span class="check">✓</span>
           <div>
-            <h3>Accelerate Turnarounds</h3>
-            <p>Maintain momentum across active jobsites with systematic, punctual submittal and drafting operations.</p>
+            <h3>Faster Turnarounds</h3>
+            <p>Keep momentum across active jobsites with predictable submittal and drafting delivery windows.</p>
           </div>
         </div>
       </div>
@@ -1279,24 +1291,21 @@ html{scroll-padding-top:132px;}
 <section class="proof-section" id="proof">
   <div class="section-head reveal">
     <div class="label">Why Work With Us</div>
-    <h2>Clear Work. Clear Communication.</h2>
-    <p>What you can expect on every project, from the first request to final delivery.</p>
+    <h2>What You Can Count On, In Writing.</h2>
+    <p>No vague promises — three commitments built into every engagement, from the first request to final delivery.</p>
   </div>
   <div class="proof-grid">
     <div class="proof-card reveal">
-      <span class="proof-quote-mark">&ldquo;</span>
-      <p class="quote">Fast turnaround. Most takeoffs and estimates are delivered within days, not weeks.</p>
-      <div class="proof-person"><strong>Fast Turnaround</strong><span>General Contractors</span></div>
+      <div class="proof-person" style="border-top:0;padding-top:0;margin-bottom:14px;"><strong style="font-size:18px;">48–72 Hour Turnaround</strong></div>
+      <p class="quote">Standard takeoffs and estimates are delivered within 2–3 business days of scope confirmation — not weeks.</p>
     </div>
     <div class="proof-card reveal">
-      <span class="proof-quote-mark">&ldquo;</span>
-      <p class="quote">Lower cost than hiring in-house, with none of the onboarding delay or overhead.</p>
-      <div class="proof-person"><strong>Lower Cost</strong><span>Specialty Contractors</span></div>
+      <div class="proof-person" style="border-top:0;padding-top:0;margin-bottom:14px;"><strong style="font-size:18px;">Scope-Match Guarantee</strong></div>
+      <p class="quote">If a deliverable doesn't match the scope we agreed on, we revise it at no additional cost. No exceptions.</p>
     </div>
     <div class="proof-card reveal">
-      <span class="proof-quote-mark">&ldquo;</span>
-      <p class="quote">One point of contact who keeps your documents, logs, and requests organized.</p>
-      <div class="proof-person"><strong>Organized Process</strong><span>Developers & Owners</span></div>
+      <div class="proof-person" style="border-top:0;padding-top:0;margin-bottom:14px;"><strong style="font-size:18px;">One Point of Contact</strong></div>
+      <p class="quote">A single project manager owns your account from intake to delivery — no ticket queues, no hand-offs.</p>
     </div>
   </div>
 </section>
@@ -1305,45 +1314,45 @@ html{scroll-padding-top:132px;}
   <div class="section-head reveal">
     <div class="label">Investment</div>
     <h2>Simple Pricing.</h2>
-    <p>Final price depends on scope. Here's a starting range so you know what to expect.</p>
+    <p>Final price depends on scope. Here's a starting range so you know what to expect before you request a quote.</p>
   </div>
   <div class="pricing-grid">
     <div class="pricing-card reveal">
       <h3>Per-Project</h3>
-      <div class="price">From $350<span> / project</span></div>
+      <div class="price">From $450<span> / project</span></div>
       <p class="desc">One takeoff, estimate, or CAD request. Fixed price after a quick scope review.</p>
       <ul class="pricing-list">
         <li>One-time takeoff, estimate, or CAD request</li>
-        <li>Fixed price, no surprises</li>
-        <li>Delivered on your timeline</li>
+        <li>Fixed price, confirmed before work starts</li>
+        <li>Delivered in 48–72 hours</li>
       </ul>
       <a class="btn btn-yellow service-link" href="#contact" data-service="Other" style="width:100%">Get a Project Quote</a>
     </div>
     <div class="pricing-card featured reveal">
       <div class="pricing-badge">Most Popular</div>
       <h3>Monthly Support</h3>
-      <div class="price">From $1,800<span> / month</span></div>
+      <div class="price">From $2,400<span> / month</span></div>
       <p class="desc">Ongoing back-office support across multiple active jobs.</p>
       <ul class="pricing-list">
         <li>Set monthly hours across all services</li>
-        <li>Priority turnaround</li>
-        <li>One point of contact</li>
+        <li>Priority turnaround on every request</li>
+        <li>One dedicated project manager</li>
       </ul>
       <a class="btn service-link" href="#contact" data-service="Other" style="width:100%">Get a Monthly Quote</a>
     </div>
     <div class="pricing-card reveal">
       <h3>Dedicated Support</h3>
-      <div class="price">From $4,200<span> / month</span></div>
+      <div class="price">From $5,200<span> / month</span></div>
       <p class="desc">Near full-time back-office extension for high-volume pipelines.</p>
       <ul class="pricing-list">
         <li>High-volume, multi-project workload</li>
-        <li>Custom reporting</li>
+        <li>Custom reporting cadence</li>
         <li>Scales with your pipeline</li>
       </ul>
       <a class="btn service-link" href="#contact" data-service="Other" style="width:100%">Talk to Us</a>
     </div>
   </div>
-  <p class="pricing-note">Prices based on current outsourced-estimating market rates — adjust once you know your real costs and margins.</p>
+  <p class="pricing-note">Rates reflect current outsourced-estimating market pricing and are adjusted once we understand your project mix and margins — every quote is confirmed in writing before work begins.</p>
 </section>
 
 <section class="section" id="process">
@@ -1353,17 +1362,46 @@ html{scroll-padding-top:132px;}
     <p>A simple, transparent onboarding sequence designed to plug straight into your standard workflows.</p>
   </div>
   <div class="process-grid">
-    <div class="step reveal"><div class="num">01</div><h3>Send Request</h3><p>Upload project documents, blueprint links, spec books, or specific execution directives.</p></div>
-    <div class="step reveal"><div class="num">02</div><h3>Scope Review</h3><p>Our managers evaluate information dependencies to fix target parameters and deliverables.</p></div>
+    <div class="step reveal"><div class="num">01</div><h3>Send Request</h3><p>Upload project documents, blueprint links, spec books, or a description of what you need done.</p></div>
+    <div class="step reveal"><div class="num">02</div><h3>Scope Review</h3><p>A project manager reviews the materials, confirms deliverables, and sends fixed pricing before any work starts.</p></div>
     <div class="step reveal"><div class="num">03</div><h3>Core Execution</h3><p>We build out your takeoffs, drafting requests, document registers, or scheduling trackers.</p></div>
     <div class="step reveal"><div class="num">04</div><h3>Direct Delivery</h3><p>Your team receives accurate, clean files ready to drop straight into field loops or client reviews.</p></div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="section-head reveal">
+    <div class="label">Common Questions</div>
+    <h2>Before You Reach Out.</h2>
+  </div>
+  <div class="faq-list reveal">
+    <div class="faq-item">
+      <button class="faq-q">Who actually does the work on my project?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Every engagement is assigned a dedicated project manager who reviews scope, coordinates the work, and stays as your single point of contact from intake through delivery.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How is my project information kept confidential?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Blueprints, specs, and project data are used only to complete your request. We're happy to sign an NDA before reviewing sensitive material.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What happens if I'm not satisfied with a deliverable?<span class="plus">+</span></button>
+      <div class="faq-a"><p>If the deliverable doesn't match the scope we confirmed in writing, we revise it at no additional charge. That's part of every engagement, not an add-on.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How fast can you turn around a takeoff or estimate?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Standard requests are delivered in 48–72 hours from scope confirmation. Monthly and Dedicated Support clients receive priority turnaround ahead of the standard queue.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do you work with contractors outside my state?<span class="plus">+</span></button>
+      <div class="faq-a"><p>Yes. Support is delivered remotely and covers contractors, developers, and owners across the United States.</p></div>
+    </div>
   </div>
 </section>
 
 <section class="cta">
   <div>
     <h2>Ready to move faster on your next project?</h2>
-    <p>Send us your blueprints or project scope and we'll get back to you with a clear plan and timeline.</p>
+    <p>Send us your blueprints or project scope and we'll get back to you with a fixed-price plan and timeline.</p>
   </div>
   <a class="btn btn-yellow service-link" href="#contact" data-service="Other">Request Your Quote &rarr;</a>
 </section>
@@ -1377,38 +1415,34 @@ html{scroll-padding-top:132px;}
       <div><strong>Primary Operations</strong><a href="mailto:info@horizonstonepro.com" data-track="email">info@horizonstonepro.com</a></div>
       <div><strong>Account Solutions</strong><a href="mailto:sales@horizonstonepro.com" data-track="email">sales@horizonstonepro.com</a></div>
       <div><strong>Telephone Support</strong><a href="tel:7703558848">(770) 355-8848</a></div>
-      <div><strong>Territorial Domain</strong><span>Dedicated Back-Office Support Across the United States</span></div>
+      <div><strong>Service Area</strong><span>United States, remote delivery — response within one business day</span></div>
     </div>
   </div>
   
   <div class="form-card reveal">
     <form id="contact-form">
       <h3>Request Support</h3>
-      <p>Tell us what your team needs and a member of Horizon Stone Pro will follow up with you.</p>
+      <p>Tell us what your team needs and a project manager will follow up with a scoped, fixed-price plan.</p>
       <div class="form-grid">
-        <div class="form-group"><label for="firstName">First Name *</label><input id="firstName" name="first_name" type="text" required /></div>
-        <div class="form-group"><label for="lastName">Last Name *</label><input id="lastName" name="last_name" type="text" required /></div>
-        <div class="form-group"><label for="company">Company</label><input id="company" name="company" type="text" /></div>
+        <div class="form-group"><label for="firstName">Name *</label><input id="firstName" name="first_name" type="text" required /></div>
         <div class="form-group"><label for="email">Email *</label><input id="email" name="email" type="email" required /></div>
-        <div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
-        <div class="form-group"><label for="service">Service Needed</label>
-          <select id="service" name="service">
-            <option value="Estimating">Estimating</option>
+        <div class="form-group full"><label for="service">Service Needed *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Estimating">Estimating & Bid Support</option>
             <option value="Quantity Takeoffs">Quantity Takeoffs</option>
             <option value="CAD Drafting">CAD Drafting</option>
             <option value="Document Control">Document Control</option>
             <option value="Project Coordination">Project Coordination</option>
             <option value="Construction Administration">Construction Administration</option>
             <option value="Scheduling Support">Scheduling Support</option>
-            <option value="Roofing Support">Roofing Support</option>
-            <option value="Civil Support">Civil Support</option>
-            <option value="Commercial Support">Commercial Support</option>
-            <option value="Other">Other</option>
+            <option value="Other">Not sure yet</option>
           </select>
         </div>
-        <div class="form-group full"><label for="message">Project Description *</label><textarea id="message" name="message" required placeholder="Tell us about the scope, drawings, timeline, and support your team needs..."></textarea></div>
+        <div class="form-group full"><label for="message">Brief Project Description *</label><textarea id="message" name="message" required placeholder="One or two lines is enough to start — we'll ask for details during scope review."></textarea></div>
       </div>
       <button id="submit-button" class="btn submit" type="submit">Send Request</button>
+      <p class="form-guarantee">You'll hear from a project manager within one business day — no obligation, no cost to get a quote.</p>
     </form>
     <div id="form-success" class="form-status" role="status" aria-live="polite">
       <div class="form-status-icon">✓</div>
@@ -1461,6 +1495,7 @@ html{scroll-padding-top:132px;}
         <a href="#industries">Industries</a>
         <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Request Support</a>
       </div>
     </div>
@@ -1493,6 +1528,7 @@ html{scroll-padding-top:132px;}
       <a href="#industries">Industries</a>
       <a href="#pricing">Pricing</a>
       <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -1565,6 +1601,18 @@ document.querySelectorAll('[data-track]').forEach(el=>{
       if(action==='call' || action==='email') fbq('track','Contact',{method:action});
     }
     if(typeof gtag==='function') gtag('event',action,{event_category:'engagement'});
+  });
+});
+
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q');
+  const a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{
+      o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!isOpen){ item.classList.add('open'); a.style.maxHeight=a.scrollHeight+'px'; }
   });
 });
 
