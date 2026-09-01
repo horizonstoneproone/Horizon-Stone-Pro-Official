@@ -318,6 +318,7 @@ h1 em{font-style:normal;color:var(--yellow)}
 /* process */
 .proc-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 #tab-transparency .proc-line{grid-template-columns:repeat(5,1fr)}
+#tab-transparency .proc-line.proc-line-3{grid-template-columns:repeat(3,1fr)}
 #tab-process .proc-line{grid-template-columns:repeat(5,1fr)}
 .proc-line:before{content:"";position:absolute;top:23px;left:5%;right:5%;height:1px;background:var(--border)}
 .proc{position:relative}
@@ -397,6 +398,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
   .proc-line{grid-template-columns:1fr 1fr;gap:32px}
   .proc-line:before{display:none}
   #tab-transparency .proc-line,#tab-process .proc-line{grid-template-columns:1fr 1fr}
+  #tab-transparency .proc-line.proc-line-3{grid-template-columns:1fr 1fr}
   .split,.contact-grid{grid-template-columns:1fr}
   nav{display:none}
   .menu-btn{display:inline-flex}
@@ -409,6 +411,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
   .b-feat,.b-tall{grid-column:span 1;grid-row:span 1}
   .proc-line{grid-template-columns:1fr}
   #tab-transparency .proc-line,#tab-process .proc-line{grid-template-columns:1fr}
+  #tab-transparency .proc-line.proc-line-3{grid-template-columns:1fr}
   .f-grid{grid-template-columns:1fr}
 }
 .mobile-bar{display:none}
@@ -652,6 +655,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
             <span class="soft-chip">Primavera P6</span>
             <span class="soft-chip">Outlook</span>
           </div>
+          <button class="btn btn-outline jump" data-tab="transparency" style="height:34px;padding:0 14px;font-size:12.5px;margin-left:auto">What each one is used for</button>
         </div>
 
       </div>
@@ -700,25 +704,9 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
       </div>
     </section>
     <section class="psec" style="padding-top:0">
-      <div class="wrap about-band">
-        <div class="head center">
-          <div class="label">About us</div>
-          <h2>Who does the work, and where.</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-card">
-            <h3>Who</h3>
-            <p>A project manager owns your account from intake to delivery. Engineering work runs through our licensed engineering team; estimating, takeoffs, CAD, and document control are handled directly by our team.</p>
-          </div>
-          <div class="about-card">
-            <h3>Where</h3>
-            <p>Based in Atlanta, GA, delivering remotely to contractors, developers, and owners across the United States. Our engineering team is licensed nationwide.</p>
-          </div>
-          <div class="about-card">
-            <h3>How</h3>
-            <p>You send scope, we confirm fixed pricing before starting, and you get a single point of contact through delivery. No ticket queues, no hand-offs.</p>
-          </div>
-        </div>
+      <div class="wrap" style="text-align:center">
+        <p style="font-size:14.5px;color:var(--muted);margin-bottom:16px">Want the full breakdown of who's on your project, where we're based, and how a request moves start to finish?</p>
+        <button class="btn btn-outline jump" data-tab="transparency">Open the Transparency page</button>
       </div>
     </section>
   </div>
@@ -754,7 +742,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
           <div class="chk"><div class="chk-ico">TO</div><div><h3>Bluebeam</h3><p>Quantity takeoffs and markups, measured directly off your PDF plan set for the estimate you receive.</p></div></div>
           <div class="chk"><div class="chk-ico">PC</div><div><h3>Procore</h3><p>Document control and project coordination. RFIs, submittals, and transmittals logged where your team can see them too.</p></div></div>
           <div class="chk"><div class="chk-ico">P6</div><div><h3>Primavera P6</h3><p>Scheduling support and look-ahead tracking for jobs where the timeline itself is part of the deliverable.</p></div></div>
-          <div class="chk"><div class="chk-ico">OD</div><div><h3>OneDrive</h3><p>Every client file is backed up here during the engagement, then handed off or purged per your instructions.</p></div></div>
+          <div class="chk"><div class="chk-ico">OD</div><div><h3>OneDrive</h3><p>Every client file is backed up here for the duration of the engagement.</p></div></div>
           <div class="chk"><div class="chk-ico">QB</div><div><h3>Stripe & QuickBooks</h3><p>Invoicing and payment go through Stripe; QuickBooks keeps the books, so every charge traces back to a real invoice.</p></div></div>
         </div>
       </div>
@@ -764,14 +752,12 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
       <div class="wrap">
         <div class="head center">
           <div class="label">Chain of custody</div>
-          <h2>What happens to your files, step by step.</h2>
+          <h2>What happens to your files.</h2>
         </div>
-        <div class="proc-line">
+        <div class="proc-line proc-line-3">
           <div class="proc"><div class="proc-n">1</div><h3>You send it</h3><p>Upload through the form, or share a OneDrive, Google Drive, or Dropbox link. Nothing is opened by anyone outside the assigned team.</p></div>
           <div class="proc"><div class="proc-n">2</div><h3>NDA, if you want one</h3><p>We'll sign one before reviewing sensitive material, at no extra charge and no delay to your timeline.</p></div>
-          <div class="proc"><div class="proc-n">3</div><h3>Assigned, not queued</h3><p>Your project manager routes the work to the specific estimator, drafter, or engineering team for the job, never a generic support inbox.</p></div>
-          <div class="proc"><div class="proc-n">4</div><h3>Reviewed before it ships</h3><p>The Director of Operations checks scope match before delivery, so what you get is what was confirmed in writing.</p></div>
-          <div class="proc"><div class="proc-n">5</div><h3>Closed out on request</h3><p>Files are handed off in your preferred format; backups are purged from OneDrive whenever you ask.</p></div>
+          <div class="proc"><div class="proc-n">3</div><h3>Closed out on request</h3><p>Files are handed off in your preferred format; backups are purged from OneDrive whenever you ask.</p></div>
         </div>
       </div>
     </section>
@@ -789,7 +775,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
           <div class="fed-item"><strong>SAM.gov active</strong><span>UEI T451VASXDSR7 · CAGE 22J81</span></div>
           <div class="fed-item"><strong>W-9 on file</strong><span>Provided before any engagement starts</span></div>
           <div class="fed-item"><strong>Invoicing through Stripe & QuickBooks</strong><span>Every payment tied to a real invoice</span></div>
-          <div class="fed-item"><strong>Liability coverage in progress</strong><span>Errors & Omissions and General Liability quotes underway. We'll confirm current status on request</span></div>
+          <div class="fed-item"><strong>Insured</strong><span>Errors & Omissions and General Liability coverage in place</span></div>
           <div class="fed-item"><strong>Signed contractor agreement & privacy policy</strong><span>In place for every engagement</span></div>
         </div>
         <p style="font-size:12.5px;color:#7f92a8;max-width:620px;margin:0 auto 24px">If any of this changes, we'll update this page. If you want documentation on any of it, ask, and we'll send it before you sign anything.</p>
