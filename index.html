@@ -163,7 +163,7 @@ h1 em{font-style:normal;color:var(--yellow)}
 .hero p.lead{font-size:17px;color:#c3d0e0;max-width:560px;margin-bottom:30px}
 .chip-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}
 .chip{font-size:12.5px;font-weight:600;color:#dbe7f7;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:7px 13px;border-radius:999px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:14px}
 .btn{display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 26px;font-weight:700;font-size:14.5px;border-radius:10px;cursor:pointer;border:none;transition:all .2s}
 .btn-primary{background:var(--blue);color:#fff}
 .btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,111,230,.35)}
@@ -192,6 +192,18 @@ h1 em{font-style:normal;color:var(--yellow)}
 .scope-card p{font-size:13px;margin:0}
 @media(max-width:1080px){.scope-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.scope-grid{grid-template-columns:1fr}}
+
+.pillar-list{display:flex;flex-direction:column;margin-top:8px}
+.pillar-row{display:grid;grid-template-columns:260px 1fr;gap:44px;padding:34px 0;border-top:1px solid var(--border)}
+.pillar-num{font-family:var(--fd);font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.5px;margin-bottom:8px;display:block}
+.pillar-name{font-family:var(--fd);font-weight:800;font-size:28px;line-height:1.18;color:var(--navy);letter-spacing:-.6px}
+.pillar-body p{font-size:15px;max-width:620px;margin-bottom:16px}
+.pillar-tags{display:flex;gap:8px;flex-wrap:wrap}
+.pillar-tags span{font-size:12px;font-weight:600;color:var(--blue);background:var(--soft);padding:6px 12px;border-radius:999px;border:1px solid var(--border)}
+@media(max-width:900px){
+  .pillar-row{grid-template-columns:1fr;gap:14px;padding:26px 0}
+  .pillar-name{font-size:22px}
+}
 
 /* coverage band */
 .coverage-band{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:center;background:var(--navy);border-radius:18px;padding:32px 40px;margin:36px 0 8px;color:#fff;position:relative;overflow:hidden}
@@ -466,20 +478,17 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
       <div class="wrap hero-in">
         <div class="eyebrow"><span class="d"></span>Active federal contractor, registered in SAM.gov</div>
         <h1>Send us the plans. We'll send back the numbers.</h1>
-        <p class="lead">Estimating, takeoffs, CAD, engineering, and document control for contractors who'd rather build than push paper. Fixed pricing, confirmed before we start, no long-term hire required.</p>
+        <p class="lead">We're the estimating, CAD, and documentation team for contractors who don't have time to be their own back office. Fixed pricing, confirmed before we start.</p>
         <div class="chip-row">
-          <span class="chip">Engineering, 50 states</span>
-          <span class="chip">Estimating & bid support</span>
-          <span class="chip">Federal contracting</span>
-          <span class="chip">General contracting support</span>
-          <span class="chip">CAD drafting</span>
-          <span class="chip">Document control</span>
+          <span class="chip">Estimating & takeoffs</span>
+          <span class="chip">CAD & engineering</span>
+          <span class="chip">Documentation & compliance</span>
         </div>
         <div class="hero-actions">
           <button class="btn btn-primary jump" data-tab="contact" data-track="quote">Upload your plans</button>
-          <a class="btn btn-ghost" href="tel:7703558848" data-track="call">Call (770) 355-8848</a>
-          <button class="btn btn-ghost jump" data-tab="transparency">See who does the work</button>
+          <button class="btn btn-ghost jump" data-tab="process">See how it works</button>
         </div>
+        <p style="font-size:13px;color:#8ea3bd;margin-bottom:36px">Prefer to talk first? <a href="tel:7703558848" data-track="call" style="color:#fff;font-weight:600;text-decoration:underline">Call (770) 355-8848</a></p>
         <div class="stat-bar">
           <div class="stat"><b>50</b><span>States, engineering team coverage</span></div>
           <div class="stat"><b>48–72h</b><span>Standard turnaround</span></div>
@@ -491,17 +500,49 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
     <section class="psec">
       <div class="wrap">
         <div class="head center">
-          <div class="label">Full scope</div>
-          <h2>One team, five disciplines.</h2>
-          <p>From federal compliance to field-ready drawings, everything a contractor's back office needs, under one point of contact.</p>
+          <div class="label">What we actually do</div>
+          <h2>Three things. Done all the way.</h2>
+          <p>Not a jack-of-all-trades shop. Estimating, CAD & engineering, and documentation — that's it, and we do all three well enough that you stop thinking about them.</p>
         </div>
-        <div class="scope-grid">
-          <div class="scope-card"><h3>Engineering services</h3><p>Structural, civil, and electrical review, stamped drawings, and design support, brought in through our licensed engineering team.</p></div>
-          <div class="scope-card"><h3>CAD & drafting</h3><p>Technical drafting, redlines, as-builts, and detail work handled by staff who read a plan set the way your PMs do.</p></div>
-          <div class="scope-card"><h3>Federal contracting</h3><p>Actively registered in SAM.gov and cleared to support federal, state, and local government projects.</p></div>
-          <div class="scope-card"><h3>General contracting support</h3><p>Bid packages, submittal tracking, and schedule follow-up for GCs running multiple active jobs.</p></div>
-          <div class="scope-card"><h3>Estimating & takeoffs</h3><p>Itemized costing and quantity metrics pulled cleanly from blueprints, priced before work starts.</p></div>
-          <div class="scope-card"><h3>Document & project control</h3><p>RFIs, transmittals, and change orders logged and audit-ready, start to closeout.</p></div>
+        <div class="pillar-list">
+          <div class="pillar-row">
+            <div>
+              <span class="pillar-num">01</span>
+              <h3 class="pillar-name">Estimating<br>& takeoffs</h3>
+            </div>
+            <div class="pillar-body">
+              <p>Itemized costing and quantity takeoffs pulled straight from your blueprints in Bluebeam, priced and confirmed before a single hour of work starts.</p>
+              <div class="pillar-tags"><span>Bid support</span><span>Quantity takeoffs</span><span>Fixed pricing upfront</span></div>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div>
+              <span class="pillar-num">02</span>
+              <h3 class="pillar-name">CAD<br>& engineering</h3>
+            </div>
+            <div class="pillar-body">
+              <p>Drafting, redlines, and as-builts in AutoCAD and Revit, plus stamped structural, civil, and electrical work through our engineering team, licensed in all 50 states.</p>
+              <div class="pillar-tags"><span>CAD drafting</span><span>Stamped drawings</span><span>50-state coverage</span></div>
+            </div>
+          </div>
+          <div class="pillar-row">
+            <div>
+              <span class="pillar-num">03</span>
+              <h3 class="pillar-name">Documentation<br>& compliance</h3>
+            </div>
+            <div class="pillar-body">
+              <p>RFIs, submittals, and change orders logged in Procore and kept audit-ready — plus the active SAM.gov registration that clears you for federal work.</p>
+              <div class="pillar-tags"><span>Document control</span><span>Federal contracting</span><span>Project coordination</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="soft-strip" style="margin-top:20px">
+          <span class="soft-label">Also included</span>
+          <div class="soft-list">
+            <span class="soft-chip">Scheduling support</span>
+            <span class="soft-chip">General contracting support</span>
+            <span class="soft-chip">Monthly & dedicated support plans</span>
+          </div>
         </div>
       </div>
     </section>
