@@ -267,6 +267,7 @@ h1 em{font-style:normal;color:var(--yellow)}
 .chk{display:flex;gap:16px;padding:18px;border-radius:14px;background:var(--white);border:1px solid var(--border);transition:.2s}
 .chk:hover{border-color:rgba(0,111,230,.25);box-shadow:var(--shadow)}
 .chk-ico{width:34px;height:34px;flex-shrink:0;border-radius:9px;background:var(--soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px}
+.chk-list .chk-ico{width:42px;font-size:11px;letter-spacing:.2px}
 .chk h3{font-family:var(--fd);font-weight:700;font-size:15px;margin-bottom:3px}
 .chk p{margin:0;font-size:13.5px}
 
@@ -298,6 +299,8 @@ h1 em{font-style:normal;color:var(--yellow)}
 
 /* process */
 .proc-line{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+#tab-transparency .proc-line{grid-template-columns:repeat(5,1fr)}
+#tab-process .proc-line{grid-template-columns:repeat(5,1fr)}
 .proc-line:before{content:"";position:absolute;top:23px;left:5%;right:5%;height:1px;background:var(--border)}
 .proc{position:relative}
 .proc-n{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;font-size:15px;margin-bottom:20px;position:relative;z-index:2}
@@ -375,6 +378,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
   .price-grid,.ind-grid,.proof-grid{grid-template-columns:1fr}
   .proc-line{grid-template-columns:1fr 1fr;gap:32px}
   .proc-line:before{display:none}
+  #tab-transparency .proc-line,#tab-process .proc-line{grid-template-columns:1fr 1fr}
   .split,.contact-grid{grid-template-columns:1fr}
   nav{display:none}
   .menu-btn{display:inline-flex}
@@ -386,6 +390,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
   .bento{grid-template-columns:1fr}
   .b-feat,.b-tall{grid-column:span 1;grid-row:span 1}
   .proc-line{grid-template-columns:1fr}
+  #tab-transparency .proc-line,#tab-process .proc-line{grid-template-columns:1fr}
   .f-grid{grid-template-columns:1fr}
 }
 .mobile-bar{display:none}
@@ -435,6 +440,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
       <button class="nl active" data-tab="home">Home</button>
       <button class="nl" data-tab="services">Services</button>
       <button class="nl" data-tab="why">Why us</button>
+      <button class="nl" data-tab="transparency">Transparency</button>
       <button class="nl" data-tab="pricing">Pricing</button>
       <button class="nl" data-tab="process">Process</button>
       <button class="nl" data-tab="faq">FAQ</button>
@@ -488,6 +494,9 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
           <div class="scope-card"><h3>General contracting support</h3><p>Bid packages, submittal tracking, and schedule follow-up for GCs running multiple active jobs.</p></div>
           <div class="scope-card"><h3>Estimating & takeoffs</h3><p>Itemized costing and quantity metrics pulled cleanly from blueprints, priced before work starts.</p></div>
           <div class="scope-card"><h3>Document & project control</h3><p>RFIs, transmittals, and change orders logged and audit-ready, start to closeout.</p></div>
+        </div>
+        <div style="text-align:center;margin-top:36px">
+          <button class="btn btn-outline jump" data-tab="transparency">See exactly who does the work and how</button>
         </div>
       </div>
     </section>
@@ -672,6 +681,81 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
     </section>
   </div>
 
+  <div class="tab-page" id="tab-transparency">
+    <section class="psec">
+      <div class="wrap">
+        <div class="head center">
+          <div class="label">Full transparency</div>
+          <h2>Who touches your project, in what order.</h2>
+          <p>No subcontractor mystery, no ticket queue. Here's the actual structure behind every deliverable — the roles, the tools, and how your files are handled from the moment you send them.</p>
+        </div>
+        <div class="scope-grid">
+          <div class="scope-card"><h3>Director of Operations</h3><p>Owns the account relationship, confirms scope and pricing with you directly, and signs off before anything ships back.</p></div>
+          <div class="scope-card"><h3>Project manager</h3><p>Your single point of contact. Breaks your request into tasks, assigns them internally, tracks the deadline, and answers your emails.</p></div>
+          <div class="scope-card"><h3>Estimating & takeoffs team</h3><p>Reads the plan set, pulls quantities in Bluebeam, and builds the itemized cost sheet you'll receive.</p></div>
+          <div class="scope-card"><h3>CAD & drafting team</h3><p>Handles redlines, as-builts, and detail drafting directly in AutoCAD or Revit, matched to your existing plan set.</p></div>
+          <div class="scope-card"><h3>Document control</h3><p>Logs RFIs, transmittals, and change orders in Procore so the paper trail stays audit-ready.</p></div>
+          <div class="scope-card"><h3>Engineering partner firm</h3><p>A licensed engineering firm, independent from us and licensed in all 50 states, does the actual stamping and calculations. We coordinate the scope; they carry the license.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="psec" style="padding-top:0">
+      <div class="wrap">
+        <div class="head center">
+          <div class="label">Software stack</div>
+          <h2>What we use, and what it's for.</h2>
+          <p>Every tool below is one your own PMs would recognize, not a proprietary portal you have to learn.</p>
+        </div>
+        <div class="chk-list" style="max-width:820px;margin:0 auto">
+          <div class="chk"><div class="chk-ico">CAD</div><div><h3>AutoCAD & Revit</h3><p>Drafting, redlines, as-builts, and detail work — delivered in the native file format you already use.</p></div></div>
+          <div class="chk"><div class="chk-ico">TO</div><div><h3>Bluebeam</h3><p>Quantity takeoffs and markups, measured directly off your PDF plan set for the estimate you receive.</p></div></div>
+          <div class="chk"><div class="chk-ico">PC</div><div><h3>Procore</h3><p>Document control and project coordination — RFIs, submittals, and transmittals logged where your team can see them too.</p></div></div>
+          <div class="chk"><div class="chk-ico">P6</div><div><h3>Primavera P6</h3><p>Scheduling support and look-ahead tracking for jobs where the timeline itself is part of the deliverable.</p></div></div>
+          <div class="chk"><div class="chk-ico">OD</div><div><h3>OneDrive</h3><p>Every client file is backed up here during the engagement, then handed off or purged per your instructions.</p></div></div>
+          <div class="chk"><div class="chk-ico">QB</div><div><h3>Stripe & QuickBooks</h3><p>Invoicing and payment go through Stripe; QuickBooks keeps the books, so every charge traces back to a real invoice.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="psec" style="padding-top:0">
+      <div class="wrap">
+        <div class="head center">
+          <div class="label">Chain of custody</div>
+          <h2>What happens to your files, step by step.</h2>
+        </div>
+        <div class="proc-line">
+          <div class="proc"><div class="proc-n">1</div><h3>You send it</h3><p>Upload through the form, or share a OneDrive, Google Drive, or Dropbox link. Nothing is opened by anyone outside the assigned team.</p></div>
+          <div class="proc"><div class="proc-n">2</div><h3>NDA, if you want one</h3><p>We'll sign one before reviewing sensitive material — no extra charge, no delay to your timeline.</p></div>
+          <div class="proc"><div class="proc-n">3</div><h3>Assigned, not queued</h3><p>Your project manager routes the work to the specific estimator, drafter, or partner firm for the job — never a generic support inbox.</p></div>
+          <div class="proc"><div class="proc-n">4</div><h3>Reviewed before it ships</h3><p>The Director of Operations checks scope match before delivery, so what you get is what was confirmed in writing.</p></div>
+          <div class="proc"><div class="proc-n">5</div><h3>Closed out on request</h3><p>Files are handed off in your preferred format; backups are purged from OneDrive whenever you ask.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="psec" style="padding-top:0">
+      <div class="wrap fed-band">
+        <div class="fed-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Business standing
+        </div>
+        <h2>Where things actually stand, no filler.</h2>
+        <p>You're vetting who you send blueprints to. Here's what's true about our operation right now, not a rounded-up version of it.</p>
+        <div class="fed-grid">
+          <div class="fed-item"><strong>LLC, registered in Georgia</strong><span>Atlanta, GA, U.S.-based entity</span></div>
+          <div class="fed-item"><strong>SAM.gov active</strong><span>UEI T451VASXDSR7 · CAGE 22J81</span></div>
+          <div class="fed-item"><strong>W-9 on file</strong><span>Provided before any engagement starts</span></div>
+          <div class="fed-item"><strong>Invoicing through Stripe & QuickBooks</strong><span>Every payment tied to a real invoice</span></div>
+          <div class="fed-item"><strong>Liability coverage in progress</strong><span>Errors & Omissions and General Liability quotes underway — we'll confirm current status on request</span></div>
+          <div class="fed-item"><strong>Signed contractor agreement & privacy policy</strong><span>In place for every engagement</span></div>
+        </div>
+        <p style="font-size:12.5px;color:#7f92a8;max-width:620px;margin:0 auto 24px">If any of this changes, we'll update this page. If you want documentation on any of it, ask — we'll send it before you sign anything.</p>
+        <button class="btn btn-outline-light jump" data-tab="contact">Ask us anything before you send plans</button>
+      </div>
+    </section>
+  </div>
+
   <div class="tab-page" id="tab-pricing">
     <section class="psec">
       <div class="wrap">
@@ -713,13 +797,62 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
       <div class="wrap">
         <div class="head center">
           <div class="label">Operational pipeline</div>
-          <h2>How we support your project.</h2>
+          <h2>How we support your project, step by step.</h2>
+          <p>Each step names who does it, what tool it happens in, and what you get out of it — so there's no guessing where your request is at any given moment.</p>
         </div>
         <div class="proc-line">
-          <div class="proc"><div class="proc-n">1</div><h3>Send request</h3><p>Upload blueprints, spec books, or describe what you need done.</p></div>
-          <div class="proc"><div class="proc-n">2</div><h3>Scope review</h3><p>We confirm deliverables and send fixed pricing before work starts.</p></div>
-          <div class="proc"><div class="proc-n">3</div><h3>Core execution</h3><p>We build your takeoffs, drafting, or document registers.</p></div>
-          <div class="proc"><div class="proc-n">4</div><h3>Direct delivery</h3><p>Clean files ready to drop straight into your workflow.</p></div>
+          <div class="proc">
+            <div class="proc-n">1</div>
+            <h3>Send request</h3>
+            <p>Upload blueprints, spec books, or describe what you need done, through the form or a shared drive link.</p>
+            <div class="chip-row" style="margin:14px 0 0">
+              <span class="chip" style="color:var(--navy);background:var(--soft);border-color:var(--border)">Handled by: Project manager</span>
+            </div>
+          </div>
+          <div class="proc">
+            <div class="proc-n">2</div>
+            <h3>Scope review</h3>
+            <p>We confirm exactly what's included, flag anything unclear, and send fixed pricing in writing before any work starts.</p>
+            <div class="chip-row" style="margin:14px 0 0">
+              <span class="chip" style="color:var(--navy);background:var(--soft);border-color:var(--border)">Handled by: Director of Operations</span>
+            </div>
+          </div>
+          <div class="proc">
+            <div class="proc-n">3</div>
+            <h3>Core execution</h3>
+            <p>Estimators, drafters, or our engineering partner build your takeoffs, drawings, or document registers in the actual software listed below.</p>
+            <div class="chip-row" style="margin:14px 0 0">
+              <span class="chip" style="color:var(--navy);background:var(--soft);border-color:var(--border)">AutoCAD · Revit · Bluebeam · Procore</span>
+            </div>
+          </div>
+          <div class="proc">
+            <div class="proc-n">4</div>
+            <h3>Scope-match check</h3>
+            <p>Before anything ships, the Director of Operations checks the deliverable against the written scope from step 2.</p>
+            <div class="chip-row" style="margin:14px 0 0">
+              <span class="chip" style="color:var(--navy);background:var(--soft);border-color:var(--border)">If it's off scope, it's revised free</span>
+            </div>
+          </div>
+          <div class="proc">
+            <div class="proc-n">5</div>
+            <h3>Direct delivery</h3>
+            <p>Clean files in your requested format, sent straight to you or your project folder — no portal login required.</p>
+            <div class="chip-row" style="margin:14px 0 0">
+              <span class="chip" style="color:var(--navy);background:var(--soft);border-color:var(--border)">48–72h from scope confirmation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="psec" style="padding-top:0">
+      <div class="wrap">
+        <div class="head center">
+          <div class="label">Want the full breakdown?</div>
+          <h2>See exactly who's involved and what we use.</h2>
+          <p>The Transparency page lists every role on your project, the software behind each deliverable, and where your files go from the moment you send them.</p>
+        </div>
+        <div style="text-align:center">
+          <button class="btn btn-primary jump" data-tab="transparency">See the transparency page</button>
         </div>
       </div>
     </section>
@@ -742,6 +875,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
           <div class="f-item"><button class="f-q">What software do you work in?<span class="p">+</span></button><div class="f-a"><p>AutoCAD and Revit for drafting, Bluebeam for markups and takeoffs, Procore for project and document coordination, Primavera P6 for scheduling, and Outlook for day-to-day communication.</p></div></div>
           <div class="f-item"><button class="f-q">Do you sign NDAs?<span class="p">+</span></button><div class="f-a"><p>Yes, before reviewing sensitive material if you'd like one in place. Your plans and specs are used only to complete your request and are never shared beyond the team working on it.</p></div></div>
           <div class="f-item"><button class="f-q">Can you support federal or government projects?<span class="p">+</span></button><div class="f-a"><p>Yes. We're an active SAM.gov registrant (UEI T451VASXDSR7, CAGE 22J81), registered as a small business, ready as prime or subcontractor under NAICS codes covering commercial and industrial construction, heavy civil, engineering services, drafting, and construction management consulting.</p></div></div>
+          <div class="f-item"><button class="f-q">Can I see exactly who's working on my project and what tools they use?<span class="p">+</span></button><div class="f-a"><p>Yes — that's the whole point of our Transparency page. It lists every role involved (project manager, estimators, drafters, our engineering partner), the exact software behind each deliverable, and the step-by-step path your files take from upload to delivery.</p></div></div>
         </div>
       </div>
     </section>
@@ -824,6 +958,7 @@ footer{background:var(--navy);color:#a9bdd6;padding:44px 6% 0}
         <div class="f-links">
           <a class="jf" data-tab="services">Services</a>
           <a class="jf" data-tab="why">Why us</a>
+          <a class="jf" data-tab="transparency">Transparency</a>
           <a class="jf" data-tab="pricing">Pricing</a>
           <a class="jf" data-tab="process">Process</a>
           <a class="jf" data-tab="faq">FAQ</a>
@@ -857,6 +992,7 @@ const tabMeta={
   home:'Horizon Stone Pro | Construction Estimating, CAD & Federal Contracting Support',
   services:'Services & Industries | Horizon Stone Pro',
   why:'Why Horizon Stone Pro',
+  transparency:'Transparency | Horizon Stone Pro',
   pricing:'Pricing | Horizon Stone Pro',
   process:'Our Process | Horizon Stone Pro',
   faq:'FAQ | Horizon Stone Pro',
