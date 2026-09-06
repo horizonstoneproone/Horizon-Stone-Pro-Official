@@ -182,20 +182,24 @@ h1 em{font-style:normal;color:var(--amber-500)}
 .std-pill span{font-size:12.5px;color:var(--muted)}
 
 /* ---------- coverage ---------- */
-.coverage{background:var(--navy-950);position:relative;overflow:hidden}
+.coverage{background:var(--navy-950);position:relative;overflow:hidden;padding:clamp(40px,6vw,68px) 0}
 .coverage .hero-grid{opacity:.3;mask-image:radial-gradient(ellipse 80% 80% at 50% 40%,#000 40%,transparent 92%)}
-.coverage-head{position:relative;z-index:2;color:#fff;max-width:620px;margin:0 auto 36px;text-align:center}
+.coverage-grid{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.coverage-head{color:#fff;max-width:420px;text-align:left;margin:0;flex:1 1 300px}
 .coverage-head p{color:#a9bdd6;font-size:15px;margin:0}
-.map-wrap{position:relative;z-index:2;max-width:820px;margin:0 auto}
+.coverage-head .sheet-label{justify-content:flex-start}
+.map-col{flex:0 1 360px}
+.map-wrap{max-width:360px;margin:0 auto}
 .us-map{width:100%;height:auto;display:block;overflow:visible}
 .map-outline{transition:fill-opacity 1.4s ease}
 .map-mesh{opacity:0;transition:opacity 1.2s ease .4s}
 .map-wrap.in .map-mesh{opacity:1}
-.map-caption{position:relative;z-index:2;text-align:center;margin-top:8px;color:#8ea3bd;font-size:13.5px}
-@media(max-width:640px){.map-wrap{max-width:100%}}
+.map-caption{text-align:center;margin-top:8px;color:#8ea3bd;font-size:13.5px}
+@media(max-width:900px){.coverage-grid{flex-direction:column;text-align:center}.coverage-head{text-align:center;max-width:520px}.coverage-head .sheet-label{justify-content:center}}
+@media(max-width:640px){.map-wrap,.map-col{max-width:280px}}
 
 /* ---------- federal band ---------- */
-.fed{background:linear-gradient(180deg,var(--navy-950),var(--navy-900));color:#fff;position:relative}
+.fed{background:linear-gradient(180deg,var(--navy-900),var(--navy-950));color:#fff;position:relative;border-top:1px solid var(--line-ondark)}
 .fed-in{position:relative;z-index:2;text-align:center}
 .fed-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,179,0,.1);border:1px solid rgba(255,179,0,.35);color:var(--amber-500);padding:8px 16px;border-radius:999px;font-family:var(--mono);font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:22px}
 .fed-badge svg{width:14px;height:14px}
