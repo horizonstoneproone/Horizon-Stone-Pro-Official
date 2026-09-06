@@ -110,6 +110,16 @@ if(contactForm){
   });
 }
 
+// optional project-detail fields toggle (contact.html)
+const extraToggle=document.getElementById('extra-toggle');
+const extraFields=document.getElementById('extra-fields');
+if(extraToggle && extraFields){
+  extraToggle.addEventListener('click',()=>{
+    const open=extraFields.classList.toggle('show');
+    extraToggle.textContent = open ? 'Hide project details' : '+ Add project details (optional)';
+  });
+}
+
 // outbound click/engagement tracking (present on every page)
 document.querySelectorAll('[data-track]').forEach(el=>{
   const isInputLike = el.tagName === 'INPUT';

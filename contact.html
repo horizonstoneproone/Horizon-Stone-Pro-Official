@@ -139,6 +139,10 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
 <section class="psec">
   <div class="wrap contact-grid">
     <div class="c-info reveal">
+      <div class="trust-badge" style="margin-bottom:18px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        NDA available before you share anything sensitive
+      </div>
       <div class="need-box">
         <h3>What we need from you</h3>
         <ul>
@@ -178,6 +182,22 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
               <option>Scheduling Support</option>
               <option>Not sure yet</option>
             </select>
+          </div>
+          <button type="button" class="extra-toggle full" id="extra-toggle">+ Add project details (optional)</button>
+          <div class="extra-fields" id="extra-fields">
+            <div class="fg"><label>Project type</label>
+              <select name="project_type">
+                <option value="">Select if known</option>
+                <option>Solar</option>
+                <option>BESS / Energy Storage</option>
+                <option>Commercial</option>
+                <option>Industrial</option>
+                <option>Residential</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Project size (m&sup2; or MW)</label><input type="text" name="project_size" placeholder="Optional"/></div>
+            <div class="fg full"><label>Bid due date</label><input type="date" name="bid_due_date"/></div>
           </div>
           <div class="fg full"><label>Project description</label><textarea required name="message" placeholder="A line or two is enough to start."></textarea></div>
         </div>
