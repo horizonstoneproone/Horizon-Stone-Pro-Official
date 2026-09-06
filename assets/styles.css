@@ -162,6 +162,15 @@ h1 em{font-style:normal;color:var(--amber-500)}
 .soft-label{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
 .soft-list{display:flex;gap:10px;flex-wrap:wrap}
 .soft-chip{font-size:13px;font-weight:600;color:var(--navy-950);background:var(--white);border:1px solid var(--line);padding:7px 14px;border-radius:999px;box-shadow:var(--shadow)}
+.tool-badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin-top:6px}
+.tool-badge{display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px 10px;box-shadow:var(--shadow);transition:.2s}
+.tool-badge:hover{border-color:rgba(0,111,230,.3);transform:translateY(-2px)}
+.tb-ico{width:42px;height:42px;border-radius:10px;background:var(--paper-2);color:var(--blue-600);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;font-family:var(--mono)}
+.tool-badge span{font-size:12.5px;font-weight:600;color:var(--ink)}
+.std-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.std-pill{display:inline-flex;align-items:center;gap:9px;background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:11px 16px}
+.std-pill b{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--blue-600);white-space:nowrap}
+.std-pill span{font-size:12.5px;color:var(--muted)}
 
 /* ---------- coverage ---------- */
 .coverage{background:var(--navy-950);position:relative;overflow:hidden}
