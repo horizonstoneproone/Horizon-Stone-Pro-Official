@@ -103,7 +103,7 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -114,6 +114,7 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
       <div class="bmark">H</div>
       <div class="btxt">HORIZON<span>STONE&nbsp;PRO</span></div>
     </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav>
       <a class="nl active" href="index.html">Home</a>
       <a class="nl" href="services.html">Services</a>
@@ -130,12 +131,12 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
 <main id="top">
 
   <section class="hero">
+    <div class="hero-aurora"><i></i><i></i><i></i></div>
     <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-glow2"></div>
+    <div class="hero-grain"></div>
     <div class="wrap hero-in">
       <div class="eyebrow"><span class="d"></span>Active federal contractor, registered in SAM.gov</div>
-      <h1>Tell us about the job.<br>We'll send back <em>the numbers.</em></h1>
+      <h1><span class="line"><span>Tell us about the job.</span></span><span class="line"><span>We'll send back <em>the numbers.</em></span></span></h1>
       <p class="lead">We're the estimating, CAD, and documentation team for contractors who don't have time to be their own back office. Fixed pricing, confirmed before we start.</p>
       <div class="chip-row">
         <span class="chip">Estimating &amp; takeoffs</span>
@@ -147,14 +148,20 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
         <a class="btn btn-ghost" href="process.html">See how it works</a>
       </div>
       <p class="call-line">You can also call us directly at <a href="tel:7703558848">(770) 355-8848</a></p>
-      <div class="plate reveal">
-        <div class="plate-item"><b class="tnum" data-count="50">0</b><span>States, engineering team coverage</span></div>
-        <div class="plate-item"><b>48–72h</b><span>Standard turnaround</span></div>
-        <div class="plate-item"><b>SAM.GOV</b><span>Federal contractor status</span></div>
-        <div class="plate-item"><b class="tnum" data-count="1">0</b><span>Point of contact</span></div>
+      <div class="kpi-band reveal">
+        <div class="kpi-item"><b class="tnum" data-count="50">0</b><span>States, engineering team coverage</span></div>
+        <div class="kpi-item"><b>48–72h</b><span>Standard turnaround</span></div>
+        <div class="kpi-item"><b>SAM.GOV</b><span>Federal contractor status</span></div>
+        <div class="kpi-item"><b class="tnum" data-count="1">0</b><span>Point of contact</span></div>
       </div>
     </div>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Estimating</span><span>CAD drafting</span><span>Quantity takeoffs</span><span>Document control</span><span>Scheduling</span><span>QA / QC</span><span>Estimating</span><span>CAD drafting</span><span>Quantity takeoffs</span><span>Document control</span><span>Scheduling</span><span>QA / QC</span>
+    </div>
+  </div>
 
   <section class="psec">
     <div class="wrap">
@@ -230,6 +237,36 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
       </div>
     </div>
   </section>
+
+
+  <section class="psec img-band">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="sheet-label">The work, up close</span>
+        <h2>Real plans. Real documents. <em>Handled for you.</em></h2>
+        <p>This is what your back office looks like with Horizon on the job: drawings reviewed, quantities counted, paperwork controlled.</p>
+      </div>
+      <div class="img-grid reveal-stagger">
+        <figure class="img-card">
+          <img src="assets/img/blueprints.webp" alt="Construction blueprints and floor plans reviewed for quantity takeoffs" loading="lazy">
+          <figcaption><b>Plans &amp; takeoffs</b><span>Blueprints read sheet by sheet, quantities counted and verified.</span></figcaption>
+        </figure>
+        <figure class="img-card">
+          <img src="assets/img/cad-drafting.webp" alt="CAD drafting of building floor plans on screen" loading="lazy">
+          <figcaption><b>CAD drafting</b><span>Redlines, as-builts and detail drawings, drawn to standard.</span></figcaption>
+        </figure>
+        <figure class="img-card">
+          <img src="assets/img/estimating.webp" alt="Estimator preparing a construction quantity takeoff" loading="lazy">
+          <figcaption><b>Estimating support</b><span>Clean estimates and bid-ready numbers, delivered on schedule.</span></figcaption>
+        </figure>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:34px">
+        <a class="btn btn-primary" href="contact.html" data-track="quote">Send us your plans</a>
+      </div>
+    </div>
+  </section>
+
+  
 
   <section class="psec coverage">
     <div class="hero-grid"></div>
