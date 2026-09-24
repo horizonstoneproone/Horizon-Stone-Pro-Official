@@ -295,6 +295,40 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
   </div>
 </section>
 
+<section class="psec" style="padding-top:0">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="sheet-label">Do the math</span>
+      <h2>What does an in-house team <em>really cost you?</em></h2>
+      <p>Move the sliders. This is a rough estimate of one year of in-house estimating capacity — salary, benefits, and software seats — from your own inputs.</p>
+    </div>
+    <div class="calc reveal">
+      <div class="calc-body">
+        <div class="calc-row">
+          <div class="calc-label"><label for="calc-staff">Estimators / CAD staff on payroll</label><span class="calc-val" id="calc-staff-val">3</span></div>
+          <input type="range" id="calc-staff" min="1" max="10" step="1" value="3" aria-label="Number of estimators or CAD staff">
+        </div>
+        <div class="calc-row">
+          <div class="calc-label"><label for="calc-salary">Average salary per person</label><span class="calc-val" id="calc-salary-val">$75,000</span></div>
+          <input type="range" id="calc-salary" min="45000" max="150000" step="5000" value="75000" aria-label="Average salary per person">
+        </div>
+        <div class="calc-row">
+          <div class="calc-label"><label for="calc-bids">Projects bid per month</label><span class="calc-val" id="calc-bids-val">6</span></div>
+          <input type="range" id="calc-bids" min="1" max="30" step="1" value="6" aria-label="Projects bid per month">
+        </div>
+      </div>
+      <div class="calc-out">
+        <div class="calc-num">
+          <small>Estimated annual in-house cost</small>
+          <strong><em>$</em><span id="calc-total" data-count="0">0</span></strong>
+        </div>
+        <a class="btn btn-primary" href="contact.html" data-track="quote">Get a Horizon quote instead</a>
+      </div>
+      <div class="calc-fine">Rough order-of-magnitude math from your inputs (salary × 1.32 loaded cost + ~$3,600/yr software per seat). Not a quote — talk to us for real numbers.</div>
+    </div>
+  </div>
+</section>
+
 </main>
 <footer>
   <div class="wrap">

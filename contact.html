@@ -163,34 +163,37 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="form-card reveal">
-      <form id="contact-form">
+      <form id="contact-form" enctype="multipart/form-data" novalidate>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="hidden" name="_subject" value="New Horizon Stone Pro Website Request" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
-        <div class="f-grid">
-          <div class="fg"><label>Name</label><input required type="text" name="name"/></div>
-          <div class="fg"><label>Email</label><input required type="email" name="email"/></div>
-          <div class="fg"><label>Phone</label><input type="tel" name="phone"/></div>
-          <div class="fg"><label>Company</label><input type="text" name="company"/></div>
-          <div class="fg full"><label>Service needed</label>
-            <select required name="service">
-              <option value="">Select a service</option>
-              <option>Estimating &amp; Bid Support</option>
-              <option>Quantity Takeoffs</option>
-              <option>CAD Drafting</option>
-              <option>Engineering Services</option>
-              <option>Document Control</option>
-              <option>Project Coordination</option>
-              <option>Scheduling Support</option>
-              <option>Not sure yet</option>
-            </select>
+        <div class="msf-progress" aria-hidden="true">
+          <div class="msf-seg active" data-seg="1"><div class="msf-bar"><i></i></div><span>Service</span></div>
+          <div class="msf-seg" data-seg="2"><div class="msf-bar"><i></i></div><span>Project</span></div>
+          <div class="msf-seg" data-seg="3"><div class="msf-bar"><i></i></div><span>Details</span></div>
+        </div>
+
+        <div class="msf-step show" data-step="1">
+          <div class="fg full" style="margin-bottom:14px"><label style="font-size:15px">What do you need? <span style="color:#c2410c">*</span></label></div>
+          <div class="svc-pick">
+            <label><input type="radio" name="service" value="Estimating & Bid Support"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Estimating &amp; Bid Support</span></label>
+            <label><input type="radio" name="service" value="Quantity Takeoffs"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Quantity Takeoffs</span></label>
+            <label><input type="radio" name="service" value="CAD Drafting"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>CAD Drafting</span></label>
+            <label><input type="radio" name="service" value="Engineering Services"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Engineering Services</span></label>
+            <label><input type="radio" name="service" value="Document Control"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>Document Control</span></label>
+            <label><input type="radio" name="service" value="Project Coordination"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Project Coordination</span></label>
+            <label><input type="radio" name="service" value="Scheduling Support"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Scheduling Support</span></label>
+            <label><input type="radio" name="service" value="Not sure yet"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>Not sure yet</span></label>
           </div>
-          <button type="button" class="extra-toggle full" id="extra-toggle">+ Add project details (optional)</button>
-          <div class="extra-fields" id="extra-fields">
-            <div class="fg"><label>Project type</label>
-              <select name="project_type">
-                <option value="">Select if known</option>
+          <div class="msf-nav"><span></span><button type="button" class="btn btn-primary" data-msf-next>Continue</button></div>
+        </div>
+
+        <div class="msf-step" data-step="2">
+          <div class="f-grid">
+            <div class="fg"><label>Project type <span style="color:#c2410c">*</span></label>
+              <select name="project_type" id="msf-ptype">
+                <option value="">Select</option>
                 <option>Solar</option>
                 <option>BESS / Energy Storage</option>
                 <option>Commercial</option>
@@ -199,12 +202,33 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
                 <option>Other</option>
               </select>
             </div>
-            <div class="fg"><label>Project size (m&sup2; or MW)</label><input type="text" name="project_size" placeholder="Optional"/></div>
-            <div class="fg full"><label>Bid due date</label><input type="date" name="bid_due_date"/></div>
+            <div class="fg"><label>Project size <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="text" name="project_size" placeholder="m², MW, or units"/></div>
+            <div class="fg full"><label>Bid due date <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="date" name="bid_due_date"/></div>
           </div>
-          <div class="fg full"><label>Project description</label><textarea required name="message" placeholder="A line or two is enough to start."></textarea></div>
+          <div class="msf-nav"><button type="button" class="btn btn-outline" data-msf-back>Back</button><button type="button" class="btn btn-primary" data-msf-next>Continue</button></div>
         </div>
-        <button class="btn btn-primary submit" id="submit-button" type="submit">Send request</button>
+
+        <div class="msf-step" data-step="3">
+          <div class="f-grid">
+            <div class="fg"><label>Name <span style="color:#c2410c">*</span></label><input type="text" name="name" id="msf-name" autocomplete="name"/></div>
+            <div class="fg"><label>Email <span style="color:#c2410c">*</span></label><input type="email" name="email" id="msf-email" autocomplete="email"/></div>
+            <div class="fg"><label>Phone <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="tel" name="phone" autocomplete="tel"/></div>
+            <div class="fg"><label>Company <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="text" name="company" autocomplete="organization"/></div>
+            <div class="fg full"><label>Project description <span style="color:#c2410c">*</span></label><textarea name="message" id="msf-msg" placeholder="A line or two is enough to start."></textarea></div>
+            <div class="fg full">
+              <label>Attach plans <span style="color:#8a94a6;font-weight:400">(optional — PDF, CAD, images)</span></label>
+              <label class="dropzone" id="msf-drop">
+                <input type="file" name="attachment" id="msf-file" multiple accept=".pdf,.dwg,.dxf,.rvt,.zip,.png,.jpg,.jpeg">
+                <b>Drop files here or click to browse</b>
+                <span>Up to 10 files · PDF, DWG, DXF, RVT, ZIP, images</span>
+              </label>
+              <div class="dz-files" id="msf-files"></div>
+            </div>
+          </div>
+          <div class="msf-nav"><button type="button" class="btn btn-outline" data-msf-back>Back</button><button class="btn btn-primary submit" id="submit-button" type="submit">Send request</button></div>
+        </div>
+
+        <div class="msf-err" id="msf-err" role="alert"></div>
         <p class="form-note">No obligation, no cost to get a quote.</p>
       </form>
       <div class="form-status" id="form-status">
