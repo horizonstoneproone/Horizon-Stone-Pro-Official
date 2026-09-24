@@ -136,3 +136,19 @@ document.querySelectorAll('[data-track]').forEach(el=>{
     if(typeof gtag==='function') gtag('event',action,{event_category:'engagement',event_label:label});
   });
 });
+
+// mobile nav toggle
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('#site-header nav');
+  if(!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.classList.toggle('x', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.closest('a')){ nav.classList.remove('open'); btn.classList.remove('x'); btn.setAttribute('aria-expanded','false'); }
+  });
+})();
