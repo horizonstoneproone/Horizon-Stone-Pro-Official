@@ -26,13 +26,14 @@ const revealEls=document.querySelectorAll('.reveal, .reveal-stagger');
 const counted=new WeakSet();
 function countUp(el){
   const target=parseFloat(el.dataset.count);
+  const fmt=n=>Math.round(n).toLocaleString('en-US');
   const dur=900;const start=performance.now();
   function step(t){
     const p=Math.min(1,(t-start)/dur);
     const eased=1-Math.pow(1-p,3);
-    el.textContent=Math.round(target*eased);
+    el.textContent=fmt(target*eased);
     if(p<1) requestAnimationFrame(step);
-    else el.textContent=target;
+    else el.textContent=fmt(target);
   }
   requestAnimationFrame(step);
 }
@@ -79,11 +80,70 @@ document.querySelectorAll('.f-item').forEach(item=>{
   });
 });
 
-// contact form (contact.html)
+// multi-step contact form (contact.html)
 const contactForm=document.getElementById('contact-form');
 if(contactForm){
+  const steps=[...contactForm.querySelectorAll('.msf-step')];
+  const segs=[...contactForm.querySelectorAll('.msf-seg')];
+  const errBox=document.getElementById('msf-err');
+  let cur=1;
+  function msfError(msg){
+    if(!msg){errBox.classList.remove('show');errBox.textContent='';return;}
+    errBox.textContent=msg;errBox.classList.add('show');
+    errBox.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function showStep(n){
+    cur=n;msfError(null);
+    steps.forEach(s=>s.classList.toggle('show',+s.dataset.step===n));
+    segs.forEach(g=>{
+      const k=+g.dataset.seg;
+      g.classList.toggle('active',k===n);
+      g.classList.toggle('done',k<n);
+      g.querySelector('.msf-bar i').style.width=k<n?'100%':(k===n?'100%':'0');
+    });
+  }
+  function validStep(n){
+    if(n===1){
+      if(!contactForm.querySelector('input[name=service]:checked')){msfError('Pick a service to continue.');return false;}
+    }
+    if(n===2){
+      if(!document.getElementById('msf-ptype').value){msfError('Select a project type to continue.');return false;}
+    }
+    if(n===3){
+      const name=document.getElementById('msf-name').value.trim();
+      const email=document.getElementById('msf-email').value.trim();
+      const msg=document.getElementById('msf-msg').value.trim();
+      if(!name){msfError('Tell us your name.');return false;}
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msfError('Enter a valid email address.');return false;}
+      if(!msg){msfError('Add a line about your project.');return false;}
+    }
+    msfError(null);return true;
+  }
+  contactForm.querySelectorAll('[data-msf-next]').forEach(b=>b.addEventListener('click',()=>{if(validStep(cur))showStep(Math.min(3,cur+1));}));
+  contactForm.querySelectorAll('[data-msf-back]').forEach(b=>b.addEventListener('click',()=>showStep(Math.max(1,cur-1))));
+  // file dropzone
+  const drop=document.getElementById('msf-drop'),fileInput=document.getElementById('msf-file'),fileList=document.getElementById('msf-files');
+  if(drop&&fileInput){
+    const renderFiles=()=>{
+      fileList.innerHTML='';
+      [...fileInput.files].slice(0,10).forEach(f=>{
+        const chip=document.createElement('span');chip.className='dz-file';
+        chip.textContent=f.name.length>28?f.name.slice(0,25)+'…':f.name;
+        fileList.appendChild(chip);
+      });
+    };
+    ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+    ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
+    drop.addEventListener('drop',e=>{
+      const dt=new DataTransfer();
+      [...(e.dataTransfer.files||[])].slice(0,10).forEach(f=>dt.items.add(f));
+      fileInput.files=dt.files;renderFiles();
+    });
+    fileInput.addEventListener('change',renderFiles);
+  }
   contactForm.addEventListener('submit', async function(e){
     e.preventDefault();
+    if(!validStep(3))return;
     const button=document.getElementById('submit-button');
     const status=document.getElementById('form-status');
     const originalText=button.textContent;
@@ -105,20 +165,64 @@ if(contactForm){
       console.error(err);
       button.disabled=false;
       button.textContent=originalText;
-      alert('We could not send your request. Please try again or email sales@horizonstonepro.com.');
+      msfError('We could not send your request. Please try again or email sales@horizonstonepro.com.');
     }
   });
 }
 
-// optional project-detail fields toggle (contact.html)
-const extraToggle=document.getElementById('extra-toggle');
-const extraFields=document.getElementById('extra-fields');
-if(extraToggle && extraFields){
-  extraToggle.addEventListener('click',()=>{
-    const open=extraFields.classList.toggle('show');
-    extraToggle.textContent = open ? 'Hide project details' : '+ Add project details (optional)';
+// before/after takeoff slider (index.html)
+(function(){
+  const ba=document.getElementById('ba-slider');
+  if(!ba)return;
+  let dragging=false;
+  function setPos(clientX){
+    const r=ba.getBoundingClientRect();
+    let p=((clientX-r.left)/r.width)*100;
+    p=Math.max(2,Math.min(98,p));
+    ba.style.setProperty('--bapos',p+'%');
+    ba.setAttribute('aria-valuenow',Math.round(p));
+  }
+  function start(e){dragging=true;ba.setPointerCapture&&e.pointerId!==undefined&&ba.setPointerCapture(e.pointerId);setPos(e.clientX);}
+  function move(e){if(dragging)setPos(e.clientX);}
+  function end(){dragging=false;}
+  ba.addEventListener('pointerdown',start);
+  ba.addEventListener('pointermove',move);
+  ba.addEventListener('pointerup',end);
+  ba.addEventListener('pointercancel',end);
+  ba.addEventListener('keydown',e=>{
+    const cur=parseFloat(getComputedStyle(ba).getPropertyValue('--bapos'))||50;
+    if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
+      e.preventDefault();
+      const p=Math.max(2,Math.min(98,cur+(e.key==='ArrowRight'?4:-4)));
+      ba.style.setProperty('--bapos',p+'%');
+      ba.setAttribute('aria-valuenow',Math.round(p));
+    }
   });
-}
+})();
+
+// in-house cost calculator (services.html)
+(function(){
+  const staff=document.getElementById('calc-staff');
+  if(!staff)return;
+  const salary=document.getElementById('calc-salary');
+  const bids=document.getElementById('calc-bids');
+  const staffVal=document.getElementById('calc-staff-val');
+  const salaryVal=document.getElementById('calc-salary-val');
+  const bidsVal=document.getElementById('calc-bids-val');
+  const total=document.getElementById('calc-total');
+  const fmt=n=>n.toLocaleString('en-US');
+  function calc(){
+    const s=+staff.value, sal=+salary.value;
+    staffVal.textContent=s;
+    salaryVal.textContent='$'+fmt(sal);
+    bidsVal.textContent=bids.value;
+    const annual=Math.round(s*(sal*1.32+3600));
+    total.dataset.count=annual;
+    total.textContent=fmt(annual);
+  }
+  [staff,salary,bids].forEach(el=>el.addEventListener('input',calc));
+  calc();
+})();
 
 // outbound click/engagement tracking (present on every page)
 document.querySelectorAll('[data-track]').forEach(el=>{
