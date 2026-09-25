@@ -714,6 +714,16 @@ textarea{min-height:110px;resize:vertical}
 .sc-icon svg{width:24px;height:24px}
 .sc-body b{display:block;font-size:16px;color:var(--ink);margin-bottom:4px}
 .sc-body>span{display:block;font-size:14px;color:#5b6b82;margin-bottom:12px;line-height:1.55}
+/* bid-ready showcase: plan slider + takeoff table side by side */
+.bid-showcase{display:grid;grid-template-columns:1.12fr .88fr;gap:20px;align-items:start;margin-top:26px}
+.bid-visual{min-width:0}
+.bid-visual .ba{margin-top:0;max-width:none}
+.bid-showcase .sample-card{margin-top:0;flex-direction:column;align-items:stretch;border-top:3px solid var(--blue-500)}
+.bid-showcase .sc-table-wrap{max-height:400px}
+@media(max-width:900px){
+  .bid-showcase{grid-template-columns:1fr}
+  .bid-showcase .sc-table-wrap{max-height:280px}
+}
 .sc-table-wrap{overflow:auto;margin-top:12px;border:1px solid var(--line);border-radius:10px;max-height:340px}
 .sc-table{width:100%;min-width:300px;border-collapse:collapse;font-size:13.5px}
 .sc-table thead th{position:sticky;top:0;z-index:1}
