@@ -715,14 +715,20 @@ textarea{min-height:110px;resize:vertical}
 .sc-body b{display:block;font-size:16px;color:var(--ink);margin-bottom:4px}
 .sc-body>span{display:block;font-size:14px;color:#5b6b82;margin-bottom:12px;line-height:1.55}
 /* bid-ready showcase: plan slider + takeoff table side by side */
-.bid-showcase{display:grid;grid-template-columns:1.12fr .88fr;gap:20px;align-items:start;margin-top:26px}
-.bid-visual{min-width:0}
-.bid-visual .ba{margin-top:0;max-width:none}
-.bid-showcase .sample-card{margin-top:0;flex-direction:column;align-items:stretch;border-top:3px solid var(--blue-500)}
-.bid-showcase .sc-table-wrap{max-height:400px}
+.bid-showcase{display:grid;grid-template-columns:1.12fr .88fr;gap:20px;align-items:stretch;margin-top:26px}
+.bid-visual{min-width:0;background:#fff;border:1px solid var(--line);border-top:3px solid var(--blue-500);
+  border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.bv-head{margin-bottom:14px}
+.bv-head b{display:block;font-size:16px;color:var(--navy)}
+.bv-head span{display:block;margin-top:4px;font-size:13.5px;color:var(--muted)}
+.bid-visual .ba{margin-top:0;max-width:none;border-radius:12px}
+.bid-visual .ba-note{margin-bottom:0}
+.bid-showcase .sample-card{margin-top:0;flex-direction:column;align-items:stretch;border-top:3px solid var(--blue-500);display:flex}
+.bid-showcase .sc-body{flex:1;display:flex;flex-direction:column;min-height:0}
+.bid-showcase .sc-table-wrap{flex:1;min-height:220px;max-height:none}
 @media(max-width:900px){
   .bid-showcase{grid-template-columns:1fr}
-  .bid-showcase .sc-table-wrap{max-height:280px}
+  .bid-showcase .sc-table-wrap{flex:none;max-height:280px;min-height:0}
 }
 .sc-table-wrap{overflow:auto;margin-top:12px;border:1px solid var(--line);border-radius:10px;max-height:340px}
 .sc-table{width:100%;min-width:300px;border-collapse:collapse;font-size:13.5px}
