@@ -3,33 +3,32 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-o.onload=function(){window.trackingFunctions.onLoad({appId:"6a5068042f6001001c0e60f7"})},
-document.head.appendChild(o)}initApollo();</script>
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1710334396977698');
-fbq('track', 'PageView');
+/* Marketing trackers load after idle / first interaction — keeps first paint fast. */
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+!function(f){if(f.fbq)return;var n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];}(window);
+function __loadTrackers(){
+  if(window.__trkDone)return;window.__trkDone=true;
+  var d=document;
+  var o=d.createElement('script');o.async=true;o.defer=true;
+  o.src='https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache='+Math.random().toString(36).substring(7);
+  o.onload=function(){try{window.trackingFunctions.onLoad({appId:'6a5068042f6001001c0e60f7'});}catch(e){}};
+  d.head.appendChild(o);
+  var t=d.createElement('script');t.async=true;t.src='https://connect.facebook.net/en_US/fbevents.js';
+  t.onload=function(){try{fbq('init','1710334396977698');fbq('track','PageView');}catch(e){}};
+  d.head.appendChild(t);
+  var g=d.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-XH3NT91CM4';
+  g.onload=function(){try{gtag('js',new Date());gtag('config','G-XH3NT91CM4');}catch(e){}};
+  d.head.appendChild(g);
+}
+function __trkKick(){if('requestIdleCallback' in window){requestIdleCallback(__loadTrackers,{timeout:5000});}else{setTimeout(__loadTrackers,3000);}}
+['pointerdown','keydown','scroll','touchstart'].forEach(function(ev){window.addEventListener(ev,__loadTrackers,{once:true,passive:true,capture:true});});
+__trkKick();
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
 /></noscript>
 <meta name="google-site-verification" content="11t34u-fYsiW8Rb8tABD-XB_9DcGZyjkOQjGakvrCC0" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XH3NT91CM4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XH3NT91CM4');
-</script>
 <title>Contact & Request a Quote | Horizon Stone Pro</title>
 <meta name="description" content="Tell Horizon Stone Pro about your project. We'll follow up to scope estimating, CAD, or documentation support and send fixed pricing before any work starts." />
 <meta name="author" content="Horizon Stone Pro LLC" />
@@ -162,19 +161,36 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
         <div class="c-row"><b>Mailing address</b><span>3343 Peachtree Rd NE, Atlanta, GA 30326</span></div>
       </div>
     </div>
-    <div class="form-card reveal">
+    <div class="form-card reveal" id="quote">
       <form id="contact-form" enctype="multipart/form-data" novalidate>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <input type="hidden" name="_subject" value="New Horizon Stone Pro Website Request" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
         <div class="msf-progress" aria-hidden="true">
-          <div class="msf-seg active" data-seg="1"><div class="msf-bar"><i></i></div><span>Service</span></div>
-          <div class="msf-seg" data-seg="2"><div class="msf-bar"><i></i></div><span>Project</span></div>
+          <div class="msf-seg active" data-seg="1"><div class="msf-bar"><i></i></div><span>Project</span></div>
+          <div class="msf-seg" data-seg="2"><div class="msf-bar"><i></i></div><span>Service</span></div>
           <div class="msf-seg" data-seg="3"><div class="msf-bar"><i></i></div><span>Details</span></div>
         </div>
 
         <div class="msf-step show" data-step="1">
+          <div class="fg full" style="margin-bottom:14px"><label style="font-size:15px">What type of project is it? <span style="color:#c2410c">*</span></label></div>
+          <div class="svc-pick">
+            <label><input type="radio" name="project_type" value="Commercial"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M4 21h16M9 7h2M9 11h2M13 7h2M13 11h2M10 21v-3h4v3"/></svg>Commercial</span></label>
+            <label><input type="radio" name="project_type" value="Residential"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/></svg>Residential</span></label>
+            <label><input type="radio" name="project_type" value="Federal / SAM.gov"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M9.5 21V10M14.5 21V10M19 21V10M3 10l9-6 9 6H3z"/></svg>Federal / SAM.gov</span></label>
+            <label><input type="radio" name="project_type" value="Industrial"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l7 5V9l7 5V4h4v17H3zM7 17h2M12 17h2M17 17h2"/></svg>Industrial</span></label>
+            <label><input type="radio" name="project_type" value="Solar / BESS"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>Solar / BESS</span></label>
+            <label><input type="radio" name="project_type" value="Other"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></svg>Other</span></label>
+          </div>
+          <div class="f-grid" style="margin-top:16px">
+            <div class="fg"><label>Project size <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="text" name="project_size" placeholder="m², MW, or units"/></div>
+            <div class="fg"><label>Bid due date <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="date" name="bid_due_date"/></div>
+          </div>
+          <div class="msf-nav"><span></span><button type="button" class="btn btn-primary" data-msf-next>Continue</button></div>
+        </div>
+
+        <div class="msf-step" data-step="2">
           <div class="fg full" style="margin-bottom:14px"><label style="font-size:15px">What do you need? <span style="color:#c2410c">*</span></label></div>
           <div class="svc-pick">
             <label><input type="radio" name="service" value="Estimating & Bid Support"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Estimating &amp; Bid Support</span></label>
@@ -185,25 +201,6 @@ src="https://www.facebook.com/tr?id=1710334396977698&ev=PageView&noscript=1"
             <label><input type="radio" name="service" value="Project Coordination"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Project Coordination</span></label>
             <label><input type="radio" name="service" value="Scheduling Support"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Scheduling Support</span></label>
             <label><input type="radio" name="service" value="Not sure yet"><span class="pick-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>Not sure yet</span></label>
-          </div>
-          <div class="msf-nav"><span></span><button type="button" class="btn btn-primary" data-msf-next>Continue</button></div>
-        </div>
-
-        <div class="msf-step" data-step="2">
-          <div class="f-grid">
-            <div class="fg"><label>Project type <span style="color:#c2410c">*</span></label>
-              <select name="project_type" id="msf-ptype">
-                <option value="">Select</option>
-                <option>Solar</option>
-                <option>BESS / Energy Storage</option>
-                <option>Commercial</option>
-                <option>Industrial</option>
-                <option>Residential</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="fg"><label>Project size <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="text" name="project_size" placeholder="m², MW, or units"/></div>
-            <div class="fg full"><label>Bid due date <span style="color:#8a94a6;font-weight:400">(optional)</span></label><input type="date" name="bid_due_date"/></div>
           </div>
           <div class="msf-nav"><button type="button" class="btn btn-outline" data-msf-back>Back</button><button type="button" class="btn btn-primary" data-msf-next>Continue</button></div>
         </div>
