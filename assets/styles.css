@@ -729,11 +729,11 @@ textarea{min-height:110px;resize:vertical}
 .bid-showcase .sc-icon{display:none}
 .bid-showcase .sc-body b{font-size:13.5px;color:var(--navy)}
 .bid-showcase .sc-body>span{font-size:12px}
-.bid-visual .ba{margin-top:30px}
+.bid-visual .ba{margin-top:46px}
 @media(max-width:900px){
   .bid-showcase{gap:10px}
   .bid-visual{padding:10px}
-  .bid-visual .ba{margin-top:26px}
+  .bid-visual .ba{margin-top:40px}
   .bid-showcase .sample-card{padding:10px}
   .bid-showcase .sc-table-wrap{flex:none;max-height:280px;min-height:0}
 }
