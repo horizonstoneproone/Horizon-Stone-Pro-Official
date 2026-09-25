@@ -241,6 +241,46 @@ document.querySelectorAll('[data-track]').forEach(el=>{
   });
 });
 
+// sample report lead magnet (index.html)
+(function(){
+  const form=document.getElementById('sample-form');
+  if(!form) return;
+  const msg=document.getElementById('sample-msg');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const email=form.email.value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.textContent='Enter a valid email to get the sample.';
+      msg.classList.add('show','err');
+      return;
+    }
+    msg.classList.remove('show','err');
+    const btn=form.querySelector('button');
+    const original=btn.textContent;
+    btn.disabled=true; btn.textContent='Sending...';
+    try{
+      await fetch('https://formsubmit.co/ajax/sales@horizonstonepro.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({email:email,_subject:'Sample takeoff report request',_template:'table'})
+      });
+      const a=document.createElement('a');
+      a.href='assets/sample-takeoff-report.pdf';
+      a.download='horizon-sample-takeoff-report.pdf';
+      document.body.appendChild(a); a.click(); a.remove();
+      msg.textContent='Sent! Your download should start now.';
+      msg.classList.add('show');
+      if(typeof fbq==='function') fbq('track','Lead');
+      if(typeof gtag==='function') gtag('event','generate_lead',{event_category:'sample_report'});
+      form.reset();
+    }catch(err){
+      msg.textContent='Something went wrong — email sales@horizonstonepro.com and we will send it.';
+      msg.classList.add('show','err');
+    }
+    btn.disabled=false; btn.textContent=original;
+  });
+})();
+
 // mobile nav toggle
 (function(){
   var btn = document.querySelector('.nav-toggle');
