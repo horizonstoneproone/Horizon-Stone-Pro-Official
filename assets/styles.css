@@ -634,6 +634,15 @@ textarea{min-height:110px;resize:vertical}
   .sc-body>span{font-size:13.5px}
   #sample-form{flex-direction:column}
   #sample-form .btn{justify-content:center}
+  /* testimonial highlight */
+  .t-card{padding:22px 18px 20px;text-align:left}
+  .t-card::before{font-size:46px;left:14px}
+  .t-card p{font-size:16px}
+  /* mobile swipe carousels: card grids become horizontal swipe rows */
+  .svc-grid,.img-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    gap:12px;margin:0 -16px;padding:4px 16px 14px;max-width:none;scrollbar-width:none}
+  .svc-grid::-webkit-scrollbar,.img-grid::-webkit-scrollbar{display:none}
+  .svc-card,.img-card{min-width:82%;scroll-snap-align:start;margin:0;flex-shrink:0}
 }
 
 /* ---------- floating click-to-call (mobile only) ---------- */
@@ -710,6 +719,18 @@ textarea{min-height:110px;resize:vertical}
 .sc-msg{display:none;margin:10px 0 0;font-size:13.5px;font-weight:600;color:#15803d}
 .sc-msg.show{display:block}
 .sc-msg.err{color:#c2410c}
+
+/* ============ Testimonial highlight ============ */
+.tsec{padding-top:10px;padding-bottom:10px}
+.t-card{margin:0 auto;max-width:760px;background:linear-gradient(180deg,#ffffff,#f4f8ff);
+  border:1px solid #d8e6fb;border-left:5px solid var(--blue-600);border-radius:16px;
+  padding:26px 30px;box-shadow:0 16px 38px rgba(10,60,150,.12);text-align:center;position:relative}
+.t-card::before{content:"\201C";position:absolute;top:0;left:20px;font-size:66px;line-height:1;
+  color:#bcd4f7;font-family:Georgia,'Times New Roman',serif;pointer-events:none}
+.t-card blockquote{margin:0}
+.t-card p{margin:0 0 14px;font-size:18px;line-height:1.65;color:#1e293b;font-weight:500}
+.t-card cite{font-style:normal;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--blue-700);font-weight:700}
 
 /* ============ Multi-step quote form ============ */
 .msf-progress{display:flex;gap:8px;margin-bottom:26px}
