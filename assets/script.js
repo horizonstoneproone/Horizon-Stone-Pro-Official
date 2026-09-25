@@ -104,10 +104,10 @@ if(contactForm){
   }
   function validStep(n){
     if(n===1){
-      if(!contactForm.querySelector('input[name=service]:checked')){msfError('Pick a service to continue.');return false;}
+      if(!contactForm.querySelector('input[name=project_type]:checked')){msfError('Select a project type to continue.');return false;}
     }
     if(n===2){
-      if(!document.getElementById('msf-ptype').value){msfError('Select a project type to continue.');return false;}
+      if(!contactForm.querySelector('input[name=service]:checked')){msfError('Pick a service to continue.');return false;}
     }
     if(n===3){
       const name=document.getElementById('msf-name').value.trim();
