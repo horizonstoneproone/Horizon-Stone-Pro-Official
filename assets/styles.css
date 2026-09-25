@@ -726,9 +726,14 @@ textarea{min-height:110px;resize:vertical}
 .bid-showcase .sample-card{margin-top:0;max-width:none;flex-direction:column;align-items:stretch;border-top:3px solid var(--blue-500);display:flex;padding:14px;border-radius:12px}
 .bid-showcase .sc-body{flex:1;display:flex;flex-direction:column;min-height:0}
 .bid-showcase .sc-table-wrap{flex:1;min-height:180px;max-height:none}
+.bid-showcase .sc-icon{display:none}
+.bid-showcase .sc-body b{font-size:13.5px;color:var(--navy)}
+.bid-showcase .sc-body>span{font-size:12px}
+.bid-visual .ba{margin-top:30px}
 @media(max-width:900px){
   .bid-showcase{gap:10px}
   .bid-visual{padding:10px}
+  .bid-visual .ba{margin-top:26px}
   .bid-showcase .sample-card{padding:10px}
   .bid-showcase .sc-table-wrap{flex:none;max-height:280px;min-height:0}
 }
