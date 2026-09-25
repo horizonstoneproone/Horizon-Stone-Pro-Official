@@ -200,6 +200,34 @@ if(contactForm){
   });
 })();
 
+// auto-demo the before/after slider once when scrolled into view
+(function(){
+  const ba=document.getElementById('ba-slider');
+  if(!ba||!('IntersectionObserver' in window))return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  let timers=[];
+  const cancel=()=>{timers.forEach(clearTimeout);timers=[];ba.classList.remove('auto');};
+  ba.addEventListener('pointerdown',cancel,{once:false});
+  ba.addEventListener('keydown',cancel);
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{
+      if(!en.isIntersecting)return;
+      io.disconnect();
+      ba.classList.add('auto');
+      const seq=[12,88,50];
+      let i=0;
+      timers.push(setTimeout(function step(){
+        if(i>=seq.length){ba.classList.remove('auto');return;}
+        ba.style.setProperty('--bapos',seq[i]+'%');
+        ba.setAttribute('aria-valuenow',seq[i]);
+        i++;
+        timers.push(setTimeout(step,850));
+      },450));
+    });
+  },{threshold:.45});
+  io.observe(ba);
+})();
+
 // in-house cost calculator (services.html)
 (function(){
   const staff=document.getElementById('calc-staff');
@@ -240,46 +268,6 @@ document.querySelectorAll('[data-track]').forEach(el=>{
     if(typeof gtag==='function') gtag('event',action,{event_category:'engagement',event_label:label});
   });
 });
-
-// sample report lead magnet (index.html)
-(function(){
-  const form=document.getElementById('sample-form');
-  if(!form) return;
-  const msg=document.getElementById('sample-msg');
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    const email=form.email.value.trim();
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-      msg.textContent='Enter a valid email to get the sample.';
-      msg.classList.add('show','err');
-      return;
-    }
-    msg.classList.remove('show','err');
-    const btn=form.querySelector('button');
-    const original=btn.textContent;
-    btn.disabled=true; btn.textContent='Sending...';
-    try{
-      await fetch('https://formsubmit.co/ajax/sales@horizonstonepro.com',{
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify({email:email,_subject:'Sample takeoff report request',_template:'table'})
-      });
-      const a=document.createElement('a');
-      a.href='assets/sample-takeoff-report.pdf';
-      a.download='horizon-sample-takeoff-report.pdf';
-      document.body.appendChild(a); a.click(); a.remove();
-      msg.textContent='Sent! Your download should start now.';
-      msg.classList.add('show');
-      if(typeof fbq==='function') fbq('track','Lead');
-      if(typeof gtag==='function') gtag('event','generate_lead',{event_category:'sample_report'});
-      form.reset();
-    }catch(err){
-      msg.textContent='Something went wrong — email sales@horizonstonepro.com and we will send it.';
-      msg.classList.add('show','err');
-    }
-    btn.disabled=false; btn.textContent=original;
-  });
-})();
 
 // mobile nav toggle
 (function(){

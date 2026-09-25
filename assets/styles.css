@@ -632,8 +632,7 @@ textarea{min-height:110px;resize:vertical}
   .sc-icon{width:40px;height:40px}
   .sc-body b{font-size:15px}
   .sc-body>span{font-size:13.5px}
-  #sample-form{flex-direction:column}
-  #sample-form .btn{justify-content:center}
+  .sc-body .btn{width:100%;justify-content:center}
   /* testimonial highlight */
   .t-card{padding:22px 18px 20px;text-align:left}
   .t-card::before{font-size:46px;left:14px}
@@ -660,6 +659,8 @@ textarea{min-height:110px;resize:vertical}
 .ba img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;pointer-events:none}
 .ba-before{position:relative}
 .ba-after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--bapos,50%))}
+.ba.auto .ba-after{transition:clip-path .85s cubic-bezier(.6,0,.3,1)}
+.ba.auto .ba-handle{transition:left .85s cubic-bezier(.6,0,.3,1)}
 .ba-after .ba-mark{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .ba-tag{position:absolute;top:14px;z-index:3;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border-radius:999px;background:rgba(12,21,38,.72);color:#fff;backdrop-filter:blur(6px)}
 .ba-tag.before{left:14px}
@@ -711,14 +712,7 @@ textarea{min-height:110px;resize:vertical}
 .sc-icon svg{width:24px;height:24px}
 .sc-body b{display:block;font-size:16px;color:var(--ink);margin-bottom:4px}
 .sc-body>span{display:block;font-size:14px;color:#5b6b82;margin-bottom:12px;line-height:1.55}
-#sample-form{display:flex;gap:10px}
-#sample-form input{flex:1;min-width:0;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;
-  font:inherit;font-size:14px;color:var(--ink)}
-#sample-form input:focus{outline:none;border-color:var(--blue-500);box-shadow:0 0 0 3px rgba(31,139,255,.15)}
-#sample-form .btn{min-height:48px;padding:0 20px;font-size:14px;white-space:nowrap}
-.sc-msg{display:none;margin:10px 0 0;font-size:13.5px;font-weight:600;color:#15803d}
-.sc-msg.show{display:block}
-.sc-msg.err{color:#c2410c}
+.sc-body .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;font-size:14px}
 
 /* ============ Testimonial highlight ============ */
 .tsec{padding-top:10px;padding-bottom:10px}
