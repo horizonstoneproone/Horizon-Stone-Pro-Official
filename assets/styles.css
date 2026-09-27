@@ -377,6 +377,7 @@ footer{background:#01060e;color:#a9bdd6;padding:60px 0 0;border-top:1px solid va
 .svc-cat:last-child{margin-bottom:0}
 .svc-cat-h{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--blue-600);margin-bottom:20px}
 .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;align-items:stretch}
+@media(max-width:640px){.svc-grid{grid-template-columns:1fr}}
 .svc-card{background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:28px;
   display:flex;flex-direction:column;gap:13px;transition:transform .28s var(--ease),box-shadow .28s,border-color .28s;position:relative;overflow:hidden}
 .svc-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;transform:scaleX(0);transform-origin:left;
@@ -472,7 +473,7 @@ footer{background:#01060e;color:#a9bdd6;padding:60px 0 0;border-top:1px solid va
 .proc-tag{display:inline-block;margin-top:16px;font-family:var(--body);font-size:11px;font-weight:700;color:var(--blue-600);
   background:var(--paper-2);padding:7px 12px;border-radius:7px;border:1px solid var(--line)}
 @media(max-width:900px){.proc-line{grid-template-columns:1fr 1fr;gap:34px}.proc-line:before{display:none}}
-@media(max-width:560px){.proc-line{grid-template-columns:1fr}}
+@media(max-width:640px){.proc-line{grid-template-columns:1fr}}
 
 /* ---------- faq ---------- */
 .faq{max-width:780px;margin:0 auto}
@@ -736,7 +737,7 @@ textarea{min-height:110px;resize:vertical}
 @media(max-width:640px){.work-grid{grid-template-columns:1fr}}
 .work-grid-4{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1100px){.work-grid-4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.work-grid-4{grid-template-columns:1fr}}
+@media(max-width:640px){.work-grid-4{grid-template-columns:1fr}}
 .work-card{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .work-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
 .work-media{position:relative;height:160px;overflow:hidden;display:flex;align-items:flex-end;padding:16px;background:var(--navy-900)}
@@ -766,7 +767,7 @@ textarea{min-height:110px;resize:vertical}
 .step-card h3{font-size:18px;font-weight:800;letter-spacing:-.4px;color:var(--navy-950);margin:0 0 10px}
 .step-card p{font-size:14.5px;color:var(--muted);line-height:1.6;margin:0}
 @media(max-width:900px){.steps-grid{grid-template-columns:repeat(2,1fr)}.step-card:nth-child(2):after{display:none}}
-@media(max-width:600px){.steps-grid{grid-template-columns:1fr}.step-card:after{display:none!important}}
+@media(max-width:640px){.steps-grid{grid-template-columns:1fr}.step-card:after{display:none!important}}
 @media(max-width:640px){.work-media{height:130px}.work-body{padding:20px}}
 
 /* ---------- federal section ---------- */
