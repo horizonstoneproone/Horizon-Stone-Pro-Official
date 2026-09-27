@@ -170,35 +170,7 @@ if(contactForm){
   });
 }
 
-// before/after takeoff slider (index.html)
-(function(){
-  const ba=document.getElementById('ba-slider');
-  if(!ba)return;
-  let dragging=false;
-  function setPos(clientX){
-    const r=ba.getBoundingClientRect();
-    let p=((clientX-r.left)/r.width)*100;
-    p=Math.max(2,Math.min(98,p));
-    ba.style.setProperty('--bapos',p+'%');
-    ba.setAttribute('aria-valuenow',Math.round(p));
-  }
-  function start(e){dragging=true;ba.setPointerCapture&&e.pointerId!==undefined&&ba.setPointerCapture(e.pointerId);setPos(e.clientX);}
-  function move(e){if(dragging)setPos(e.clientX);}
-  function end(){dragging=false;}
-  ba.addEventListener('pointerdown',start);
-  ba.addEventListener('pointermove',move);
-  ba.addEventListener('pointerup',end);
-  ba.addEventListener('pointercancel',end);
-  ba.addEventListener('keydown',e=>{
-    const cur=parseFloat(getComputedStyle(ba).getPropertyValue('--bapos'))||50;
-    if(e.key==='ArrowLeft'||e.key==='ArrowRight'){
-      e.preventDefault();
-      const p=Math.max(2,Math.min(98,cur+(e.key==='ArrowRight'?4:-4)));
-      ba.style.setProperty('--bapos',p+'%');
-      ba.setAttribute('aria-valuenow',Math.round(p));
-    }
-  });
-})();
+
 
 // auto-demo the before/after slider once when scrolled into view
 (function(){
